@@ -1,8 +1,8 @@
 //
 //  YourRoutineViewController.swift
-//  Skinfeel
+//  Skincare
 //
-//  Created by Gabriele Namie on 10/01/22.
+//  Created by Carolina Ortega on 09/12/21.
 //
 
 import Foundation
@@ -14,14 +14,45 @@ class YourRoutineViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var dataFilter = 0
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    weak var NewRoutineViewControllerDelegate: NewRoutineViewControllerDelegate?
+    var defaults = UserDefaults.standard
+    var selectedSection: Int?
+    var selectedProducts: [String] = []
+    
+    var limpezaManha: [String] = []
+    var hidratacaoManha: [String] = []
+    var protecaoManha: [String] = []
+    var protecaoTarde: [String] = []
+    var limpezaNoite: [String] = []
+    var esfoliacaoNoite: [String] = []
+    var protecaoNoite: [String] = []
+    
+    @IBAction func saveButton(_ sender: Any) {
+        let somaManha = limpezaManha.count + hidratacaoManha.count + protecaoManha.count
+        let somaTarde = protecaoTarde.count
+        let somaNoite = limpezaNoite.count + esfoliacaoNoite.count + protecaoNoite.count
+        defaults.set(somaManha, forKey: "somaManha")
+        defaults.set(somaTarde, forKey: "somaTarde")
+        defaults.set(somaNoite, forKey: "somaNoite")
+
+        defaults.set(true, forKey: "feito")
+        navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        limpezaManha = defaults.stringArray(forKey: "limpezaManha")!
+        hidratacaoManha = defaults.stringArray(forKey: "hidratacaoManha")!
+        protecaoManha = defaults.stringArray(forKey: "protecaoManha")!
+        protecaoTarde = defaults.stringArray(forKey: "protecaoTarde")!
+        limpezaNoite = defaults.stringArray(forKey: "limpezaNoite")!
+        esfoliacaoNoite = defaults.stringArray(forKey: "esfoliacaoNoite")!
+        protecaoNoite = defaults.stringArray(forKey: "protecaoNoite")!
+        
         navigationController?.setNavigationBarHidden(false, animated: false)
-        let coreData = CoreDataStack.shared.getAllRoutines()
-        routineName.text = coreData[0].routineName
+        
         //multi seleção
         self.tableView.allowsMultipleSelection = true
         self.tableView.allowsMultipleSelectionDuringEditing = true
@@ -53,18 +84,32 @@ extension YourRoutineViewController: UITableViewDelegate{
     
 }
 
-extension YourRoutineViewController: UITableViewDataSource{
+extension YourRoutineViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch dataFilter {
-        case 0:
-            return 2
-        case 1:
-            return 2
-        case 2:
-            return 2
-        default:
-            return 2
+        if dataFilter == 0 {
+            if section == 0 {
+                return defaults.stringArray(forKey: "limpezaManha")!.count
+            } else if section == 1 {
+                return defaults.stringArray(forKey: "hidratacaoManha")!.count
+            } else {
+                return defaults.stringArray(forKey: "protecaoManha")!.count
+            }
         }
+        else if dataFilter == 1 {
+            return defaults.stringArray(forKey: "protecaoTarde")!.count
+            
+        } else {
+            if section == 0 {
+                return defaults.stringArray(forKey: "limpezaNoite")!.count
+            } else if section == 1 {
+                return defaults.stringArray(forKey: "esfoliacaoNoite")!.count
+                
+            } else {
+                return defaults.stringArray(forKey: "protecaoNoite")!.count
+                
+            }
+        }
+        return 1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -80,6 +125,32 @@ extension YourRoutineViewController: UITableViewDataSource{
         }
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = self.tableView(tableView, cellForRowAt: indexPath)
+            let text = cell.textLabel!.text
+            if let text = text {
+                NSLog("did select and the text is \(text)")
+                    selectedProducts.append(text)
+                    print("Novo array", selectedProducts)
+
+        }
+    }
+        
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = self.tableView(tableView, cellForRowAt: indexPath)
+        let text = cell.textLabel!.text
+        if let text = text {
+            NSLog("did deselect and the text is \(text)")
+            if let index = selectedProducts.firstIndex(of: text) {
+                selectedProducts.remove(at: index)
+                print("Novo array", selectedProducts)
+                
+            }
+            
+        }
+    }
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch dataFilter {
         case 0:
@@ -132,18 +203,48 @@ extension YourRoutineViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
-        cell.textLabel?.text = "oi"
-        return cell
+        if dataFilter == 0 {
+            if indexPath.section == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
+                cell.textLabel?.text = limpezaManha[indexPath.row]
+                return cell
+                
+            } else if indexPath.section == 1 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
+                cell.textLabel?.text = hidratacaoManha[indexPath.row]
+                return cell
+                
+            } else if indexPath.section == 2 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
+                cell.textLabel?.text = protecaoManha[indexPath.row]
+                return cell
+                
+            }
+        } else if dataFilter == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
+            cell.textLabel?.text = protecaoTarde[indexPath.row]
+            return cell
+            
+        } else {
+            if indexPath.section == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
+                cell.textLabel?.text = limpezaNoite[indexPath.row]
+                return cell
+            } else if indexPath.section == 1 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
+                cell.textLabel?.text = esfoliacaoNoite[indexPath.row]
+                return cell
+                
+                
+            } else if indexPath.section == 2{
+                let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
+                cell.textLabel?.text = protecaoNoite[indexPath.row]
+                return cell
+                
+            }
+            
+        }
         
-    }
-    
-    
-}
-extension YourRoutineViewController: YourRoutineViewControllerDelegate{
-    func didRegister() {
-        let coreData = CoreDataStack.shared.getAllRoutines()
-        routineName.text = coreData[0].routineName
+        return UITableViewCell()
     }
 }
-
