@@ -1,45 +1,28 @@
 //
-//  AppDelegate.swift
+//  CoreDataStack.swift
 //  Skinfeel
 //
-//  Created by Gabriele Namie on 20/12/21.
-// vamo que vamo gabi, vai dar certo
+//  Created by Gabriele Namie on 10/01/22.
+//
 
-import UIKit
+import Foundation
 import CoreData
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
-    }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
+class CoreDataStack {
+    static let shared: CoreDataStack = CoreDataStack()
+    
+    private init() {}
+    
     // MARK: - Core Data stack
 
-    lazy var persistentContainer: NSPersistentCloudKitContainer = {
+    lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentCloudKitContainer(name: "Skinfeel")
+        let container = NSPersistentContainer(name: "Model")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -74,6 +57,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
+    // MARK: - Core Data Getting support
+    
+    func getAllRoutines() -> [Routine] {
+        let fr = NSFetchRequest<Routine>(entityName: "Routine")
+        do {
+            return try self.persistentContainer.viewContext.fetch(fr)
+        } catch {
+            print(error)
+        }
+        return []
+    }
+    
+    // MARK: - Core Data Creating support
+    
+    func createRoutine(routineName: String, dateEnd: Date, dateStart: Date, seg: Bool, ter: Bool, qua: Bool, qui: Bool, sex: Bool, sab: Bool, dom: Bool) -> Routine {
+        let routine = Routine(context: self.persistentContainer.viewContext)
+        
+        routine.routineName = routineName
+        routine.dateEnd = dateEnd
+        routine.dateStart = dateStart
+        routine.seg = seg
+        routine.ter = ter
+        routine.qua = qua
+        routine.qui = qui
+        routine.sex = sex
+        routine.sab = sab
+        routine.dom = dom
+        
+        self.saveContext()
+        return routine
+    }
+    
+    // MARK: - Core Data deleting support
+    
+    func deleteObject(routine: Routine) {
+        self.persistentContainer.viewContext.delete(routine)
+        self.saveContext()
+    }
 }
-
