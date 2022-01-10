@@ -3,15 +3,13 @@
 //  Skinfeel
 //
 //  Created by Gabriele Namie on 20/12/21.
-//
+// vamo que vamo gabi, vai dar certo
 
 import UIKit
 import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
