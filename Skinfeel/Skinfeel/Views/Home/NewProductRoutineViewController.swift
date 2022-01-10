@@ -1,8 +1,8 @@
 //
-//  NewProductRoutineViewController.swift
-//  Skinfeel
+//  NewProductViewController.swift
+//  Skincare
 //
-//  Created by Gabriele Namie on 10/01/22.
+//  Created by Carolina Ortega on 06/12/21.
 //
 
 import Foundation
@@ -15,12 +15,46 @@ class NewProductRoutineViewController: UIViewController{
     var searchProduct: [String]!
     let defaults = UserDefaults.standard
     var chosenProducts: [String] = []
+
     var array: [String] = [] //trocar!!!
+    var selectedSection: Int = 0
     
     @IBAction func saveButton(_ sender: Any) {
-        defaults.setValue(array, forKey: "newArray")
+        if defaults.integer(forKey: "filtro") == 0 {
+        if defaults.integer(forKey: "section") == 0 {
+            defaults.setValue(array, forKey: "limpezaManha")
+            print(array)
+            defaults.removeObject(forKey: "newArray")
+        } else if defaults.integer(forKey: "section") == 1 {
+            defaults.setValue(array, forKey: "hidratacaoManha")
+            print(array)
+            defaults.removeObject(forKey: "newArray")
+        } else {
+            defaults.setValue(array, forKey: "protecaoManha")
+            print(array)
+            defaults.removeObject(forKey: "newArray")
+        }
+        } else if defaults.integer(forKey: "filtro") == 1 {
+            defaults.setValue(array, forKey: "protecaoTarde")
+            print(array)
+            defaults.removeObject(forKey: "newArray")
+        } else {
+            if defaults.integer(forKey: "section") == 0 {
+                defaults.setValue(array, forKey: "limpezaNoite")
+                print(array)
+                defaults.removeObject(forKey: "newArray")
+            } else if defaults.integer(forKey: "section") == 1 {
+                defaults.setValue(array, forKey: "esfoliacaoNoite")
+                print(array)
+                defaults.removeObject(forKey: "newArray")
+            } else {
+                defaults.setValue(array, forKey: "protecaoNoite")
+                print(array)
+                defaults.removeObject(forKey: "newArray")
+            }
+        }
+        navigationController?.popViewController(animated: false)
     }
-    
 
     
     override func viewDidLoad() {
@@ -36,15 +70,13 @@ class NewProductRoutineViewController: UIViewController{
         self.productTableView.allowsMultipleSelection = true
         self.productTableView.allowsMultipleSelectionDuringEditing = true
         
-
-
-        
         
     }
 //
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         chosenProducts = defaults.stringArray(forKey: "myKey") ?? []
+        array = defaults.stringArray(forKey: "newArray") ?? []
         print(chosenProducts)
         list = chosenProducts
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -81,6 +113,7 @@ extension NewProductRoutineViewController: UITableViewDataSource, UITableViewDel
                 }
 
         }
+        defaults.set(array, forKey: "newArray")
     }
         
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -93,10 +126,13 @@ extension NewProductRoutineViewController: UITableViewDataSource, UITableViewDel
                 print(array)
                 
             }
+            defaults.set(array, forKey: "newArray")
 
         }
 
-    }}
+    }
+    
+}
     
 
 extension Array where Element: Hashable {

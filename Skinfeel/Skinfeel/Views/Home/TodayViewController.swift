@@ -1,8 +1,8 @@
 //
 //  TodayViewController.swift
-//  Skinfeel
+//  Skincare
 //
-//  Created by Gabriele Namie on 10/01/22.
+//  Created by Carolina Ortega on 01/12/21.
 //
 
 import UIKit
@@ -19,7 +19,8 @@ class TodayViewController: UIViewController {
     let fraseSemRotina = UILabel()
     let imagemBoasVindas = UIImageView()
     weak var NewRoutineViewControllerDelegate: NewRoutineViewControllerDelegate?
-
+    
+    var isDone: Bool = false
     
     @IBOutlet weak var profileAvatar: UIButton!
     @IBOutlet var day1: UIButton!
@@ -36,6 +37,7 @@ class TodayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        defaults.set(isDone, forKey: "feito") //mudar
         navigationController?.setNavigationBarHidden(true, animated: false)
         //collectionView
         self.routineCollectionView.delegate = self
@@ -83,6 +85,8 @@ class TodayViewController: UIViewController {
         day7.translatesAutoresizingMaskIntoConstraints = false
         day7.addTarget(self, action: #selector(clicarDia7), for: .touchUpInside)
         
+        oi = CoreDataStack.shared.getAllRoutines()
+        routineCollectionView.reloadData()
         
         //Dia atual
         days[currentWeekDay].backgroundColor = UIColor(named: "Rosa")
@@ -91,18 +95,21 @@ class TodayViewController: UIViewController {
         calendario()
         
     }
-    
 
-
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    
         navigationController?.setNavigationBarHidden(true, animated: animated)
         let buttonImage = UIImage(named: defaults.string(forKey: "profileImage")!)
         profileAvatar.setImage(buttonImage, for: .normal)
-        self.routineCollectionView.reloadData()
         numeroDeCelulas()
+        oi = CoreDataStack.shared.getAllRoutines()
+        self.routineCollectionView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        oi = CoreDataStack.shared.getAllRoutines()
+        self.routineCollectionView.reloadData()
     }
     
     func numeroDeCelulas(){
@@ -220,10 +227,18 @@ class TodayViewController: UIViewController {
         clickDays(selected: day7, day2: day2, day3: day3, day4: day4, day5: day5, day6: day6, day7: day1)
     }
     @IBAction func AddRoutine(_ sender: Any) {
+        defaults.removeObject(forKey: "limpezaManha")
+        defaults.removeObject(forKey: "hidratacaoManha")
+        defaults.removeObject(forKey: "protecaoManha")
+        defaults.removeObject(forKey: "protecaoTarde")
+        defaults.removeObject(forKey: "limpezaNoite")
+        defaults.removeObject(forKey: "esfoliacaoNoite")
+        defaults.removeObject(forKey: "protecaoNoite")
+        
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyBoard.instantiateViewController(identifier: "NewRoutineView") as! NewRoutineViewController
         vc.TodayViewControllerDelegate = self
-        self.navigationController?.pushViewController(vc, animated: false)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 //Formatação da collectionView
@@ -239,6 +254,28 @@ extension TodayViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell  = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as! RoutineCollectionViewCell
         cell.nameRoutine.text = oi[indexPath.row].routineName
+        if defaults.bool(forKey: "feito") == false {
+            cell.morningCircularProgress.setProgress(duration: 1.0, value: 0)
+            cell.afternoonCircularProgress.setProgress(duration: 1.0, value: 0)
+            cell.nightCircularProgress.setProgress(duration: 1.0, value: 0)
+            cell.morningCircularProgress.progressColor = UIColor(named: "Rosa")!
+            cell.afternoonCircularProgress.progressColor = UIColor(named: "Rosa")!
+            cell.nightCircularProgress.progressColor = UIColor(named: "Rosa")!
+            cell.morningCircularProgress.circleColor = UIColor(named: "circular")!
+            cell.afternoonCircularProgress.circleColor = UIColor(named: "circular")!
+            cell.nightCircularProgress.circleColor = UIColor(named: "circular")!
+        } else {
+            cell.morningCircularProgress.setProgress(duration: 1.0, value: defaults.float(forKey: "somaManha")/10)
+            cell.morningCircularProgress.progressColor = UIColor(named: "Rosa")!
+            cell.afternoonCircularProgress.progressColor = UIColor(named: "Rosa")!
+            cell.nightCircularProgress.progressColor = UIColor(named: "Rosa")!
+            cell.morningCircularProgress.circleColor = UIColor(named: "circular")!
+            cell.afternoonCircularProgress.circleColor = UIColor(named: "circular")!
+            cell.nightCircularProgress.circleColor = UIColor(named: "circular")!
+            cell.afternoonCircularProgress.setProgress(duration: 1.0, value: defaults.float(forKey: "somaTarde")/10)
+            cell.nightCircularProgress.setProgress(duration: 1.0, value: defaults.float(forKey: "somaNoite")/10)
+
+        }
         return cell
     }
     
@@ -252,4 +289,3 @@ extension TodayViewController: TodayViewControllerDelegate{
         routineCollectionView.reloadData()
     }
 }
-

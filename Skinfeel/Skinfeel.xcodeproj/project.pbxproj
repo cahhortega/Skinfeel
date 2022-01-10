@@ -10,10 +10,7 @@
 		9924050D2771139200CF0946 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924050C2771139200CF0946 /* AppDelegate.swift */; };
 		992405192771139400CF0946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992405182771139400CF0946 /* Assets.xcassets */; };
 		9937940D278CC5110096F99F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9937940C278CC5110096F99F /* SceneDelegate.swift */; };
-		99379411278CC5B80096F99F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9937940F278CC5B80096F99F /* Model.xcdatamodeld */; };
 		99379413278CC5D50096F99F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99379412278CC5D50096F99F /* CoreDataStack.swift */; };
-		99379415278CC7260096F99F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99379414278CC7260096F99F /* Main.storyboard */; };
-		99379417278CC7380096F99F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99379416278CC7380096F99F /* Launch Screen.storyboard */; };
 		9937941A278CC7950096F99F /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99379419278CC7950096F99F /* Identifiers.swift */; };
 		9937941C278CC7BF0096F99F /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9937941B278CC7BF0096F99F /* NotificationManager.swift */; };
 		99379421278CC8710096F99F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99379420278CC8710096F99F /* Model.swift */; };
@@ -47,6 +44,9 @@
 		99379465278CCEFC0096F99F /* AddProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99379464278CCEFC0096F99F /* AddProductTableViewCell.swift */; };
 		99379467278CCF1D0096F99F /* ShelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99379466278CCF1D0096F99F /* ShelfCell.swift */; };
 		99379469278CCF450096F99F /* ShelfFormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99379468278CCF450096F99F /* ShelfFormTableViewCell.swift */; };
+		A050417A278CDE1600BCF86C /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0504178278CDE1600BCF86C /* CoreDataModel.xcdatamodeld */; };
+		A050417D278CDEAA00BCF86C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A050417B278CDEAA00BCF86C /* Main.storyboard */; };
+		A050417E278CDEAA00BCF86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,10 +55,7 @@
 		992405182771139400CF0946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9924051D2771139400CF0946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9937940C278CC5110096F99F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		99379410278CC5B80096F99F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		99379412278CC5D50096F99F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		99379414278CC7260096F99F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		99379416278CC7380096F99F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		99379419278CC7950096F99F /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		9937941B278CC7BF0096F99F /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		99379420278CC8710096F99F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -92,6 +89,9 @@
 		99379464278CCEFC0096F99F /* AddProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductTableViewCell.swift; sourceTree = "<group>"; };
 		99379466278CCF1D0096F99F /* ShelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfCell.swift; sourceTree = "<group>"; };
 		99379468278CCF450096F99F /* ShelfFormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfFormTableViewCell.swift; sourceTree = "<group>"; };
+		A0504179278CDE1600BCF86C /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		A050417B278CDEAA00BCF86C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../Desktop/Main.storyboard; sourceTree = "<group>"; };
+		A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../../../../Desktop/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +124,10 @@
 		9924050B2771139200CF0946 /* Skinfeel */ = {
 			isa = PBXGroup;
 			children = (
+				A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */,
+				A050417B278CDEAA00BCF86C /* Main.storyboard */,
 				9937940C278CC5110096F99F /* SceneDelegate.swift */,
 				9924050C2771139200CF0946 /* AppDelegate.swift */,
-				99379414278CC7260096F99F /* Main.storyboard */,
-				99379416278CC7380096F99F /* Launch Screen.storyboard */,
 				992405182771139400CF0946 /* Assets.xcassets */,
 				9924051D2771139400CF0946 /* Info.plist */,
 				9937944B278CCC770096F99F /* Cells */,
@@ -143,7 +143,7 @@
 		9937940E278CC59C0096F99F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				9937940F278CC5B80096F99F /* Model.xcdatamodeld */,
+				A0504178278CDE1600BCF86C /* CoreDataModel.xcdatamodeld */,
 				99379412278CC5D50096F99F /* CoreDataStack.swift */,
 			);
 			path = CoreData;
@@ -347,9 +347,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99379417278CC7380096F99F /* Launch Screen.storyboard in Resources */,
+				A050417E278CDEAA00BCF86C /* LaunchScreen.storyboard in Resources */,
 				992405192771139400CF0946 /* Assets.xcassets in Resources */,
-				99379415278CC7260096F99F /* Main.storyboard in Resources */,
+				A050417D278CDEAA00BCF86C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A050417A278CDE1600BCF86C /* CoreDataModel.xcdatamodeld in Sources */,
 				99379435278CCA630096F99F /* TodayViewControllerDelegate.swift in Sources */,
 				99379448278CCC360096F99F /* Request.swift in Sources */,
 				99379421278CC8710096F99F /* Model.swift in Sources */,
@@ -387,7 +388,6 @@
 				99379452278CCD150096F99F /* YourRoutineTableViewCell.swift in Sources */,
 				9937945A278CCE020096F99F /* DayTableViewCell.swift in Sources */,
 				99379429278CC9260096F99F /* NameViewController.swift in Sources */,
-				99379411278CC5B80096F99F /* Model.xcdatamodeld in Sources */,
 				9937943B278CCB010096F99F /* YourRoutineViewController.swift in Sources */,
 				99379467278CCF1D0096F99F /* ShelfCell.swift in Sources */,
 				99379463278CCED40096F99F /* TaskTableViewCell.swift in Sources */,
@@ -599,13 +599,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9937940F278CC5B80096F99F /* Model.xcdatamodeld */ = {
+		A0504178278CDE1600BCF86C /* CoreDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				99379410278CC5B80096F99F /* Model.xcdatamodel */,
+				A0504179278CDE1600BCF86C /* CoreDataModel.xcdatamodel */,
 			);
-			currentVersion = 99379410278CC5B80096F99F /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			currentVersion = A0504179278CDE1600BCF86C /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

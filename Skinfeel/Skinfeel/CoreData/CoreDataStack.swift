@@ -1,10 +1,10 @@
 //
 //  CoreDataStack.swift
-//  Skinfeel
+//  Skincare
 //
-//  Created by Gabriele Namie on 10/01/22.
+//  Created by Carolina Ortega on 14/12/21.
 //
-
+//
 import Foundation
 import CoreData
 
@@ -22,7 +22,7 @@ class CoreDataStack {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "Model")
+        let container = NSPersistentContainer(name: "CoreDataModel")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

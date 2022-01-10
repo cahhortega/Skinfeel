@@ -1,8 +1,8 @@
 //
 //  NewRoutineViewController.swift
-//  Skinfeel
+//  Skincare
 //
-//  Created by Gabriele Namie on 10/01/22.
+//  Created by Carolina Ortega on 02/12/21.
 //
 
 import UIKit
@@ -14,8 +14,7 @@ class NewRoutineViewController: UIViewController {
     @IBOutlet weak var dataEnd: UIDatePicker!
     @IBOutlet var segmentedControl: UISegmentedControl!
     
-    var arrayView = NewProductRoutineViewController()
-    
+    var today = TodayViewController()
     weak var TodayViewControllerDelegate: TodayViewControllerDelegate?
     var dataFilter = 0
     var defaults = UserDefaults.standard
@@ -31,6 +30,8 @@ class NewRoutineViewController: UIViewController {
     @IBOutlet var qui: UIButton!
     @IBOutlet var sex: UIButton!
     @IBOutlet var sab: UIButton!
+    
+    var selectedSection: Int?
     
     var limpezaManha: [String] = []
     var hidratacaoManha: [String] = []
@@ -81,12 +82,17 @@ class NewRoutineViewController: UIViewController {
         sex.addTarget(self, action: #selector(click(button:)), for: .touchUpInside)
         sab.translatesAutoresizingMaskIntoConstraints = false
         sab.addTarget(self, action: #selector(click(button:)), for: .touchUpInside)
-        
     }
     override func viewWillAppear(_ animated: Bool) {
+        limpezaManha = defaults.stringArray(forKey: "limpezaManha") ?? []
+        hidratacaoManha = defaults.stringArray(forKey: "hidratacaoManha") ?? []
+        protecaoManha = defaults.stringArray(forKey: "protecaoManha") ?? []
+        protecaoTarde = defaults.stringArray(forKey: "protecaoTarde") ?? []
+        limpezaNoite = defaults.stringArray(forKey: "limpezaNoite") ?? []
+        esfoliacaoNoite = defaults.stringArray(forKey: "esfoliacaoNoite") ?? []
+        protecaoNoite = defaults.stringArray(forKey: "protecaoNoite") ?? []
         reload()
-        limpezaManha = defaults.stringArray(forKey: "newArray") ?? []
-        print(limpezaManha)
+        
     }
     //ação do botão de repetição
     @objc func click(button: UIButton){
@@ -126,6 +132,7 @@ class NewRoutineViewController: UIViewController {
     }
     
     @IBAction func saveFunc(_ sender: Any) {
+        
         guard let routineName = self.routineName.text else {
             return
         }
@@ -138,7 +145,7 @@ class NewRoutineViewController: UIViewController {
         let sex: Bool = (self.sex != nil)
         let sab: Bool = (self.sab != nil)
         let dom: Bool = (self.dom != nil)
-        if dataStart <= Date(){
+        if dataStart < Date(){
             print("data invalida")
         }
         if dataEnd <= dataStart{
@@ -149,9 +156,7 @@ class NewRoutineViewController: UIViewController {
         }
         var _ = CoreDataStack.shared.createRoutine(routineName: routineName, dateEnd: Date(), dateStart: Date(), seg: Bool(), ter: Bool(), qua: Bool(), qui: Bool(), sex: Bool(), sab: Bool(), dom: Bool())
         //falta algo
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyBoard.instantiateViewController(identifier: "TodayView") as! TodayViewController
-        self.navigationController?.pushViewController(vc, animated: false)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -162,8 +167,29 @@ extension NewRoutineViewController: UITableViewDelegate{
 
 extension NewRoutineViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return limpezaManha.count + 1
+        if dataFilter == 0 {
+            if section == 0 {
+                return limpezaManha.count + 1
+            } else if section == 1 {
+                return hidratacaoManha.count + 1
+            } else {
+                return protecaoManha.count + 1
+            }
+            
+        } else if dataFilter == 1 {
+            return protecaoTarde.count + 1
+        } else {
+            if section == 0 {
+                return limpezaNoite.count + 1
+            } else if section == 1 {
+                return esfoliacaoNoite.count + 1
+            } else {
+                return protecaoNoite.count + 1
+            }
+        }
+        return 1
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         switch dataFilter {
         case 0:
@@ -228,34 +254,155 @@ extension NewRoutineViewController: UITableViewDataSource{
         }
         
     }
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    //
-    //        if editingStyle == .insert {
-    //            tasksTableView.beginUpdates()
-    //            tasksTableView.endUpdates()
-    //        }
-    //    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let totalOfRows = tasksTableView.numberOfRows(inSection: indexPath.section)
-        if limpezaManha.count == 0 {
-            let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
-            return cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(identifier: "newproductroutine") as! NewProductRoutineViewController
+        self.navigationController?.pushViewController(vc, animated: false)
+        if dataFilter == 0 {
+            defaults.set(dataFilter, forKey: "filtro")
+        } else if dataFilter == 1 {
+            defaults.set(dataFilter, forKey: "filtro")
+        } else {
+            defaults.set(dataFilter, forKey: "filtro")
         }
-        
-        else {
-            if indexPath.row == totalOfRows - 1 { //ultima celula
-                let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
-                return cell
-            } else {
-                let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
-                return cell
+        selectedSection = indexPath.section
+        defaults.set(selectedSection, forKey: "section")
+        print(defaults.integer(forKey: "section"))
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let totalOfRows = tasksTableView.numberOfRows(inSection: indexPath.section)
+        if dataFilter == 0 {
+            if indexPath.section == 0 {
+                if limpezaManha.count == 0 {
+                    let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                    return cell
+                }
+                else {
+                    if indexPath.row == totalOfRows - 1 { //ultima celula
+                        let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                        return cell
+                    } else {
+                        let cell = tasksTableView.dequeueReusableCell(withIdentifier: "task", for: indexPath) as! TaskTableViewCell
+                        cell.titleTask.text = limpezaManha[indexPath.row]
+                        return cell
+                        
+                    }
+                }
+            } else if indexPath.section == 1 {
+                if hidratacaoManha.count == 0 {
+                    let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                    return cell
+                }
+                else {
+                    if indexPath.row == totalOfRows - 1 { //ultima celula
+                        let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                        return cell
+                    } else {
+                        let cell = tasksTableView.dequeueReusableCell(withIdentifier: "task", for: indexPath) as! TaskTableViewCell
+                        cell.titleTask.text = hidratacaoManha[indexPath.row]
+                        return cell
+                        
+                    }
+                }
+                
+            } else if indexPath.section == 2{
+                if protecaoManha.count == 0 {
+                    let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                    return cell
+                }
+                else {
+                    if indexPath.row == totalOfRows - 1 { //ultima celula
+                        let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                        return cell
+                    } else {
+                        let cell = tasksTableView.dequeueReusableCell(withIdentifier: "task", for: indexPath) as! TaskTableViewCell
+                        cell.titleTask.text = protecaoManha[indexPath.row]
+                        return cell
+                        
+                    }
+                }
                 
             }
+        } else if dataFilter == 1 {
+            if protecaoTarde.count == 0 {
+                let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                return cell
+            }
+            else {
+                if indexPath.row == totalOfRows - 1 { //ultima celula
+                    let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                    return cell
+                } else {
+                    let cell = tasksTableView.dequeueReusableCell(withIdentifier: "task", for: indexPath) as! TaskTableViewCell
+                    cell.titleTask.text = protecaoTarde[indexPath.row]
+                    return cell
+                    
+                }
+            }
+        } else {
+            if indexPath.section == 0 {
+                if limpezaNoite.count == 0 {
+                    let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                    return cell
+                }
+                else {
+                    if indexPath.row == totalOfRows - 1 { //ultima celula
+                        let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                        return cell
+                    } else {
+                        let cell = tasksTableView.dequeueReusableCell(withIdentifier: "task", for: indexPath) as! TaskTableViewCell
+                        cell.titleTask.text = limpezaNoite[indexPath.row]
+                        return cell
+                        
+                    }
+                }
+            } else if indexPath.section == 1 {
+                if esfoliacaoNoite.count == 0 {
+                    let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                    return cell
+                }
+                else {
+                    if indexPath.row == totalOfRows - 1 { //ultima celula
+                        let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                        return cell
+                    } else {
+                        let cell = tasksTableView.dequeueReusableCell(withIdentifier: "task", for: indexPath) as! TaskTableViewCell
+                        cell.titleTask.text = esfoliacaoNoite[indexPath.row]
+                        return cell
+                        
+                    }
+                }
+                
+            } else if indexPath.section == 2{
+                if protecaoNoite.count == 0 {
+                    let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                    return cell
+                }
+                else {
+                    if indexPath.row == totalOfRows - 1 { //ultima celula
+                        let cell = tasksTableView.dequeueReusableCell(withIdentifier: "add", for: indexPath) as! AddProductTableViewCell
+                        return cell
+                    } else {
+                        let cell = tasksTableView.dequeueReusableCell(withIdentifier: "task", for: indexPath) as! TaskTableViewCell
+                        cell.titleTask.text = protecaoNoite[indexPath.row]
+                        return cell
+                        
+                    }
+                }
+                
+            }
+            
         }
+        
+        return UITableViewCell()
     }
 }
 
+
+
+extension NewRoutineViewController: NewRoutineViewControllerDelegate{
+    func didRegister() {
+        
+    }
+}
