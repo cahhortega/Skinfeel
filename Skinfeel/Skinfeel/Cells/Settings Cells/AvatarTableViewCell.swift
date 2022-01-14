@@ -25,28 +25,6 @@ class AvatarTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        switch defaults.string(forKey: "profileImage") {
-        case "girl1-profile":
-            clickAvatar(iconSelected: girl1, icon2: girl2, icon3: girl3, icon4: girl4, icon5: boy1, icon6: boy2, icon7: boy3, icon8: boy4)
-        case "girl2-profile":
-            clickAvatar(iconSelected: girl2, icon2: girl1, icon3: girl3, icon4: girl4, icon5: boy1, icon6: boy2, icon7: boy3, icon8: boy4)
-        case "girl3-profile":
-            clickAvatar(iconSelected: girl3, icon2: girl2, icon3: girl1, icon4: girl4, icon5: boy1, icon6: boy2, icon7: boy3, icon8: boy4)
-        case "girl4-profile":
-            clickAvatar(iconSelected: girl4, icon2: girl2, icon3: girl3, icon4: girl1, icon5: boy1, icon6: boy2, icon7: boy3, icon8: boy4)
-        case "boy1-profile":
-            clickAvatar(iconSelected: boy1, icon2: girl2, icon3: girl3, icon4: girl4, icon5: girl1, icon6: boy2, icon7: boy3, icon8: boy4)
-        case "boy2-profile":
-            clickAvatar(iconSelected: boy2, icon2: girl2, icon3: girl3, icon4: girl4, icon5: boy1, icon6: girl1, icon7: boy3, icon8: boy4)
-        case "boy3-profile":
-            clickAvatar(iconSelected: boy3, icon2: girl2, icon3: girl3, icon4: girl4, icon5: boy1, icon6: boy2, icon7: boy4, icon8: girl1)
-        case "boy4-profile":
-            clickAvatar(iconSelected: boy4, icon2: girl2, icon3: girl3, icon4: girl4, icon5: boy1, icon6: boy2, icon7: boy3, icon8: girl1)
-        
-        default:
-            print("oi")
-        }
-        
         girl1.translatesAutoresizingMaskIntoConstraints = false
         girl1.addTarget(self, action: #selector(clickGirl1), for: .touchUpInside)
         
@@ -71,6 +49,27 @@ class AvatarTableViewCell: UITableViewCell {
         boy4.translatesAutoresizingMaskIntoConstraints = false
         boy4.addTarget(self, action: #selector(clickBoy4), for: .touchUpInside)
         
+        switch defaults.string(forKey: "profileImage") {
+        case "girl1-profile":
+            clickAvatar(iconSelected: girl1, icon2: girl2, icon3: girl3, icon4: girl4, icon5: boy1, icon6: boy2, icon7: boy3, icon8: boy4)
+        case "girl2-profile":
+            clickAvatar(iconSelected: girl2, icon2: girl1, icon3: girl3, icon4: girl4, icon5: boy1, icon6: boy2, icon7: boy3, icon8: boy4)
+        case "girl3-profile":
+            clickAvatar(iconSelected: girl3, icon2: girl2, icon3: girl1, icon4: girl4, icon5: boy1, icon6: boy2, icon7: boy3, icon8: boy4)
+        case "girl4-profile":
+            clickAvatar(iconSelected: girl4, icon2: girl2, icon3: girl3, icon4: girl1, icon5: boy1, icon6: boy2, icon7: boy3, icon8: boy4)
+        case "boy1-profile":
+            clickAvatar(iconSelected: boy1, icon2: girl2, icon3: girl3, icon4: girl4, icon5: girl1, icon6: boy2, icon7: boy3, icon8: boy4)
+        case "boy2-profile":
+            clickAvatar(iconSelected: boy2, icon2: girl2, icon3: girl3, icon4: girl4, icon5: boy1, icon6: girl1, icon7: boy3, icon8: boy4)
+        case "boy3-profile":
+            clickAvatar(iconSelected: boy3, icon2: girl2, icon3: girl3, icon4: girl4, icon5: boy1, icon6: boy2, icon7: boy4, icon8: girl1)
+        case "boy4-profile":
+            clickAvatar(iconSelected: boy4, icon2: girl2, icon3: girl3, icon4: girl4, icon5: boy1, icon6: boy2, icon7: boy3, icon8: girl1)
+        default:
+            print("oi")
+        }
+        
     }
     
     @objc func clickAvatar(iconSelected: UIButton, icon2: UIButton, icon3: UIButton, icon4: UIButton, icon5: UIButton, icon6: UIButton, icon7: UIButton, icon8: UIButton) {
@@ -87,13 +86,11 @@ class AvatarTableViewCell: UITableViewCell {
             icon7.alpha = 0.5
             icon8.alpha = 0.5
             selectedAvatar = true
-            
         } else {
             iconSelected.alpha = 1
             iconSelected.layer.borderWidth = 3
             iconSelected.layer.borderColor = UIColor(named: "Rosa")?.cgColor
             iconSelected.layer.cornerRadius = 35
-            
             resetDesign(icon: icon2)
             resetDesign(icon: icon3)
             resetDesign(icon: icon4)
@@ -101,7 +98,6 @@ class AvatarTableViewCell: UITableViewCell {
             resetDesign(icon: icon6)
             resetDesign(icon: icon7)
             resetDesign(icon: icon8)
-            
         }
 
     }

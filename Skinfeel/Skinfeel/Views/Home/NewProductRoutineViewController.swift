@@ -81,13 +81,8 @@ class NewProductRoutineViewController: UIViewController{
         list = chosenProducts
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-    
-
-
-    }
-    
-
-    
+}
+        
 extension NewProductRoutineViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
@@ -133,8 +128,6 @@ extension NewProductRoutineViewController: UITableViewDataSource, UITableViewDel
     }
     
 }
-    
-
 extension Array where Element: Hashable {
     func difference(from other: [Element]) -> [Element] {
         let thisSet = Set(self)
