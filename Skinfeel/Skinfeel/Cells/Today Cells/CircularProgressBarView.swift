@@ -16,12 +16,12 @@ class CircularProgressBarView: UIView {
         super.init(coder: aDecoder)
         makeCircularPath()
     }
-    var progressColor = UIColor.white {
+    var progressColor = UIColor(named: "Rosa")! {
         didSet {
             progressLayer.strokeColor = progressColor.cgColor
         }
     }
-    var circleColor = UIColor.white {
+    var circleColor = UIColor(named: "Bg")! {
         didSet {
             circleLayer.strokeColor = circleColor.cgColor
         }

@@ -9,7 +9,8 @@ import UIKit
 
 
 
-class NameViewController: UIViewController {
+class NameViewController: UIViewController, UITextFieldDelegate {
+    
     var defaults = UserDefaults.standard
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet var name: UITextField!
@@ -32,6 +33,12 @@ class NameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        name.delegate = self
+        
+        //Fazer o teclado sumir quando tocar fora dele
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         print("Contador inicial:", formCounter)
         print("Contador cor inicial:", colorCounter)
         progressView.progress = 0.1
@@ -48,17 +55,21 @@ class NameViewController: UIViewController {
             style: .plain,
             target: self,
             action: #selector(onboardingBack))
-            navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "Rosa")
-
+        navigationItem.leftBarButtonItem?.tintColor = UIColor(named: "Rosa")
         
         
     }
-
-       @objc func onboardingBack(){
-               let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-               let vc = storyBoard.instantiateViewController(identifier: "firstView") as! OnboardingViewController
-               self.navigationController?.pushViewController(vc, animated: false)
-           }
+    
+    @objc func dismissKeyboard(){
+        name.resignFirstResponder()
+        view.endEditing(true)
+    }
+    
+    @objc func onboardingBack(){
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(identifier: "firstView") as! OnboardingViewController
+        self.navigationController?.pushViewController(vc, animated: false)
+    }
 }
 
 

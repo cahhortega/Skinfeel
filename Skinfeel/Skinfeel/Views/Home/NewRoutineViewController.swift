@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewRoutineViewController: UIViewController {
+class NewRoutineViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var tasksTableView: UITableView!
     @IBOutlet var routineName: UITextField!
     @IBOutlet weak var dataStart: UIDatePicker!
@@ -46,7 +46,11 @@ class NewRoutineViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: false)
         
-        defaults.set(limpezaManha, forKey: "hidratacaoManha")
+        routineName.delegate = self
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        defaults.set(limpezaManha, forKey: "limpezaManha")
         defaults.set(hidratacaoManha, forKey: "hidratacaoManha")
         defaults.set(protecaoManha, forKey: "protecaoManha")
         defaults.set(protecaoTarde, forKey: "protecaoTarde")
@@ -131,6 +135,11 @@ class NewRoutineViewController: UIViewController {
         self.tasksTableView.reloadData()
     }
     
+    @objc func dismissKeyboard(){
+        routineName.resignFirstResponder()
+        view.endEditing(true)
+    }
+    
     @IBAction func saveFunc(_ sender: Any) {
         
         guard let routineName = self.routineName.text else {
@@ -145,12 +154,34 @@ class NewRoutineViewController: UIViewController {
         let sex: Bool = (self.sex != nil)
         let sab: Bool = (self.sab != nil)
         let dom: Bool = (self.dom != nil)
-        if dataStart < Date(){
+        if limpezaManha == [] || hidratacaoManha == [] || protecaoManha == [] || protecaoTarde == [] || limpezaNoite == [] || esfoliacaoNoite == [] || protecaoNoite == [] {
+            let ac = UIAlertController(title: "Dados incompletos", message: "Uma das tarefas não está preenchida", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            ac.view.tintColor = UIColor(named: "Rosa")
+            present(ac, animated: true)
+        }
+        
+        if dataStart < Date() && dataEnd <= dataStart {
+            let ac = UIAlertController(title: "Dados inválidos", message: "A data de início e fim da sua rotina estão inválidas", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            ac.view.tintColor = UIColor(named: "Rosa")
+            present(ac, animated: true)
+        }
+        if dataStart < Date(){ //nao ta funcionando certo
             print("data invalida")
+            let ac = UIAlertController(title: "Dados inválidos", message: "A data de início da sua rotina está inválida", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            ac.view.tintColor = UIColor(named: "Rosa")
+            present(ac, animated: true)
         }
         if dataEnd <= dataStart{
             print("data fim invalida")
+            let ac = UIAlertController(title: "Dados inválidos", message: "A data do fim da sua rotina está inválida", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            ac.view.tintColor = UIColor(named: "Rosa")
+            present(ac, animated: true)
         }
+        
         if seg == false && ter == false && qua == false && qui == false && sex == false && sab == false && dom == false{
             print("ta faltando coisa ai")
         }

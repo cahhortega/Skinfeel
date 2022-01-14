@@ -52,17 +52,16 @@ class TodayViewController: UIViewController {
         imagemBoasVindas.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         fraseSemRotina.text = "Clique em ”+” para criar sua primeira rotina"
-
+        
         fraseSemRotina.numberOfLines = 0
         fraseSemRotina.textAlignment = .center
         fraseSemRotina.textColor = .label
-
+        
         fraseSemRotina.translatesAutoresizingMaskIntoConstraints = false
         fraseSemRotina.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35).isActive = true
         fraseSemRotina.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35).isActive = true
         fraseSemRotina.topAnchor.constraint(equalTo: imagemBoasVindas.bottomAnchor, constant: 35).isActive = true
         
-
         //Botões dos dias da semana
         day1.translatesAutoresizingMaskIntoConstraints = false
         day1.addTarget(self, action: #selector(clicarDia1), for: .touchUpInside)
@@ -95,7 +94,6 @@ class TodayViewController: UIViewController {
         calendario()
         
     }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -252,30 +250,22 @@ extension TodayViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell  = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as! RoutineCollectionViewCell
+        let cell = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as! RoutineCollectionViewCell
         cell.nameRoutine.text = oi[indexPath.row].routineName
-        if defaults.bool(forKey: "feito") == false {
-            cell.morningCircularProgress.setProgress(duration: 1.0, value: 0)
-            cell.afternoonCircularProgress.setProgress(duration: 1.0, value: 0)
-            cell.nightCircularProgress.setProgress(duration: 1.0, value: 0)
-            cell.morningCircularProgress.progressColor = UIColor(named: "Rosa")!
-            cell.afternoonCircularProgress.progressColor = UIColor(named: "Rosa")!
-            cell.nightCircularProgress.progressColor = UIColor(named: "Rosa")!
-            cell.morningCircularProgress.circleColor = UIColor(named: "circular")!
-            cell.afternoonCircularProgress.circleColor = UIColor(named: "circular")!
-            cell.nightCircularProgress.circleColor = UIColor(named: "circular")!
-        } else {
-            cell.morningCircularProgress.setProgress(duration: 1.0, value: defaults.float(forKey: "somaManha")/10)
-            cell.morningCircularProgress.progressColor = UIColor(named: "Rosa")!
-            cell.afternoonCircularProgress.progressColor = UIColor(named: "Rosa")!
-            cell.nightCircularProgress.progressColor = UIColor(named: "Rosa")!
-            cell.morningCircularProgress.circleColor = UIColor(named: "circular")!
-            cell.afternoonCircularProgress.circleColor = UIColor(named: "circular")!
-            cell.nightCircularProgress.circleColor = UIColor(named: "circular")!
-            cell.afternoonCircularProgress.setProgress(duration: 1.0, value: defaults.float(forKey: "somaTarde")/10)
-            cell.nightCircularProgress.setProgress(duration: 1.0, value: defaults.float(forKey: "somaNoite")/10)
-
-        }
+        cell.morningCircularProgress.setProgress(duration: 1.0, value: 0.0)
+        cell.afternoonCircularProgress.setProgress(duration: 1.0, value: 0.0)
+        cell.nightCircularProgress.setProgress(duration: 1.0, value: 0.0)
+        
+        //        if defaults.bool(forKey: "feito") == false {
+        //            cell.morningCircularProgress.setProgress(duration: 0, value: 0)
+        //            cell.afternoonCircularProgress.setProgress(duration: 0, value: 0)
+        //            cell.nightCircularProgress.setProgress(duration: 0, value: 0)
+        //        } else {
+        //            cell.morningCircularProgress.setProgress(duration: 1.0, value: defaults.float(forKey: "somaManha")/10)
+        //            cell.afternoonCircularProgress.setProgress(duration: 1.0, value: defaults.float(forKey: "somaTarde")/10)
+        //            cell.nightCircularProgress.setProgress(duration: 1.0, value: defaults.float(forKey: "somaNoite")/10)
+        //
+        //        }
         return cell
     }
     

@@ -56,10 +56,6 @@ class SkinTypeViewController: UIViewController {
         
         //Caso existem chaves que estão se repetindo, ele pega a maior
         setupColor()
-
-        // if desempate.count > repetidos.count {
-        //        UM UNICO VALOR
-        //}
         
         let mainString = "Sua pele é \(skinType)"
         progressView.progress = 0.75
@@ -76,10 +72,10 @@ class SkinTypeViewController: UIViewController {
             setupPage(girl: "girl1", skin: "oleosa", name: "Maria")
             
         case "normal":
-            setupPage(girl: "girl2", skin: "normal", name: "Luiza")
+            setupPage(girl: "boy2", skin: "normal", name: "Luiz")
             
         case "seca":
-            setupPage(girl: "girl3", skin: "seca", name: "Carla")
+            setupPage(girl: "boy3", skin: "seca", name: "Carlos")
             
         case "mista":
             setupPage(girl: "girl4", skin: "mista", name: "Olivia")
@@ -226,7 +222,7 @@ class SkinTypeViewController: UIViewController {
     func setupPage(girl: String, skin: String, name: String){ //Configurando a página
         defaults.set("\(girl)-profile", forKey: "profileImage")
         skinType = skin
-        subtitle.text = "A rotina da \(name) vai te ajudar a começar"
+        subtitle.text = "A rotina de \(name) vai te ajudar a começar"
         meetLabel.text = "Conheça \(name)"
         skinImage.image = UIImage(named: girl)
     }
