@@ -38,6 +38,7 @@ class TodayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         defaults.set(isDone, forKey: "feito") //mudar
+        print(defaults.string(forKey: "profileImage")!)
         navigationController?.setNavigationBarHidden(true, animated: false)
         //collectionView
         self.routineCollectionView.delegate = self
