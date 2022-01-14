@@ -252,10 +252,10 @@ extension TodayViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as! RoutineCollectionViewCell
         cell.nameRoutine.text = oi[indexPath.row].routineName
-        cell.morningCircularProgress.setProgress(duration: 1.0, value: 0.0)
-        cell.afternoonCircularProgress.setProgress(duration: 1.0, value: 0.0)
-        cell.nightCircularProgress.setProgress(duration: 1.0, value: 0.0)
-        
+//        cell.morningCircularProgress.setProgress(duration: 1.0, value: 0.0)
+//        cell.afternoonCircularProgress.setProgress(duration: 1.0, value: 0.0)
+//        cell.nightCircularProgress.setProgress(duration: 1.0, value: 0.0)
+//
         //        if defaults.bool(forKey: "feito") == false {
         //            cell.morningCircularProgress.setProgress(duration: 0, value: 0)
         //            cell.afternoonCircularProgress.setProgress(duration: 0, value: 0)

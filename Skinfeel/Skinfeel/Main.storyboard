@@ -14,7 +14,7 @@
         <!--Name View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="name" id="BYZ-38-t0r" customClass="NameViewController" customModule="Skincare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="name" id="BYZ-38-t0r" customClass="NameViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,7 @@
         <!--Form View Controller-->
         <scene sceneID="jaM-a5-4pO">
             <objects>
-                <viewController storyboardIdentifier="forms" id="wJv-RP-ls9" customClass="FormViewController" customModule="Skincare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="forms" id="wJv-RP-ls9" customClass="FormViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zFS-nV-ysT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,7 +217,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="C1L-f9-PYX">
             <objects>
-                <viewController storyboardIdentifier="firstView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GoL-BW-RwK" customClass="OnboardingViewController" customModule="Skincare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GoL-BW-RwK" customClass="OnboardingViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DcM-D3-e67">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -290,7 +290,7 @@
         <!--Skin Type View Controller-->
         <scene sceneID="MKF-f1-Ycs">
             <objects>
-                <viewController storyboardIdentifier="type" id="49a-Dp-n1M" customClass="SkinTypeViewController" customModule="Skincare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="type" id="49a-Dp-n1M" customClass="SkinTypeViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fpr-gb-Tt1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -342,7 +342,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Bg"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rotina" textLabel="PwW-GR-tNU" style="IBUITableViewCellStyleDefault" id="Ead-cX-BOD" customClass="SkinRoutineTableViewCell" customModule="Skincare" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rotina" textLabel="PwW-GR-tNU" style="IBUITableViewCellStyleDefault" id="Ead-cX-BOD" customClass="SkinRoutineTableViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ead-cX-BOD" id="bDc-M9-EcL">
@@ -407,7 +407,7 @@
         <!--Your Day View Controller-->
         <scene sceneID="bFU-lg-0KR">
             <objects>
-                <viewController storyboardIdentifier="day" id="luA-1x-Qjd" customClass="YourDayViewController" customModule="Skincare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="day" id="luA-1x-Qjd" customClass="YourDayViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7og-F3-I81">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -470,17 +470,17 @@
                                 <rect key="frame" x="40" y="456.5" width="334.5" height="50"/>
                                 <subviews>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" placeholderIntrinsicWidth="69" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" id="0jt-Mg-TP7">
-                                        <rect key="frame" x="0.0" y="0.0" width="79" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="center" placeholderIntrinsicWidth="69" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" id="kes-Nk-86j">
-                                        <rect key="frame" x="127" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="128" y="0.0" width="79" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" id="G3Y-Y3-PHH">
-                                        <rect key="frame" x="255" y="0.0" width="79" height="50"/>
+                                        <rect key="frame" x="255" y="0.0" width="80" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
@@ -538,7 +538,7 @@
         <!--Hoje-->
         <scene sceneID="cBu-kA-nzS">
             <objects>
-                <viewController storyboardIdentifier="TodayView" id="eEQ-bH-nev" customClass="TodayViewController" customModule="Skincare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TodayView" id="eEQ-bH-nev" customClass="TodayViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="YgQ-t1-inJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -590,7 +590,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="rotine" translatesAutoresizingMaskIntoConstraints="NO" id="0Kr-Hd-NGa" customClass="RoutineCollectionViewCell" customModule="Skincare" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="rotine" translatesAutoresizingMaskIntoConstraints="NO" id="0Kr-Hd-NGa" customClass="RoutineCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="23" y="8" width="370" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLr-Vj-LoN">
@@ -625,15 +625,15 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8M-PT-nax" customClass="CircularProgressView" customModule="Skincare" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8M-PT-nax" customClass="CircularProgressView" customModule="Skinfeel" customModuleProvider="target">
                                                     <rect key="frame" x="45" y="60" width="50" height="50"/>
                                                     <color key="backgroundColor" name="gelo botao"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvL-JA-s5S" customClass="CircularProgressView" customModule="Skincare" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvL-JA-s5S" customClass="CircularProgressView" customModule="Skinfeel" customModuleProvider="target">
                                                     <rect key="frame" x="160" y="60" width="50" height="50"/>
                                                     <color key="backgroundColor" name="gelo botao"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkB-xg-dBs" customClass="CircularProgressView" customModule="Skincare" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkB-xg-dBs" customClass="CircularProgressView" customModule="Skinfeel" customModuleProvider="target">
                                                     <rect key="frame" x="275" y="60" width="50" height="50"/>
                                                     <color key="backgroundColor" name="gelo botao"/>
                                                 </view>
@@ -918,7 +918,7 @@
         <!--New Routine View Controller-->
         <scene sceneID="as3-fL-cWi">
             <objects>
-                <viewController storyboardIdentifier="NewRoutineView" id="5Kg-KO-euP" customClass="NewRoutineViewController" customModule="Skincare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewRoutineView" id="5Kg-KO-euP" customClass="NewRoutineViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ng-nu-s5V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -979,7 +979,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xgH-LR-Xqs">
-                                <rect key="frame" x="20" y="505" width="396" height="32"/>
+                                <rect key="frame" x="20" y="505" width="396" height="24"/>
                                 <segments>
                                     <segment title="Manhã"/>
                                     <segment title="Tarde"/>
@@ -994,7 +994,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Bg"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="task" style="IBUITableViewCellStyleDefault" translatesAutoresizingMaskIntoConstraints="NO" id="gCZ-5h-rM6" customClass="TaskTableViewCell" customModule="Skincare" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="task" style="IBUITableViewCellStyleDefault" translatesAutoresizingMaskIntoConstraints="NO" id="gCZ-5h-rM6" customClass="TaskTableViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="45" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gCZ-5h-rM6" id="5zG-Xy-X1H">
@@ -1018,15 +1018,16 @@
                                             <outlet property="titleTask" destination="bb1-Tn-POX" id="C2O-gc-9iW"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="add" id="ozA-pa-dO1" customClass="AddProductTableViewCell" customModule="Skincare" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="add" id="ozA-pa-dO1" customClass="AddProductTableViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="89" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ozA-pa-dO1" id="JOD-yJ-w2D">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-WI-uza">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A1O-WI-uza">
                                                     <rect key="frame" x="20" y="6" width="189" height="33.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="  adicionar produto">
@@ -1215,7 +1216,7 @@
                             <constraint firstItem="IV0-1x-1EG" firstAttribute="top" secondItem="qoc-KW-sLi" secondAttribute="bottom" constant="10" id="TQV-vy-UrW"/>
                             <constraint firstItem="bhA-Wa-leI" firstAttribute="trailing" secondItem="qoc-KW-sLi" secondAttribute="trailing" constant="20" id="U0k-hQ-6x6"/>
                             <constraint firstItem="IV0-1x-1EG" firstAttribute="leading" secondItem="7Ng-nu-s5V" secondAttribute="leading" constant="24" id="eYx-YE-oaN"/>
-                            <constraint firstItem="9gl-Dp-rAA" firstAttribute="top" secondItem="xgH-LR-Xqs" secondAttribute="bottom" constant="12" id="iGk-tc-TOk"/>
+                            <constraint firstItem="9gl-Dp-rAA" firstAttribute="top" secondItem="xgH-LR-Xqs" secondAttribute="bottom" constant="20" id="iGk-tc-TOk"/>
                             <constraint firstItem="xgH-LR-Xqs" firstAttribute="top" secondItem="V0X-eu-wk2" secondAttribute="bottom" constant="16" id="jSk-xB-LE4"/>
                             <constraint firstItem="sWP-O7-B7N" firstAttribute="leading" secondItem="bhA-Wa-leI" secondAttribute="leading" constant="20" id="ju4-dW-YMu"/>
                             <constraint firstItem="j9v-jI-KYW" firstAttribute="top" secondItem="sWP-O7-B7N" secondAttribute="bottom" constant="20" id="k2s-Ne-hun"/>
@@ -1259,7 +1260,7 @@
         <!--Your Routine View Controller-->
         <scene sceneID="2LX-Li-gg1">
             <objects>
-                <viewController id="5FF-tN-0kE" customClass="YourRoutineViewController" customModule="Skincare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5FF-tN-0kE" customClass="YourRoutineViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ahx-o0-2bI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1286,7 +1287,7 @@
                                 <rect key="frame" x="20" y="228" width="374" height="628"/>
                                 <color key="backgroundColor" name="Bg"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="yourRoutine" textLabel="b2T-sL-oEY" style="IBUITableViewCellStyleDefault" id="Rpb-EC-cse" customClass="YourRoutineTableViewCell" customModule="Skincare" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="yourRoutine" textLabel="b2T-sL-oEY" style="IBUITableViewCellStyleDefault" id="Rpb-EC-cse" customClass="YourRoutineTableViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rpb-EC-cse" id="FAZ-sx-djh">
@@ -1346,7 +1347,7 @@
         <!--Settings View Controller-->
         <scene sceneID="sCW-A3-1eT">
             <objects>
-                <viewController id="cQp-u9-hye" customClass="SettingsViewController" customModule="Skincare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cQp-u9-hye" customClass="SettingsViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rp9-If-Ji9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1367,7 +1368,7 @@
                                 <rect key="frame" x="20" y="290" width="374" height="473"/>
                                 <color key="backgroundColor" name="Bg"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="name" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="name" textLabel="F6G-P8-SJx" detailTextLabel="iaC-JB-gjL" style="IBUITableViewCellStyleValue1" id="PWY-Sk-b1f" customClass="NameTableViewCell" customModule="Skincare" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="name" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="name" textLabel="F6G-P8-SJx" detailTextLabel="iaC-JB-gjL" style="IBUITableViewCellStyleValue1" id="PWY-Sk-b1f" customClass="NameTableViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PWY-Sk-b1f" id="dRp-kR-797">
@@ -1396,7 +1397,7 @@
                                             <outlet property="name" destination="iaC-JB-gjL" id="kWW-hl-uAa"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="avatar" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="avatar" rowHeight="140" id="ZsA-Wk-pSe" customClass="AvatarTableViewCell" customModule="Skincare" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="avatar" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="avatar" rowHeight="140" id="ZsA-Wk-pSe" customClass="AvatarTableViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="374" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZsA-Wk-pSe" id="2Eu-MX-BVa">
@@ -1477,7 +1478,7 @@
                                             <outlet property="girls" destination="64s-il-8b2" id="KJg-Jc-Teu"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="dia" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="day" rowHeight="25" id="CJp-8V-9Wb" customClass="DayTableViewCell" customModule="Skincare" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="dia" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="day" rowHeight="25" id="CJp-8V-9Wb" customClass="DayTableViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="228" width="374" height="25"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CJp-8V-9Wb" id="Gf6-pE-mZb">
@@ -1503,7 +1504,7 @@
                                             <outlet property="labelDay" destination="RKY-uZ-95R" id="fqv-ab-5Cr"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="switch" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="switch" id="lPC-Bi-MHN" customClass="SwitchDayTableViewCell" customModule="Skincare" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="switch" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="switch" id="lPC-Bi-MHN" customClass="SwitchDayTableViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="253" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lPC-Bi-MHN" id="Cka-OD-gM8">
@@ -1571,7 +1572,7 @@
         <!--Shelf Form View Controller-->
         <scene sceneID="s33-FL-6Rt">
             <objects>
-                <viewController storyboardIdentifier="shelf" id="AUe-1s-Auk" customClass="ShelfFormViewController" customModule="Skincare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="shelf" id="AUe-1s-Auk" customClass="ShelfFormViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uUp-f0-6HP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1600,7 +1601,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Bg"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="produto" textLabel="9I1-uy-qum" style="IBUITableViewCellStyleDefault" id="EkL-zI-Kju" customClass="ShelfFormTableViewCell" customModule="Skincare" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="produto" textLabel="9I1-uy-qum" style="IBUITableViewCellStyleDefault" id="EkL-zI-Kju" customClass="ShelfFormTableViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="384" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EkL-zI-Kju" id="zkt-Lp-pVG">
@@ -1690,7 +1691,7 @@
         <!--Estante-->
         <scene sceneID="gw5-Xu-yFn">
             <objects>
-                <viewController storyboardIdentifier="shelfView" id="IFJ-xW-AiF" customClass="ShelfViewController" customModule="Skincare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="shelfView" id="IFJ-xW-AiF" customClass="ShelfViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cGk-mD-9mX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1711,7 +1712,7 @@
                                 <rect key="frame" x="10" y="206" width="384" height="418"/>
                                 <color key="backgroundColor" name="Bg"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="estante" textLabel="LNX-hL-afn" style="IBUITableViewCellStyleDefault" id="Gmw-I1-3ME" customClass="ShelfTableViewCell" customModule="Skincare" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="estante" textLabel="LNX-hL-afn" style="IBUITableViewCellStyleDefault" id="Gmw-I1-3ME" customClass="ShelfTableViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="384" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gmw-I1-3ME" id="pS4-tF-djj">
@@ -1787,7 +1788,7 @@
         <!--New Product Shelf View Controller-->
         <scene sceneID="wQJ-s1-h2G">
             <objects>
-                <viewController id="ZGo-eP-RB5" customClass="NewProductShelfViewController" customModule="Skincare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZGo-eP-RB5" customClass="NewProductShelfViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kVc-oC-Akj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1802,7 +1803,7 @@
                                 <rect key="frame" x="10" y="189" width="384" height="575"/>
                                 <color key="backgroundColor" name="Bg"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="produto" textLabel="0Oa-qs-Pio" style="IBUITableViewCellStyleDefault" id="Ri9-yS-wa1" customClass="ShelfFormTableViewCell" customModule="Skincare" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="produto" textLabel="0Oa-qs-Pio" style="IBUITableViewCellStyleDefault" id="Ri9-yS-wa1" customClass="ShelfFormTableViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="384" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ri9-yS-wa1" id="hTX-IP-4d0">
@@ -1862,7 +1863,7 @@
         <!--New Product Routine View Controller-->
         <scene sceneID="L27-Q9-Wa3">
             <objects>
-                <viewController storyboardIdentifier="newproductroutine" id="5Hm-yi-gsZ" customClass="NewProductRoutineViewController" customModule="Skincare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newproductroutine" id="5Hm-yi-gsZ" customClass="NewProductRoutineViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VzX-vK-MWR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1877,7 +1878,7 @@
                                 <rect key="frame" x="10" y="145" width="384" height="668"/>
                                 <color key="backgroundColor" name="Bg"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="produto" textLabel="Teu-OI-pQX" style="IBUITableViewCellStyleDefault" id="hcs-8X-kZz" customClass="ShelfFormTableViewCell" customModule="Skincare" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="produto" textLabel="Teu-OI-pQX" style="IBUITableViewCellStyleDefault" id="hcs-8X-kZz" customClass="ShelfFormTableViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="384" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hcs-8X-kZz" id="LgW-Y4-tfG">
