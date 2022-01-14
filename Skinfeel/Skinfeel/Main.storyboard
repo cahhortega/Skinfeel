@@ -995,7 +995,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xgH-LR-Xqs">
-                                <rect key="frame" x="20" y="505" width="396" height="32"/>
+                                <rect key="frame" x="20" y="505" width="396" height="24"/>
                                 <segments>
                                     <segment title="Manhã"/>
                                     <segment title="Tarde"/>
@@ -1041,8 +1041,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-WI-uza">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A1O-WI-uza">
                                                     <rect key="frame" x="20" y="6" width="189" height="33.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="  adicionar produto">
@@ -1231,7 +1232,7 @@
                             <constraint firstItem="IV0-1x-1EG" firstAttribute="top" secondItem="qoc-KW-sLi" secondAttribute="bottom" constant="10" id="TQV-vy-UrW"/>
                             <constraint firstItem="bhA-Wa-leI" firstAttribute="trailing" secondItem="qoc-KW-sLi" secondAttribute="trailing" constant="20" id="U0k-hQ-6x6"/>
                             <constraint firstItem="IV0-1x-1EG" firstAttribute="leading" secondItem="7Ng-nu-s5V" secondAttribute="leading" constant="24" id="eYx-YE-oaN"/>
-                            <constraint firstItem="9gl-Dp-rAA" firstAttribute="top" secondItem="xgH-LR-Xqs" secondAttribute="bottom" constant="12" id="iGk-tc-TOk"/>
+                            <constraint firstItem="9gl-Dp-rAA" firstAttribute="top" secondItem="xgH-LR-Xqs" secondAttribute="bottom" constant="20" id="iGk-tc-TOk"/>
                             <constraint firstItem="xgH-LR-Xqs" firstAttribute="top" secondItem="V0X-eu-wk2" secondAttribute="bottom" constant="16" id="jSk-xB-LE4"/>
                             <constraint firstItem="sWP-O7-B7N" firstAttribute="leading" secondItem="bhA-Wa-leI" secondAttribute="leading" constant="20" id="ju4-dW-YMu"/>
                             <constraint firstItem="j9v-jI-KYW" firstAttribute="top" secondItem="sWP-O7-B7N" secondAttribute="bottom" constant="20" id="k2s-Ne-hun"/>
