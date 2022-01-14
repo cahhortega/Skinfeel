@@ -38,7 +38,6 @@ class TodayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         defaults.set(isDone, forKey: "feito") //mudar
-        print(isDone)
         navigationController?.setNavigationBarHidden(true, animated: false)
         //collectionView
         self.routineCollectionView.delegate = self
@@ -62,7 +61,6 @@ class TodayViewController: UIViewController {
         fraseSemRotina.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35).isActive = true
         fraseSemRotina.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35).isActive = true
         fraseSemRotina.topAnchor.constraint(equalTo: imagemBoasVindas.bottomAnchor, constant: 35).isActive = true
-        
         
         //Botões dos dias da semana
         day1.translatesAutoresizingMaskIntoConstraints = false
@@ -96,7 +94,6 @@ class TodayViewController: UIViewController {
         calendario()
         
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
