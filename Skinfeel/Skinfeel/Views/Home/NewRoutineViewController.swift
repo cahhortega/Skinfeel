@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewRoutineViewController: UIViewController, UITextFieldDelegate {
+class NewRoutineViewController: UIViewController {
     @IBOutlet var tasksTableView: UITableView!
     @IBOutlet var routineName: UITextField!
     @IBOutlet weak var dataStart: UIDatePicker!
@@ -46,9 +46,9 @@ class NewRoutineViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: false)
         
-        routineName.delegate = self
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
+//        routineName.delegate = self
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+//        view.addGestureRecognizer(tap)
         
         defaults.set(limpezaManha, forKey: "limpezaManha")
         defaults.set(hidratacaoManha, forKey: "hidratacaoManha")
