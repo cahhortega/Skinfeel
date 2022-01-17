@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewRoutineViewController: UIViewController, UITextFieldDelegate {
+class NewRoutineViewController: UIViewController {
     @IBOutlet var tasksTableView: UITableView!
     @IBOutlet var routineName: UITextField!
     @IBOutlet weak var dataStart: UIDatePicker!
@@ -46,9 +46,9 @@ class NewRoutineViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: false)
         
-        routineName.delegate = self
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
+//        routineName.delegate = self
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+//        view.addGestureRecognizer(tap)
         
         defaults.set(limpezaManha, forKey: "limpezaManha")
         defaults.set(hidratacaoManha, forKey: "hidratacaoManha")
@@ -154,37 +154,52 @@ class NewRoutineViewController: UIViewController, UITextFieldDelegate {
         let sex: Bool = (self.sex != nil)
         let sab: Bool = (self.sab != nil)
         let dom: Bool = (self.dom != nil)
+        
+        //Nome da rotina vazio
+        if routineName == "" {
+            let ac = UIAlertController(title: "Dados incompletos", message: "O campo 'Nome' não está preenchido", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            ac.view.tintColor = UIColor(named: "Rosa")
+            present(ac, animated: true)
+        }
+        //Tarefas vazias
         if limpezaManha == [] || hidratacaoManha == [] || protecaoManha == [] || protecaoTarde == [] || limpezaNoite == [] || esfoliacaoNoite == [] || protecaoNoite == [] {
             let ac = UIAlertController(title: "Dados incompletos", message: "Uma das tarefas não está preenchida", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             ac.view.tintColor = UIColor(named: "Rosa")
             present(ac, animated: true)
         }
-        
+        //Data de inicio e fim invalidas
         if dataStart < Date() && dataEnd <= dataStart {
             let ac = UIAlertController(title: "Dados inválidos", message: "A data de início e fim da sua rotina estão inválidas", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             ac.view.tintColor = UIColor(named: "Rosa")
             present(ac, animated: true)
         }
+        //Data de inicio invalida
         if dataStart < Date(){ //nao ta funcionando certo
-            print("data invalida")
             let ac = UIAlertController(title: "Dados inválidos", message: "A data de início da sua rotina está inválida", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             ac.view.tintColor = UIColor(named: "Rosa")
             present(ac, animated: true)
+        } else if dataStart == Date() {
+            print ("ok")
         }
+        //Data de fim inválida
         if dataEnd <= dataStart{
-            print("data fim invalida")
             let ac = UIAlertController(title: "Dados inválidos", message: "A data do fim da sua rotina está inválida", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             ac.view.tintColor = UIColor(named: "Rosa")
             present(ac, animated: true)
         }
-        
+        //Campo "repetir" vazio
         if seg == false && ter == false && qua == false && qui == false && sex == false && sab == false && dom == false{
-            print("ta faltando coisa ai")
+            let ac = UIAlertController(title: "Dados incompletos", message: "O campo 'Repetir' não está preenchido.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            ac.view.tintColor = UIColor(named: "Rosa")
+            present(ac, animated: true)
         }
+        
         var _ = CoreDataStack.shared.createRoutine(routineName: routineName, dateEnd: Date(), dateStart: Date(), seg: Bool(), ter: Bool(), qua: Bool(), qui: Bool(), sex: Bool(), sab: Bool(), dom: Bool())
         //falta algo
         self.navigationController?.popViewController(animated: true)
