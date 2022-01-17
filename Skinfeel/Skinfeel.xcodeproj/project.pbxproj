@@ -44,10 +44,42 @@
 		99379465278CCEFC0096F99F /* AddProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99379464278CCEFC0096F99F /* AddProductTableViewCell.swift */; };
 		99379467278CCF1D0096F99F /* ShelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99379466278CCF1D0096F99F /* ShelfCell.swift */; };
 		99379469278CCF450096F99F /* ShelfFormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99379468278CCF450096F99F /* ShelfFormTableViewCell.swift */; };
+		99C9B52E2795F3AB00048C33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B52D2795F3AB00048C33 /* AppDelegate.swift */; };
+		99C9B5302795F3AB00048C33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B52F2795F3AB00048C33 /* SceneDelegate.swift */; };
+		99C9B5322795F3AB00048C33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B5312795F3AB00048C33 /* ViewController.swift */; };
+		99C9B5352795F3AB00048C33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C9B5332795F3AB00048C33 /* Main.storyboard */; };
+		99C9B5382795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B5362795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld */; };
+		99C9B53A2795F3AE00048C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99C9B5392795F3AE00048C33 /* Assets.xcassets */; };
+		99C9B53D2795F3AE00048C33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C9B53B2795F3AE00048C33 /* LaunchScreen.storyboard */; };
+		99C9B5422795F3AE00048C33 /* SkinfeelPartial.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 99C9B52B2795F3AB00048C33 /* SkinfeelPartial.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A050417A278CDE1600BCF86C /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0504178278CDE1600BCF86C /* CoreDataModel.xcdatamodeld */; };
 		A050417D278CDEAA00BCF86C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A050417B278CDEAA00BCF86C /* Main.storyboard */; };
 		A050417E278CDEAA00BCF86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99C9B5402795F3AE00048C33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 992405012771139200CF0946 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99C9B52A2795F3AB00048C33;
+			remoteInfo = SkinfeelPartial;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99C9B5232795F1BF00048C33 /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				99C9B5422795F3AE00048C33 /* SkinfeelPartial.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		992405092771139200CF0946 /* Skinfeel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skinfeel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +121,25 @@
 		99379464278CCEFC0096F99F /* AddProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductTableViewCell.swift; sourceTree = "<group>"; };
 		99379466278CCF1D0096F99F /* ShelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfCell.swift; sourceTree = "<group>"; };
 		99379468278CCF450096F99F /* ShelfFormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfFormTableViewCell.swift; sourceTree = "<group>"; };
+		99C9B50D2795F1BB00048C33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99C9B50F2795F1BB00048C33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		99C9B5112795F1BB00048C33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99C9B5142795F1BB00048C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99C9B5172795F1BB00048C33 /* SkinfeelAppClip.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SkinfeelAppClip.xcdatamodel; sourceTree = "<group>"; };
+		99C9B5192795F1BF00048C33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99C9B51C2795F1BF00048C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99C9B51E2795F1BF00048C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99C9B51F2795F1BF00048C33 /* SkinfeelAppClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkinfeelAppClip.entitlements; sourceTree = "<group>"; };
+		99C9B52B2795F3AB00048C33 /* SkinfeelPartial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkinfeelPartial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99C9B52D2795F3AB00048C33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99C9B52F2795F3AB00048C33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		99C9B5312795F3AB00048C33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99C9B5342795F3AB00048C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99C9B5372795F3AB00048C33 /* SkinfeelPartial.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SkinfeelPartial.xcdatamodel; sourceTree = "<group>"; };
+		99C9B5392795F3AE00048C33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99C9B53C2795F3AE00048C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99C9B53E2795F3AE00048C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99C9B53F2795F3AE00048C33 /* SkinfeelPartial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkinfeelPartial.entitlements; sourceTree = "<group>"; };
 		A0504179278CDE1600BCF86C /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A050417B278CDEAA00BCF86C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,6 +153,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		99C9B5282795F3AB00048C33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -109,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				9924050B2771139200CF0946 /* Skinfeel */,
+				99C9B50C2795F1BB00048C33 /* SkinfeelAppClip */,
+				99C9B52C2795F3AB00048C33 /* SkinfeelPartial */,
 				9924050A2771139200CF0946 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				992405092771139200CF0946 /* Skinfeel.app */,
+				99C9B52B2795F3AB00048C33 /* SkinfeelPartial.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,6 +350,38 @@
 			path = "Shelf Cells";
 			sourceTree = "<group>";
 		};
+		99C9B50C2795F1BB00048C33 /* SkinfeelAppClip */ = {
+			isa = PBXGroup;
+			children = (
+				99C9B50D2795F1BB00048C33 /* AppDelegate.swift */,
+				99C9B50F2795F1BB00048C33 /* SceneDelegate.swift */,
+				99C9B5112795F1BB00048C33 /* ViewController.swift */,
+				99C9B5132795F1BB00048C33 /* Main.storyboard */,
+				99C9B5192795F1BF00048C33 /* Assets.xcassets */,
+				99C9B51B2795F1BF00048C33 /* LaunchScreen.storyboard */,
+				99C9B51E2795F1BF00048C33 /* Info.plist */,
+				99C9B51F2795F1BF00048C33 /* SkinfeelAppClip.entitlements */,
+				99C9B5162795F1BB00048C33 /* SkinfeelAppClip.xcdatamodeld */,
+			);
+			path = SkinfeelAppClip;
+			sourceTree = "<group>";
+		};
+		99C9B52C2795F3AB00048C33 /* SkinfeelPartial */ = {
+			isa = PBXGroup;
+			children = (
+				99C9B52D2795F3AB00048C33 /* AppDelegate.swift */,
+				99C9B52F2795F3AB00048C33 /* SceneDelegate.swift */,
+				99C9B5312795F3AB00048C33 /* ViewController.swift */,
+				99C9B5332795F3AB00048C33 /* Main.storyboard */,
+				99C9B5392795F3AE00048C33 /* Assets.xcassets */,
+				99C9B53B2795F3AE00048C33 /* LaunchScreen.storyboard */,
+				99C9B53E2795F3AE00048C33 /* Info.plist */,
+				99C9B53F2795F3AE00048C33 /* SkinfeelPartial.entitlements */,
+				99C9B5362795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld */,
+			);
+			path = SkinfeelPartial;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,15 +392,34 @@
 				992405052771139200CF0946 /* Sources */,
 				992405062771139200CF0946 /* Frameworks */,
 				992405072771139200CF0946 /* Resources */,
+				99C9B5232795F1BF00048C33 /* Embed App Clips */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				99C9B5412795F3AE00048C33 /* PBXTargetDependency */,
 			);
 			name = Skinfeel;
 			productName = Skinfeel;
 			productReference = 992405092771139200CF0946 /* Skinfeel.app */;
 			productType = "com.apple.product-type.application";
+		};
+		99C9B52A2795F3AB00048C33 /* SkinfeelPartial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99C9B5432795F3AE00048C33 /* Build configuration list for PBXNativeTarget "SkinfeelPartial" */;
+			buildPhases = (
+				99C9B5272795F3AB00048C33 /* Sources */,
+				99C9B5282795F3AB00048C33 /* Frameworks */,
+				99C9B5292795F3AB00048C33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkinfeelPartial;
+			productName = SkinfeelPartial;
+			productReference = 99C9B52B2795F3AB00048C33 /* SkinfeelPartial.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
 		};
 /* End PBXNativeTarget section */
 
@@ -321,6 +433,9 @@
 				TargetAttributes = {
 					992405082771139200CF0946 = {
 						CreatedOnToolsVersion = 13.2;
+					};
+					99C9B52A2795F3AB00048C33 = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
@@ -338,6 +453,7 @@
 			projectRoot = "";
 			targets = (
 				992405082771139200CF0946 /* Skinfeel */,
+				99C9B52A2795F3AB00048C33 /* SkinfeelPartial */,
 			);
 		};
 /* End PBXProject section */
@@ -350,6 +466,16 @@
 				A050417E278CDEAA00BCF86C /* LaunchScreen.storyboard in Resources */,
 				992405192771139400CF0946 /* Assets.xcassets in Resources */,
 				A050417D278CDEAA00BCF86C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99C9B5292795F3AB00048C33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C9B53D2795F3AE00048C33 /* LaunchScreen.storyboard in Resources */,
+				99C9B53A2795F3AE00048C33 /* Assets.xcassets in Resources */,
+				99C9B5352795F3AB00048C33 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +526,61 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		99C9B5272795F3AB00048C33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C9B5322795F3AB00048C33 /* ViewController.swift in Sources */,
+				99C9B52E2795F3AB00048C33 /* AppDelegate.swift in Sources */,
+				99C9B5382795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld in Sources */,
+				99C9B5302795F3AB00048C33 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99C9B5412795F3AE00048C33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99C9B52A2795F3AB00048C33 /* SkinfeelPartial */;
+			targetProxy = 99C9B5402795F3AE00048C33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99C9B5132795F1BB00048C33 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99C9B5142795F1BB00048C33 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99C9B51B2795F1BF00048C33 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99C9B51C2795F1BF00048C33 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		99C9B5332795F3AB00048C33 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99C9B5342795F3AB00048C33 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99C9B53B2795F3AE00048C33 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99C9B53C2795F3AE00048C33 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9924051E2771139400CF0946 /* Debug */ = {
@@ -522,6 +702,7 @@
 		992405212771139400CF0946 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,7 +720,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.dev.GabiNamie.Skinfeel;
+				PRODUCT_BUNDLE_IDENTIFIER = br.GabiNamie.Skinfeel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -550,6 +731,7 @@
 		992405222771139400CF0946 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -567,11 +749,71 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.dev.GabiNamie.Skinfeel;
+				PRODUCT_BUNDLE_IDENTIFIER = br.GabiNamie.Skinfeel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		99C9B5442795F3AE00048C33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SkinfeelPartial/SkinfeelPartial.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y74F655Y8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SkinfeelPartial/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Skinfeel;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.GabiNamie.Skinfeel.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99C9B5452795F3AE00048C33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SkinfeelPartial/SkinfeelPartial.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y74F655Y8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SkinfeelPartial/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Skinfeel;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.GabiNamie.Skinfeel.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -596,9 +838,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		99C9B5432795F3AE00048C33 /* Build configuration list for PBXNativeTarget "SkinfeelPartial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99C9B5442795F3AE00048C33 /* Debug */,
+				99C9B5452795F3AE00048C33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		99C9B5162795F1BB00048C33 /* SkinfeelAppClip.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				99C9B5172795F1BB00048C33 /* SkinfeelAppClip.xcdatamodel */,
+			);
+			currentVersion = 99C9B5172795F1BB00048C33 /* SkinfeelAppClip.xcdatamodel */;
+			path = SkinfeelAppClip.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		99C9B5362795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				99C9B5372795F3AB00048C33 /* SkinfeelPartial.xcdatamodel */,
+			);
+			currentVersion = 99C9B5372795F3AB00048C33 /* SkinfeelPartial.xcdatamodel */;
+			path = SkinfeelPartial.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		A0504178278CDE1600BCF86C /* CoreDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
