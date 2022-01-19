@@ -17,7 +17,6 @@ class YourRoutineViewController: UIViewController {
     var defaults = UserDefaults.standard
     var selectedSection: Int?
     var selectedProducts: [String] = []
-    
     var limpezaManha: [String] = []
     var hidratacaoManha: [String] = []
     var protecaoManha: [String] = []
@@ -25,6 +24,7 @@ class YourRoutineViewController: UIViewController {
     var limpezaNoite: [String] = []
     var esfoliacaoNoite: [String] = []
     var protecaoNoite: [String] = []
+    var nomeRotina = CoreDataStack.shared.getAllRoutines()
     
     @IBAction func saveButton(_ sender: Any) {
         let somaManha = limpezaManha.count + hidratacaoManha.count + protecaoManha.count
@@ -246,5 +246,12 @@ extension YourRoutineViewController: UITableViewDataSource {
         }
         
         return UITableViewCell()
+    }
+}
+extension YourRoutineViewController: YourRoutineViewControllerDelegate{
+    func didRegister() {
+        nomeRotina = CoreDataStack.shared.getAllRoutines()
+        
+        //routineName.text = nomeRotina[0]
     }
 }

@@ -107,7 +107,6 @@ class TodayViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        oi = CoreDataStack.shared.getAllRoutines()
         self.routineCollectionView.reloadData()
     }
     
