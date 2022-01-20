@@ -1042,7 +1042,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="routineName" destination="ao4-7N-JA1" id="8gU-RL-HhV"/>
+                        <outlet property="routineNome" destination="ao4-7N-JA1" id="Cil-uJ-6KF"/>
                         <outlet property="segmentedControl" destination="kvx-jC-x3r" id="cnr-oo-Ops"/>
                         <outlet property="tableView" destination="RQx-Pw-Ul8" id="rYK-G8-rRv"/>
                     </connections>
@@ -1123,24 +1123,24 @@
                                                     <color key="textColor" systemColor="tertiaryLabelColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" id="64s-il-8b2">
-                                                    <rect key="frame" x="20" y="38" width="345" height="75"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                                <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="15" id="64s-il-8b2">
+                                                    <rect key="frame" x="20" y="38" width="346" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQF-Ov-naU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="75.5" height="75"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="75" id="Lv6-Xn-Lds"/>
-                                                                <constraint firstAttribute="height" constant="75" id="ux2-57-vlY"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="ux2-57-vlY"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" image="girl1"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9m-Ou-2Fd">
-                                                            <rect key="frame" x="90" y="0.0" width="75" height="75"/>
+                                                            <rect key="frame" x="90.5" y="0.0" width="75" height="75"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="75" id="ceN-ZD-CmU"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="ceN-ZD-CmU"/>
                                                                 <constraint firstAttribute="width" constant="75" id="nud-lY-fhu"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1148,20 +1148,20 @@
                                                             <state key="normal" image="girl2"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coZ-pb-ZUs">
-                                                            <rect key="frame" x="180" y="0.0" width="75" height="75"/>
+                                                            <rect key="frame" x="180.5" y="0.0" width="75.5" height="75"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="75" id="Svv-uW-Y5L"/>
-                                                                <constraint firstAttribute="height" constant="75" id="gn4-16-ArO"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="gn4-16-ArO"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" image="girl3"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wL6-3W-l05">
-                                                            <rect key="frame" x="270" y="0.0" width="75" height="75"/>
+                                                            <rect key="frame" x="271" y="0.0" width="75" height="75"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="75" id="0N9-Y0-Xxc"/>
-                                                                <constraint firstAttribute="height" constant="75" id="xWr-Bi-QoI"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="xWr-Bi-QoI"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1172,24 +1172,24 @@
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="inU-gc-h7R"/>
                                                     </constraints>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" distribution="fillEqually" spacing="15" id="PY4-bQ-4M6">
-                                                    <rect key="frame" x="20" y="126" width="345" height="75"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                                <stackView opaque="NO" contentMode="scaleAspectFit" layoutMarginsFollowReadableWidth="YES" distribution="fillEqually" spacing="15" id="PY4-bQ-4M6">
+                                                    <rect key="frame" x="20" y="126" width="346" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32S-qL-pnc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="75.5" height="75"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="75" id="ha2-Sm-lwi"/>
-                                                                <constraint firstAttribute="height" constant="75" id="zqX-uF-nFM"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="zqX-uF-nFM"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" image="boy1"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NY1-CB-qeg">
-                                                            <rect key="frame" x="90" y="0.0" width="75" height="75"/>
+                                                            <rect key="frame" x="90.5" y="0.0" width="75" height="75"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="75" id="TJQ-Lr-HJn"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="TJQ-Lr-HJn"/>
                                                                 <constraint firstAttribute="width" constant="75" id="XRl-Ul-ztZ"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1197,9 +1197,9 @@
                                                             <state key="normal" image="boy2"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcK-ch-4o8">
-                                                            <rect key="frame" x="180" y="0.0" width="75" height="75"/>
+                                                            <rect key="frame" x="180.5" y="0.0" width="75.5" height="75"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="75" id="3hf-wX-cS4"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="3hf-wX-cS4"/>
                                                                 <constraint firstAttribute="width" constant="75" id="UIc-8F-BLk"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1207,10 +1207,10 @@
                                                             <state key="normal" image="boy3"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly7-bN-fAQ">
-                                                            <rect key="frame" x="270" y="0.0" width="75" height="75"/>
+                                                            <rect key="frame" x="271" y="0.0" width="75" height="75"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="75" id="Bgh-Eq-u4L"/>
-                                                                <constraint firstAttribute="height" constant="75" id="kbM-Bx-T0E"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="kbM-Bx-T0E"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -1218,14 +1218,15 @@
                                                         </button>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" secondItem="PY4-bQ-4M6" secondAttribute="height" multiplier="23:5" id="U6a-ZC-JMg"/>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="oA2-AS-naM"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="F7e-cJ-Cut" firstAttribute="top" secondItem="2Eu-MX-BVa" secondAttribute="topMargin" id="akk-Jl-Ik7"/>
-                                                <constraint firstItem="64s-il-8b2" firstAttribute="top" secondItem="F7e-cJ-Cut" secondAttribute="bottom" constant="10" id="gme-LZ-X8Z"/>
                                                 <constraint firstItem="F7e-cJ-Cut" firstAttribute="leading" secondItem="2Eu-MX-BVa" secondAttribute="leading" constant="20" id="m7n-4y-y8d"/>
+                                                <constraint firstItem="PY4-bQ-4M6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="64s-il-8b2" secondAttribute="bottom" constant="13" id="xZC-Y9-Wuj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Bg"/>

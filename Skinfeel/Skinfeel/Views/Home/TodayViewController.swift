@@ -88,7 +88,7 @@ class TodayViewController: UIViewController {
         day7.addTarget(self, action: #selector(clicarDia7), for: .touchUpInside)
         
         oi = CoreDataStack.shared.getAllRoutines()
-        routineCollectionView.reloadData()
+        self.routineCollectionView.reloadData()
         
         //Dia atual
         days[currentWeekDay].backgroundColor = UIColor(named: "Rosa")
@@ -109,6 +109,7 @@ class TodayViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        oi = CoreDataStack.shared.getAllRoutines()
         self.routineCollectionView.reloadData()
     }
     @IBAction func deleteItem(_ sender: Any) {

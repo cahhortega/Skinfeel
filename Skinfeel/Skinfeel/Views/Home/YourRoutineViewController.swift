@@ -10,7 +10,8 @@ import UIKit
 
 class YourRoutineViewController: UIViewController {
     
-    @IBOutlet weak var routineName: UILabel!
+    weak var NewRoutineViewControllerDelegate: NewRoutineViewControllerDelegate?
+    @IBOutlet weak var routineNome: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var dataFilter = 0
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -53,6 +54,7 @@ class YourRoutineViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(false, animated: false)
         
+        
         //multi seleção
         self.tableView.allowsMultipleSelection = true
         self.tableView.allowsMultipleSelectionDuringEditing = true
@@ -79,6 +81,15 @@ class YourRoutineViewController: UIViewController {
         
     }
 }
+extension YourRoutineViewController: YourRoutineViewControllerDelegate{
+    func reloadData() {
+        nomeRotina = CoreDataStack.shared.getAllRoutines()
+        print(nomeRotina)
+        routineNome.text = Routine.value(forKey: "routineName") as? String
+        print(routineNome!)
+    }
+}
+
 //tableView
 extension YourRoutineViewController: UITableViewDelegate{
     
@@ -246,12 +257,5 @@ extension YourRoutineViewController: UITableViewDataSource {
         }
         
         return UITableViewCell()
-    }
-}
-extension YourRoutineViewController: YourRoutineViewControllerDelegate{
-    func didRegister() {
-        nomeRotina = CoreDataStack.shared.getAllRoutines()
-        
-        //routineName.text = nomeRotina[0]
     }
 }
