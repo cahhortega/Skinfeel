@@ -86,7 +86,7 @@ class TodayViewController: UIViewController {
         day7.addTarget(self, action: #selector(clicarDia7), for: .touchUpInside)
         
         oi = CoreDataStack.shared.getAllRoutines()
-        routineCollectionView.reloadData()
+        self.routineCollectionView.reloadData()
         
         //Dia atual
         days[currentWeekDay].backgroundColor = UIColor(named: "Rosa")

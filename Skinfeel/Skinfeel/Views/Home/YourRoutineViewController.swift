@@ -10,14 +10,14 @@ import UIKit
 
 class YourRoutineViewController: UIViewController {
     
-    @IBOutlet weak var routineName: UILabel!
+    weak var NewRoutineViewControllerDelegate: NewRoutineViewControllerDelegate?
+    @IBOutlet weak var routineNome: UILabel!
     @IBOutlet weak var tableView: UITableView!
     var dataFilter = 0
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     var defaults = UserDefaults.standard
     var selectedSection: Int?
     var selectedProducts: [String] = []
-    
     var limpezaManha: [String] = []
     var hidratacaoManha: [String] = []
     var protecaoManha: [String] = []
@@ -25,6 +25,7 @@ class YourRoutineViewController: UIViewController {
     var limpezaNoite: [String] = []
     var esfoliacaoNoite: [String] = []
     var protecaoNoite: [String] = []
+    var nomeRotina = CoreDataStack.shared.getAllRoutines()
     
     @IBAction func saveButton(_ sender: Any) {
         let somaManha = limpezaManha.count + hidratacaoManha.count + protecaoManha.count
@@ -53,6 +54,7 @@ class YourRoutineViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(false, animated: false)
         
+        
         //multi seleção
         self.tableView.allowsMultipleSelection = true
         self.tableView.allowsMultipleSelectionDuringEditing = true
@@ -79,6 +81,15 @@ class YourRoutineViewController: UIViewController {
         
     }
 }
+extension YourRoutineViewController: YourRoutineViewControllerDelegate{
+    func reloadData() {
+        nomeRotina = CoreDataStack.shared.getAllRoutines()
+        print(nomeRotina)
+        routineNome.text = Routine.value(forKey: "routineName") as? String
+        print(routineNome!)
+    }
+}
+
 //tableView
 extension YourRoutineViewController: UITableViewDelegate{
     
