@@ -31,6 +31,8 @@ class TodayViewController: UIViewController {
     @IBOutlet var day6: UIButton!
     @IBOutlet var day7: UIButton!
     
+    @IBOutlet var deleteButton: UIButton!
+    
     lazy var days: [UIButton] = [day1, day2, day3, day4, day5, day6, day7]
     
     var oi = CoreDataStack.shared.getAllRoutines()
@@ -108,6 +110,27 @@ class TodayViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.routineCollectionView.reloadData()
+    }
+    @IBAction func deleteItem(_ sender: Any) {
+//        Alerta
+        let ac = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        ac.addAction(UIAlertAction(title: "Apagar rotina", style: .destructive, handler: {(action:UIAlertAction!) in
+//            if let selectedCells = self.collectionView.indexPathsForSelectedItems {
+//                // 1 The selected cells will be reversed and sorted so the items with the highest index will be removed first.
+////                let items = selectedCells.map { $0.item }.sorted().reversed()
+//                // 2 The items will be removed from the modelData array
+////                for item in items {
+////                    let _ = try? CurriculoRepositorio.shared.delete(nome: self.curriculoSelecionado)
+////                    self.curriculos.remove(at: item)
+////                }
+//                // 3 The selected cells will be reversed and sorted so the items with the highest index will be removed first.
+////                self.collectionView.deleteItems(at: selectedCells)
+//                self.deleteButton.isEnabled = false
+//              }
+        }))
+        ac.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        present(ac, animated: true)
+
     }
     
     func numeroDeCelulas(){
