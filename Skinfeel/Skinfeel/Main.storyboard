@@ -477,7 +477,7 @@
                                 <rect key="frame" x="40" y="456.5" width="334.5" height="50"/>
                                 <subviews>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" placeholderIntrinsicWidth="69" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="0jt-Mg-TP7">
-                                        <rect key="frame" x="0.0" y="0.0" width="79" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="663850800.73192406">
                                             <!--2022-01-14 11:00:00 +0000-->
@@ -485,7 +485,7 @@
                                         <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="center" placeholderIntrinsicWidth="69" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="kes-Nk-86j">
-                                        <rect key="frame" x="127" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="128" y="0.0" width="79" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="663876000.30323803">
                                             <!--2022-01-14 18:00:00 +0000-->
@@ -493,7 +493,7 @@
                                         <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="G3Y-Y3-PHH">
-                                        <rect key="frame" x="255" y="0.0" width="79" height="50"/>
+                                        <rect key="frame" x="255" y="0.0" width="80" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="663897600.28867805">
                                             <!--2022-01-15 00:00:00 +0000-->
@@ -606,9 +606,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="rotine" translatesAutoresizingMaskIntoConstraints="NO" id="0Kr-Hd-NGa" customClass="RoutineCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="rotine" translatesAutoresizingMaskIntoConstraints="NO" id="0Kr-Hd-NGa" customClass="RoutineCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="23" y="8" width="370" height="170"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLr-Vj-LoN">
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLr-Vj-LoN">
                                             <rect key="frame" x="0.0" y="0.0" width="370" height="170"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome rotina " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfQ-fu-pr0">
@@ -688,10 +689,6 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" name="gelo botao"/>
-                                        <constraints>
-                                            <constraint firstItem="bLr-Vj-LoN" firstAttribute="leading" secondItem="0Kr-Hd-NGa" secondAttribute="leadingMargin" constant="-8" id="W1V-fO-buh"/>
-                                            <constraint firstItem="bLr-Vj-LoN" firstAttribute="top" secondItem="0Kr-Hd-NGa" secondAttribute="topMargin" constant="-8" id="njz-X4-8Mh"/>
-                                        </constraints>
                                         <size key="customSize" width="370" height="170"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -918,27 +915,9 @@
                                 </subviews>
                                 <color key="backgroundColor" name="Bg"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ws-lQ-z7W">
-                                <rect key="frame" x="295" y="255" width="47" height="33"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large" weight="medium">
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    </preferredSymbolConfiguration>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="deleteItem:" destination="eEQ-bH-nev" eventType="touchUpInside" id="BLx-Dr-i1V"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BxC-Fh-b8b"/>
                         <color key="backgroundColor" name="Bg"/>
-                        <constraints>
-                            <constraint firstItem="9Ws-lQ-z7W" firstAttribute="top" secondItem="zAj-ee-WsH" secondAttribute="bottom" constant="13" id="DGG-wI-TNh"/>
-                            <constraint firstItem="p1T-dy-vcg" firstAttribute="top" secondItem="9Ws-lQ-z7W" secondAttribute="bottom" constant="22" id="aVs-af-LeG"/>
-                            <constraint firstItem="4cz-rp-qQL" firstAttribute="leading" secondItem="9Ws-lQ-z7W" secondAttribute="trailing" constant="8" symbolic="YES" id="kNf-CB-Ysu"/>
-                            <constraint firstItem="9Ws-lQ-z7W" firstAttribute="leading" secondItem="CS7-LM-awc" secondAttribute="leading" constant="276" id="ww2-Ep-SfX"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Hoje" image="calendar" catalog="system" id="9ue-FL-Sm9"/>
                     <navigationItem key="navigationItem" id="vpI-Ne-hpS">
@@ -954,7 +933,6 @@
                         <outlet property="day5" destination="Ayf-BB-fT5" id="1Pr-oF-g3y"/>
                         <outlet property="day6" destination="ial-El-yMJ" id="blz-FC-Pi0"/>
                         <outlet property="day7" destination="erx-va-Jad" id="Emz-6J-b8s"/>
-                        <outlet property="deleteButton" destination="9Ws-lQ-z7W" id="EEO-T3-N6x"/>
                         <outlet property="profileAvatar" destination="YYq-I7-S4L" id="MVt-SP-UlU"/>
                         <outlet property="routineCollectionView" destination="p1T-dy-vcg" id="IvD-FN-XNn"/>
                         <outlet property="titleLabel" destination="CS7-LM-awc" id="Jrf-DT-4FR"/>
@@ -1055,25 +1033,25 @@
         <scene sceneID="sCW-A3-1eT">
             <objects>
                 <viewController id="cQp-u9-hye" customClass="SettingsViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Rp9-If-Ji9">
+                    <view key="view" contentMode="scaleToFill" id="Rp9-If-Ji9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Seu perfil" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F8I-SL-Umi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu perfil" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F8I-SL-Umi">
                                 <rect key="frame" x="19" y="128" width="375" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aqui você consegue alterar seu perfil e ativar ou desativar as notificações que te lembram da sua rotina" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KPy-cO-03o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aqui você consegue alterar seu perfil e ativar ou desativar as notificações que te lembram da sua rotina" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KPy-cO-03o">
                                 <rect key="frame" x="19" y="189" width="375" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" scrollEnabled="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="89S-7S-7dZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="89S-7S-7dZ">
                                 <rect key="frame" x="19" y="290" width="375" height="473"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Bg"/>
@@ -1446,7 +1424,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="eEQ-bH-nev" kind="relationship" relationship="viewControllers" id="Upf-aX-Wvd"/>
-                        <segue destination="IFJ-xW-AiF" kind="relationship" relationship="viewControllers" id="PgX-Tm-Cnq"/>
+                        <segue destination="4Ef-9L-aWw" kind="relationship" relationship="viewControllers" id="5MP-OS-cSE"/>
+                        <segue destination="IFJ-xW-AiF" kind="relationship" relationship="viewControllers" id="ZgL-8q-Ztu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DzR-IH-upA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2041,6 +2020,154 @@
             </objects>
             <point key="canvasLocation" x="8603" y="-1112"/>
         </scene>
+        <!--Feed-->
+        <scene sceneID="KZy-xe-QD1">
+            <objects>
+                <viewController id="4Ef-9L-aWw" customClass="FeedViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iYo-vJ-EY3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkj-7p-t64">
+                                <rect key="frame" x="20" y="84" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique nos cards para saber mais sobre como cuidar da sua pele da maneira correta" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="YYf-9p-3PH">
+                                <rect key="frame" x="20" y="145" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" layoutMarginsFollowReadableWidth="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wYb-8t-fds">
+                                <rect key="frame" x="20" y="239.5" width="374" height="169"/>
+                                <color key="backgroundColor" name="Bg"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="9" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="bY1-gk-Svr">
+                                    <size key="itemSize" width="356" height="170"/>
+                                    <size key="estimatedItemSize" width="356" height="170"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="high" translatesAutoresizingMaskIntoConstraints="NO" id="xii-nL-hlE" customClass="HighlightedCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="-0.5" width="370" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ol4-iu-VW9">
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="170"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9Z-8n-XC5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="362" height="170"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                    <connections>
+                                                        <action selector="acaoBotao:" destination="4Ef-9L-aWw" eventType="touchUpInside" id="Yow-dc-I9W"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="gelo botao"/>
+                                        <size key="customSize" width="370" height="170"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destaques" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wg1-nE-BTz">
+                                <rect key="frame" x="20" y="206" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para você" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLz-xB-V70">
+                                <rect key="frame" x="20" y="428.5" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" layoutMarginsFollowReadableWidth="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MDE-Vz-dyc">
+                                <rect key="frame" x="20" y="482" width="374" height="181"/>
+                                <color key="backgroundColor" name="Bg"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="9" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="GsW-vu-eaO">
+                                    <size key="itemSize" width="170" height="169.5"/>
+                                    <size key="estimatedItemSize" width="170" height="170"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="sug" translatesAutoresizingMaskIntoConstraints="NO" id="Yzd-5S-6JE" customClass="SuggestedCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="6.5" width="170" height="168.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SH6-8b-5VI">
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="168.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phs-ER-EC1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                    <connections>
+                                                        <action selector="acaoBotao:" destination="4Ef-9L-aWw" eventType="touchUpInside" id="N6S-AN-RTt"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="gelo botao"/>
+                                        <size key="customSize" width="170" height="168.5"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wTo-Xk-mtl"/>
+                        <color key="backgroundColor" name="Bg"/>
+                        <constraints>
+                            <constraint firstItem="wTo-Xk-mtl" firstAttribute="trailing" secondItem="wLz-xB-V70" secondAttribute="trailing" constant="20" id="0iq-QD-Tyc"/>
+                            <constraint firstItem="MDE-Vz-dyc" firstAttribute="top" secondItem="wLz-xB-V70" secondAttribute="bottom" constant="20" id="2NC-Qr-0ok"/>
+                            <constraint firstItem="MDE-Vz-dyc" firstAttribute="leading" secondItem="wTo-Xk-mtl" secondAttribute="leading" constant="20" id="2fM-xF-Ubj"/>
+                            <constraint firstItem="Mkj-7p-t64" firstAttribute="leading" secondItem="wTo-Xk-mtl" secondAttribute="leading" constant="20" id="3CK-0x-Ke2"/>
+                            <constraint firstItem="wLz-xB-V70" firstAttribute="leading" secondItem="iYo-vJ-EY3" secondAttribute="leading" constant="20" id="4uN-A4-TWa"/>
+                            <constraint firstItem="wYb-8t-fds" firstAttribute="trailing" secondItem="wg1-nE-BTz" secondAttribute="trailing" id="7Rp-dd-RGi"/>
+                            <constraint firstItem="YYf-9p-3PH" firstAttribute="top" secondItem="Mkj-7p-t64" secondAttribute="bottom" constant="20" id="CFa-WO-WkM"/>
+                            <constraint firstItem="wTo-Xk-mtl" firstAttribute="bottom" secondItem="wYb-8t-fds" secondAttribute="bottom" constant="355.5" id="KMb-je-5e4"/>
+                            <constraint firstItem="wg1-nE-BTz" firstAttribute="top" secondItem="YYf-9p-3PH" secondAttribute="bottom" constant="20" id="KSB-3x-o9L"/>
+                            <constraint firstItem="wLz-xB-V70" firstAttribute="top" secondItem="wYb-8t-fds" secondAttribute="bottom" constant="20" id="RSc-ao-5zy"/>
+                            <constraint firstItem="wTo-Xk-mtl" firstAttribute="trailing" secondItem="Mkj-7p-t64" secondAttribute="trailing" constant="20" id="XNf-Pj-bIG"/>
+                            <constraint firstItem="wTo-Xk-mtl" firstAttribute="trailing" secondItem="wg1-nE-BTz" secondAttribute="trailing" constant="20" id="YI7-Yr-AtP"/>
+                            <constraint firstItem="wTo-Xk-mtl" firstAttribute="bottom" secondItem="MDE-Vz-dyc" secondAttribute="bottom" constant="101" id="huM-PD-2sj"/>
+                            <constraint firstItem="Mkj-7p-t64" firstAttribute="top" secondItem="iYo-vJ-EY3" secondAttribute="top" constant="84" id="mks-Cl-rfH"/>
+                            <constraint firstItem="wYb-8t-fds" firstAttribute="top" secondItem="wg1-nE-BTz" secondAttribute="bottom" id="n6P-Et-fLn"/>
+                            <constraint firstItem="wTo-Xk-mtl" firstAttribute="trailing" secondItem="MDE-Vz-dyc" secondAttribute="trailing" constant="20" id="nOb-OF-N8t"/>
+                            <constraint firstItem="wYb-8t-fds" firstAttribute="leading" secondItem="wg1-nE-BTz" secondAttribute="leading" id="oo0-L5-2wQ"/>
+                            <constraint firstItem="wg1-nE-BTz" firstAttribute="leading" secondItem="wTo-Xk-mtl" secondAttribute="leading" constant="20" id="oss-KV-mcE"/>
+                            <constraint firstItem="wTo-Xk-mtl" firstAttribute="trailing" secondItem="YYf-9p-3PH" secondAttribute="trailing" constant="20" id="qLq-r0-0QC"/>
+                            <constraint firstItem="YYf-9p-3PH" firstAttribute="leading" secondItem="wTo-Xk-mtl" secondAttribute="leading" constant="20" id="tkK-BF-BB9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Feed" image="square.fill.text.grid.1x2" catalog="system" id="qa7-bO-eUI"/>
+                    <connections>
+                        <outlet property="highlightedCollectionView" destination="wYb-8t-fds" id="Yk8-l3-GiT"/>
+                        <outlet property="suggestedCollectionView" destination="MDE-Vz-dyc" id="qBW-V2-bPV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5EN-lz-tOi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6760.8695652173919" y="1544.8660714285713"/>
+        </scene>
     </scenes>
     <color key="tintColor" name="Rosa"/>
     <resources>
@@ -2064,8 +2191,8 @@
         <image name="onboarding-girl" width="256" height="301"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="square.fill.text.grid.1x2" catalog="system" width="128" height="100"/>
         <image name="tarde" width="60" height="60"/>
-        <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="Bg">
             <color red="0.95300000905990601" green="0.9649999737739563" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

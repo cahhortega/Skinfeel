@@ -52,6 +52,9 @@
 		99C9B53A2795F3AE00048C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99C9B5392795F3AE00048C33 /* Assets.xcassets */; };
 		99C9B53D2795F3AE00048C33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C9B53B2795F3AE00048C33 /* LaunchScreen.storyboard */; };
 		99C9B5422795F3AE00048C33 /* SkinfeelPartial.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 99C9B52B2795F3AB00048C33 /* SkinfeelPartial.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A03642F4279B3E35002606DC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03642F3279B3E35002606DC /* FeedViewController.swift */; };
+		A03642F6279B3E7B002606DC /* HighlightedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03642F5279B3E7B002606DC /* HighlightedCollectionViewCell.swift */; };
+		A03642F8279B673F002606DC /* SuggestedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03642F7279B673F002606DC /* SuggestedCollectionViewCell.swift */; };
 		A050417A278CDE1600BCF86C /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0504178278CDE1600BCF86C /* CoreDataModel.xcdatamodeld */; };
 		A050417D278CDEAA00BCF86C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A050417B278CDEAA00BCF86C /* Main.storyboard */; };
 		A050417E278CDEAA00BCF86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */; };
@@ -133,6 +136,9 @@
 		99C9B53C2795F3AE00048C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99C9B53E2795F3AE00048C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99C9B53F2795F3AE00048C33 /* SkinfeelPartial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkinfeelPartial.entitlements; sourceTree = "<group>"; };
+		A03642F3279B3E35002606DC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		A03642F5279B3E7B002606DC /* HighlightedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedCollectionViewCell.swift; sourceTree = "<group>"; };
+		A03642F7279B673F002606DC /* SuggestedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedCollectionViewCell.swift; sourceTree = "<group>"; };
 		A0504179278CDE1600BCF86C /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A050417B278CDEAA00BCF86C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -185,7 +191,6 @@
 				9924050C2771139200CF0946 /* AppDelegate.swift */,
 				992405182771139400CF0946 /* Assets.xcassets */,
 				9924051D2771139400CF0946 /* Info.plist */,
-				A0834FA62795F890009F756A /* Shared */,
 				9937944B278CCC770096F99F /* Cells */,
 				9937940E278CC59C0096F99F /* CoreData */,
 				99379418278CC7710096F99F /* Notifications */,
@@ -225,6 +230,7 @@
 		99379422278CC8890096F99F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A03642F2279B3E23002606DC /* Feed */,
 				99379424278CC8B00096F99F /* Home */,
 				99379423278CC8970096F99F /* Onboarding */,
 				99379425278CC8E80096F99F /* Shelf */,
@@ -361,6 +367,16 @@
 			path = SkinfeelPartial;
 			sourceTree = "<group>";
 		};
+		A03642F2279B3E23002606DC /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				A03642F3279B3E35002606DC /* FeedViewController.swift */,
+				A03642F5279B3E7B002606DC /* HighlightedCollectionViewCell.swift */,
+				A03642F7279B673F002606DC /* SuggestedCollectionViewCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
 		A0834FA62795F890009F756A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +509,7 @@
 				9937941C278CC7BF0096F99F /* NotificationManager.swift in Sources */,
 				9924050D2771139200CF0946 /* AppDelegate.swift in Sources */,
 				99379427278CC9060096F99F /* OnboardingViewController.swift in Sources */,
+				A03642F8279B673F002606DC /* SuggestedCollectionViewCell.swift in Sources */,
 				9937940D278CC5110096F99F /* SceneDelegate.swift in Sources */,
 				99379437278CCA8B0096F99F /* NewRoutineViewController.swift in Sources */,
 				9937942D278CC9B10096F99F /* SkinTypeViewController.swift in Sources */,
@@ -504,6 +521,7 @@
 				9937945A278CCE020096F99F /* DayTableViewCell.swift in Sources */,
 				99379429278CC9260096F99F /* NameViewController.swift in Sources */,
 				9937943B278CCB010096F99F /* YourRoutineViewController.swift in Sources */,
+				A03642F6279B3E7B002606DC /* HighlightedCollectionViewCell.swift in Sources */,
 				99379467278CCF1D0096F99F /* ShelfCell.swift in Sources */,
 				99379463278CCED40096F99F /* TaskTableViewCell.swift in Sources */,
 				99379461278CCEAA0096F99F /* SkinRoutineTableViewCell.swift in Sources */,
@@ -511,6 +529,7 @@
 				99379454278CCD410096F99F /* RoutineCollectionViewCell.swift in Sources */,
 				9937942B278CC9830096F99F /* FormViewController.swift in Sources */,
 				99379465278CCEFC0096F99F /* AddProductTableViewCell.swift in Sources */,
+				A03642F4279B3E35002606DC /* FeedViewController.swift in Sources */,
 				99379413278CC5D50096F99F /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
