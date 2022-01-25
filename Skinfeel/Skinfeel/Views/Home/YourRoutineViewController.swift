@@ -26,6 +26,7 @@ class YourRoutineViewController: UIViewController {
     var esfoliacaoNoite: [String] = []
     var protecaoNoite: [String] = []
     var nomeRotina = CoreDataStack.shared.getAllRoutines()
+    static var index : Int = -1 
     
     @IBAction func saveButton(_ sender: Any) {
         let somaManha = limpezaManha.count + hidratacaoManha.count + protecaoManha.count
@@ -53,12 +54,20 @@ class YourRoutineViewController: UIViewController {
         protecaoNoite = defaults.stringArray(forKey: "protecaoNoite")!
         
         navigationController?.setNavigationBarHidden(false, animated: false)
-        
+        routineNome.text = nomeRotina[YourRoutineViewController.index].routineName
         
         //multi seleção
         self.tableView.allowsMultipleSelection = true
         self.tableView.allowsMultipleSelectionDuringEditing = true
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        routineNome.text = nomeRotina[YourRoutineViewController.index].routineName
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        routineNome.text = nomeRotina[YourRoutineViewController.index].routineName
     }
     //reload da tableView
     func reload() {
@@ -82,11 +91,8 @@ class YourRoutineViewController: UIViewController {
     }
 }
 extension YourRoutineViewController: YourRoutineViewControllerDelegate{
-    func reloadData() {
+    func didRegister() {
         nomeRotina = CoreDataStack.shared.getAllRoutines()
-        print(nomeRotina)
-        routineNome.text = Routine.value(forKey: "routineName") as? String
-        print(routineNome!)
     }
 }
 

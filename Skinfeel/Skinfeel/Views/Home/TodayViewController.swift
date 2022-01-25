@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TodayViewController: UIViewController {
+class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     @IBOutlet var routineCollectionView: UICollectionView!
     var defaults = UserDefaults.standard
     @IBOutlet var titleLabel: UILabel!
@@ -268,6 +268,13 @@ extension TodayViewController: UICollectionViewDataSource{
         //
         //        }
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(identifier: "YourRoutineView") as! YourRoutineViewController
+        YourRoutineViewController.index = indexPath.row
+        vc.NewRoutineViewControllerDelegate = self
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
