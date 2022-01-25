@@ -55,6 +55,7 @@
 		A03642F4279B3E35002606DC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03642F3279B3E35002606DC /* FeedViewController.swift */; };
 		A03642F6279B3E7B002606DC /* HighlightedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03642F5279B3E7B002606DC /* HighlightedCollectionViewCell.swift */; };
 		A03642F8279B673F002606DC /* SuggestedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03642F7279B673F002606DC /* SuggestedCollectionViewCell.swift */; };
+		A03642FA279FAF23002606DC /* News.json in Sources */ = {isa = PBXBuildFile; fileRef = A03642F9279FAF23002606DC /* News.json */; };
 		A050417A278CDE1600BCF86C /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0504178278CDE1600BCF86C /* CoreDataModel.xcdatamodeld */; };
 		A050417D278CDEAA00BCF86C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A050417B278CDEAA00BCF86C /* Main.storyboard */; };
 		A050417E278CDEAA00BCF86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */; };
@@ -139,6 +140,7 @@
 		A03642F3279B3E35002606DC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		A03642F5279B3E7B002606DC /* HighlightedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedCollectionViewCell.swift; sourceTree = "<group>"; };
 		A03642F7279B673F002606DC /* SuggestedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedCollectionViewCell.swift; sourceTree = "<group>"; };
+		A03642F9279FAF23002606DC /* News.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = News.json; sourceTree = "<group>"; };
 		A0504179278CDE1600BCF86C /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A050417B278CDEAA00BCF86C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				A03642F3279B3E35002606DC /* FeedViewController.swift */,
 				A03642F5279B3E7B002606DC /* HighlightedCollectionViewCell.swift */,
 				A03642F7279B673F002606DC /* SuggestedCollectionViewCell.swift */,
+				A03642F9279FAF23002606DC /* News.json */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				99379445278CCBEB0096F99F /* NewProductShelfViewController.swift in Sources */,
 				9937941C278CC7BF0096F99F /* NotificationManager.swift in Sources */,
 				9924050D2771139200CF0946 /* AppDelegate.swift in Sources */,
+				A03642FA279FAF23002606DC /* News.json in Sources */,
 				99379427278CC9060096F99F /* OnboardingViewController.swift in Sources */,
 				A03642F8279B673F002606DC /* SuggestedCollectionViewCell.swift in Sources */,
 				9937940D278CC5110096F99F /* SceneDelegate.swift in Sources */,

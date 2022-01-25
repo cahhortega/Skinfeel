@@ -350,14 +350,14 @@
                                 <color key="backgroundColor" name="Bg"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rotina" textLabel="PwW-GR-tNU" style="IBUITableViewCellStyleDefault" id="Ead-cX-BOD" customClass="SkinRoutineTableViewCell" customModule="Skinfeel" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="45" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ead-cX-BOD" id="bDc-M9-EcL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Tarefa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PwW-GR-tNU">
-                                                    <rect key="frame" x="20" y="0.0" width="335" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -477,7 +477,7 @@
                                 <rect key="frame" x="40" y="456.5" width="334.5" height="50"/>
                                 <subviews>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" placeholderIntrinsicWidth="69" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="0jt-Mg-TP7">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="79" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="663850800.73192406">
                                             <!--2022-01-14 11:00:00 +0000-->
@@ -485,7 +485,7 @@
                                         <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="center" placeholderIntrinsicWidth="69" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="kes-Nk-86j">
-                                        <rect key="frame" x="128" y="0.0" width="79" height="50"/>
+                                        <rect key="frame" x="127" y="0.0" width="80" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="663876000.30323803">
                                             <!--2022-01-14 18:00:00 +0000-->
@@ -493,7 +493,7 @@
                                         <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="G3Y-Y3-PHH">
-                                        <rect key="frame" x="255" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="255" y="0.0" width="79" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="663897600.28867805">
                                             <!--2022-01-15 00:00:00 +0000-->
@@ -606,7 +606,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="rotine" translatesAutoresizingMaskIntoConstraints="NO" id="0Kr-Hd-NGa" customClass="RoutineCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="rotine" translatesAutoresizingMaskIntoConstraints="NO" id="0Kr-Hd-NGa" customClass="RoutineCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="23" y="8" width="370" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLr-Vj-LoN">
@@ -1033,25 +1033,25 @@
         <scene sceneID="sCW-A3-1eT">
             <objects>
                 <viewController id="cQp-u9-hye" customClass="SettingsViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Rp9-If-Ji9">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Rp9-If-Ji9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu perfil" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F8I-SL-Umi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Seu perfil" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F8I-SL-Umi">
                                 <rect key="frame" x="19" y="128" width="375" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aqui você consegue alterar seu perfil e ativar ou desativar as notificações que te lembram da sua rotina" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KPy-cO-03o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aqui você consegue alterar seu perfil e ativar ou desativar as notificações que te lembram da sua rotina" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KPy-cO-03o">
                                 <rect key="frame" x="19" y="189" width="375" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="89S-7S-7dZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" scrollEnabled="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="89S-7S-7dZ">
                                 <rect key="frame" x="19" y="290" width="375" height="473"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Bg"/>
@@ -2052,7 +2052,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="high" translatesAutoresizingMaskIntoConstraints="NO" id="xii-nL-hlE" customClass="HighlightedCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="high" translatesAutoresizingMaskIntoConstraints="NO" id="xii-nL-hlE" customClass="HighlightedCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="8" y="-0.5" width="370" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ol4-iu-VW9">
@@ -2104,7 +2104,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="sug" translatesAutoresizingMaskIntoConstraints="NO" id="Yzd-5S-6JE" customClass="SuggestedCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="sug" translatesAutoresizingMaskIntoConstraints="NO" id="Yzd-5S-6JE" customClass="SuggestedCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="8" y="6.5" width="170" height="168.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SH6-8b-5VI">
