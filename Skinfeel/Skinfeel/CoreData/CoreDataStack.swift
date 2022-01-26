@@ -72,19 +72,12 @@ class CoreDataStack {
     
     // MARK: - Core Data Creating support
     
-    func createRoutine(routineName: String, dateEnd: Date, dateStart: Date, seg: Bool, ter: Bool, qua: Bool, qui: Bool, sex: Bool, sab: Bool, dom: Bool) -> Routine {
+    func createRoutine(routineName: String, dateEnd: Date, dateStart: Date) -> Routine {
         let routine = Routine(context: self.persistentContainer.viewContext)
         
         routine.routineName = routineName
         routine.dateEnd = dateEnd
         routine.dateStart = dateStart
-        routine.seg = seg
-        routine.ter = ter
-        routine.qua = qua
-        routine.qui = qui
-        routine.sex = sex
-        routine.sab = sab
-        routine.dom = dom
         
         self.saveContext()
         return routine
@@ -97,3 +90,4 @@ class CoreDataStack {
         self.saveContext()
     }
 }
+
