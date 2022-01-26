@@ -8,5 +8,7 @@
 import UIKit
 
 class HighlightedCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var imagem: UIImageView!
+    
     
 }

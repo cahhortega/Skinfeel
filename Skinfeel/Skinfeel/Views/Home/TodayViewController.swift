@@ -103,6 +103,7 @@ class TodayViewController: UIViewController {
         numeroDeCelulas()
         oi = CoreDataStack.shared.getAllRoutines()
         self.routineCollectionView.reloadData()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -128,7 +129,7 @@ class TodayViewController: UIViewController {
     func calendario(){
         var diaDepois = currentDay
         var diaAntes = currentDay
-        currentMonth = 2
+//        currentMonth = 2
         for i in currentWeekDay ... 6 {
             days[i].setTitle("\(diaDepois)", for: .normal)
             if currentMonth == 2 {
