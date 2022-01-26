@@ -32,6 +32,7 @@ class SuggestedCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         
         if indexPath.item == 0 {
             cell.imagem.image = UIImage(named: "crueltyfree")
+           
                 
         } else if indexPath.item == 1 {
             cell.imagem.image = UIImage(named: "men")

@@ -29,6 +29,8 @@ class FeedViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationController?.navigationBar.topItem?.title = "Feed"
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.setHidesBackButton(true, animated: false)
+        
         
         highlightedCollectionView.dataSource = highDataSource
         highlightedCollectionView.delegate = highDelegate
@@ -41,7 +43,7 @@ class FeedViewController: UIViewController {
         suggestedCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "ID")
         suggestedCollectionView.isPagingEnabled = true
         suggestedCollectionView.showsHorizontalScrollIndicator = false
-
+        
         newsCollectionView.dataSource = newsDataSource
         newsCollectionView.delegate = newsDelegate
         newsCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "ID")
@@ -54,7 +56,7 @@ class FeedViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationController?.navigationBar.topItem?.title = "Feed"
         navigationController?.navigationBar.prefersLargeTitles = true
-
+        
     }
     
 }

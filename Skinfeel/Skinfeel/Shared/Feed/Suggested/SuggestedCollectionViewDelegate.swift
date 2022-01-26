@@ -9,22 +9,23 @@ import Foundation
 import UIKit
 
 class SuggestedCollectionViewDelegate: NSObject, UICollectionViewDelegate {
+    private lazy var exploreView = ExploreViewController()
+    var defaults = UserDefaults.standard
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let url : NSURL?
                 switch indexPath.row{
                 case 0:
-                    url = NSURL(string: "https://facebook.com")
-                case 1:
-                    url = NSURL(string: "https://google.com")
-                case 2:
-                    url = NSURL(string: "https://apple.com")
-                default:
-                    return;
-                }
+                    defaults.set(0, forKey: "botao")
 
-            if url != nil{
-                UIApplication.shared.open(url! as URL)
-            }
+                case 1:
+                    defaults.set(1, forKey: "botao")
+
+                case 2:
+                    defaults.set(2, forKey: "botao")
+
+                default:
+                    defaults.set(3, forKey: "botao")
+
+                }
     }
 }

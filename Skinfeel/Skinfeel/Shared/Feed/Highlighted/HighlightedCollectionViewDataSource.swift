@@ -26,18 +26,24 @@ class HighlightedCollectionViewDataSource: NSObject, UICollectionViewDataSource 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "high", for: indexPath) as! HighlightedCollectionViewCell
-//
-//        if indexPath.item == 0 {
-//            cell.backgroundColor = .green
-        cell.imagem.image = UIImage(named: "\(cards[indexPath.row].id)")
-//
-//        } else if indexPath.item == 1 {
-//            cell.backgroundColor = .purple
-//            cell.imagem.image = UIImage(named: "2")
-//
-//        } else {
-//            cell.backgroundColor = .blue
-//        }
+        
+        if indexPath.item == 0 {
+            cell.imagem.image = UIImage(named: "high1")
+            cell.titulo.text = "Avon é a marca mais comentada do BBB e triplica faturamento no e-commerce"
+            
+        } else if indexPath.item == 1 {
+            cell.imagem.image = UIImage(named: "high2")
+            cell.titulo.text = "Pele madura: qual o melhor jeito de cuidar?"
+
+        } else if indexPath.item == 2 {
+            cell.imagem.image = UIImage(named: "high3")
+            cell.titulo.text = "Consumidor simplifica rotina de skincare e maquiagem no pós-Covid"
+
+        } else{
+            cell.imagem.image = UIImage(named: "high4")
+            cell.titulo.text = "Skincare em alta na pandemia ajuda a prevenir doenças dermatológicas"
+
+        }
         return cell
         
         

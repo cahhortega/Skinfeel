@@ -9,6 +9,7 @@ import UIKit
 
 class HighlightedCollectionViewCell: UICollectionViewCell {
     @IBOutlet var imagem: UIImageView!
+    @IBOutlet var titulo: UILabel!
     
     
 }
