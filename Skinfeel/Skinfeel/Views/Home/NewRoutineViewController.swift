@@ -200,7 +200,7 @@ class NewRoutineViewController: UIViewController {
             present(ac, animated: true)
         }
         
-        var _ = CoreDataStack.shared.createRoutine(routineName: routineName, dateEnd: Date(), dateStart: Date(), seg: Bool(), ter: Bool(), qua: Bool(), qui: Bool(), sex: Bool(), sab: Bool(), dom: Bool())
+        var _ = CoreDataStack.shared.createRoutine(routineName: routineName, dateEnd: Date(), dateStart: Date())
         //falta algo
         self.navigationController?.popViewController(animated: true)
     }
