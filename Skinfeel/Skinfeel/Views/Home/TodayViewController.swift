@@ -15,7 +15,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     let hour = Calendar.current.component(.hour, from: Date()) //Hora do dia
     let currentWeekDay = Calendar.current.component(.weekday, from: Date())-1 //Dia da semana (terça = 2)
     //-1 é para igualar as posições do dia com as posições dos botões no vetor
-    let currentDay = Calendar.current.component(.day, from: Date()) //Dia
+    var currentDay = Calendar.current.component(.day, from: Date()) //Dia
     var currentMonth = Calendar.current.component(.month, from: Date()) //Mês
     var currentYear = Calendar.current.component(.year, from: Date())
     let fraseSemRotina = UILabel()
@@ -132,14 +132,23 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     func calendario(){
         var diaDepois = currentDay
         var diaAntes = currentDay
-        //currentMonth = 2
+//        currentMonth = 2
+//        currentYear = 2023
         for i in currentWeekDay ... 6 {
             days[i].setTitle("\(diaDepois)", for: .normal)
             if currentMonth == 2 {
-                if diaDepois == 28 { //FEV
-                    diaDepois = 1
+                if currentYear % 4 == 0 { //ANO BISSEXTO
+                    if diaDepois == 29 { //FEV
+                        diaDepois = 1
+                    } else {
+                        diaDepois += 1
+                    }
                 } else {
-                    diaDepois += 1
+                    if diaDepois == 28 { //FEV
+                        diaDepois = 1
+                    } else {
+                        diaDepois += 1
+                    }
                 }
             } else if currentMonth == 1 || currentMonth == 3 || currentMonth == 5 || currentMonth == 7 || currentMonth == 8 || currentMonth == 10 || currentMonth == 12 { //Meses com 31 dias
                 if diaDepois == 31{
