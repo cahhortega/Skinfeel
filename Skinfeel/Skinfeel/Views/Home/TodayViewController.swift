@@ -7,7 +7,8 @@
 
 import UIKit
 
-class TodayViewController: UIViewController {
+
+class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     @IBOutlet var routineCollectionView: UICollectionView!
     var defaults = UserDefaults.standard
     @IBOutlet var titleLabel: UILabel!
@@ -16,8 +17,10 @@ class TodayViewController: UIViewController {
     //-1 é para igualar as posições do dia com as posições dos botões no vetor
     let currentDay = Calendar.current.component(.day, from: Date()) //Dia
     var currentMonth = Calendar.current.component(.month, from: Date()) //Mês
+    var currentYear = Calendar.current.component(.year, from: Date())
     let fraseSemRotina = UILabel()
     let imagemBoasVindas = UIImageView()
+    let dateFormatter = DateFormatter()
     weak var NewRoutineViewControllerDelegate: NewRoutineViewControllerDelegate?
     
     var isDone: Bool = false
@@ -30,9 +33,7 @@ class TodayViewController: UIViewController {
     @IBOutlet var day5: UIButton!
     @IBOutlet var day6: UIButton!
     @IBOutlet var day7: UIButton!
-    
-    @IBOutlet var deleteButton: UIButton!
-    
+        
     lazy var days: [UIButton] = [day1, day2, day3, day4, day5, day6, day7]
     
     var oi = CoreDataStack.shared.getAllRoutines()
@@ -105,33 +106,13 @@ class TodayViewController: UIViewController {
         numeroDeCelulas()
         oi = CoreDataStack.shared.getAllRoutines()
         self.routineCollectionView.reloadData()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         oi = CoreDataStack.shared.getAllRoutines()
         self.routineCollectionView.reloadData()
-    }
-    @IBAction func deleteItem(_ sender: Any) {
-//        Alerta
-        let ac = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        ac.addAction(UIAlertAction(title: "Apagar rotina", style: .destructive, handler: {(action:UIAlertAction!) in
-//            if let selectedCells = self.collectionView.indexPathsForSelectedItems {
-//                // 1 The selected cells will be reversed and sorted so the items with the highest index will be removed first.
-////                let items = selectedCells.map { $0.item }.sorted().reversed()
-//                // 2 The items will be removed from the modelData array
-////                for item in items {
-////                    let _ = try? CurriculoRepositorio.shared.delete(nome: self.curriculoSelecionado)
-////                    self.curriculos.remove(at: item)
-////                }
-//                // 3 The selected cells will be reversed and sorted so the items with the highest index will be removed first.
-////                self.collectionView.deleteItems(at: selectedCells)
-//                self.deleteButton.isEnabled = false
-//              }
-        }))
-        ac.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
-        present(ac, animated: true)
-
     }
     
     func numeroDeCelulas(){
@@ -151,7 +132,7 @@ class TodayViewController: UIViewController {
     func calendario(){
         var diaDepois = currentDay
         var diaAntes = currentDay
-        currentMonth = 2
+        //currentMonth = 2
         for i in currentWeekDay ... 6 {
             days[i].setTitle("\(diaDepois)", for: .normal)
             if currentMonth == 2 {
@@ -179,8 +160,6 @@ class TodayViewController: UIViewController {
             days[j].setTitle("\(diaAntes)", for: .normal)
         }
     }
-    
-    
     
     //Função que muda o background do botão
     @objc func clickDays(selected: UIButton,
@@ -211,9 +190,8 @@ class TodayViewController: UIViewController {
         else {
             selected.backgroundColor = UIColor(named: "Bg")
             selected.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
+            
         }
-        
-        
     }
     
     func titleText(){
@@ -276,21 +254,24 @@ extension TodayViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as! RoutineCollectionViewCell
         cell.nameRoutine.text = oi[indexPath.row].routineName
-//        cell.morningCircularProgress.setProgress(duration: 1.0, value: 0.0)
-//        cell.afternoonCircularProgress.setProgress(duration: 1.0, value: 0.0)
-//        cell.nightCircularProgress.setProgress(duration: 1.0, value: 0.0)
-//
-        //        if defaults.bool(forKey: "feito") == false {
-        //            cell.morningCircularProgress.setProgress(duration: 0, value: 0)
-        //            cell.afternoonCircularProgress.setProgress(duration: 0, value: 0)
-        //            cell.nightCircularProgress.setProgress(duration: 0, value: 0)
-        //        } else {
-        //            cell.morningCircularProgress.setProgress(duration: 1.0, value: defaults.float(forKey: "somaManha")/10)
-        //            cell.afternoonCircularProgress.setProgress(duration: 1.0, value: defaults.float(forKey: "somaTarde")/10)
-        //            cell.nightCircularProgress.setProgress(duration: 1.0, value: defaults.float(forKey: "somaNoite")/10)
-        //
-        //        }
+        let date1 = oi[indexPath.row].dateStart
+        let date2 = oi[indexPath.row].dateEnd
+        let dateInicial = dateFormatter.string(from: date1!)
+        let dateFinal = dateFormatter.string(from: date2!)
+        let dateAtual = "\(currentDay)/\(currentMonth)/\(currentYear)"
+        for cell in oi{
+            if dateInicial <= dateAtual || dateFinal >= dateAtual{
+               
+            }
+        }
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(identifier: "YourRoutineView") as! YourRoutineViewController
+        YourRoutineViewController.index = indexPath.row
+        vc.NewRoutineViewControllerDelegate = self
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

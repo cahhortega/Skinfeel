@@ -7,5 +7,5 @@
 
 import Foundation
 protocol YourRoutineViewControllerDelegate: AnyObject {
-    func reloadData()
+    func didRegister()
 }
