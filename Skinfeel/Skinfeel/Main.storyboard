@@ -477,7 +477,7 @@
                                 <rect key="frame" x="40" y="456.5" width="334.5" height="50"/>
                                 <subviews>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" placeholderIntrinsicWidth="69" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="0jt-Mg-TP7">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="79" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="663850800.73192406">
                                             <!--2022-01-14 11:00:00 +0000-->
@@ -485,7 +485,7 @@
                                         <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="center" placeholderIntrinsicWidth="69" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="kes-Nk-86j">
-                                        <rect key="frame" x="128" y="0.0" width="79" height="50"/>
+                                        <rect key="frame" x="127" y="0.0" width="80" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="663876000.30323803">
                                             <!--2022-01-14 18:00:00 +0000-->
@@ -493,7 +493,7 @@
                                         <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="G3Y-Y3-PHH">
-                                        <rect key="frame" x="255" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="255" y="0.0" width="79" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="663897600.28867805">
                                             <!--2022-01-15 00:00:00 +0000-->
@@ -554,7 +554,6 @@
         <!--Hoje-->
         <scene sceneID="cBu-kA-nzS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sL6-bZ-gka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="TodayView" id="eEQ-bH-nev" customClass="TodayViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="YgQ-t1-inJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -939,6 +938,7 @@
                         <outlet property="titleLabel" destination="CS7-LM-awc" id="gL1-7h-JQN"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sL6-bZ-gka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6760.8695652173919" y="-1111.6071428571429"/>
         </scene>
@@ -1008,18 +1008,29 @@
                             <constraint firstItem="RQx-Pw-Ul8" firstAttribute="leading" secondItem="YUG-po-5eS" secondAttribute="leading" constant="20" id="xxq-Tt-bLO"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="7VE-JS-zVz">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="HYk-a9-i2Y">
                             <color key="tintColor" name="Rosa"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="1XS-gW-oRt">
-                            <color key="tintColor" name="Rosa"/>
-                            <connections>
-                                <action selector="saveButton:" destination="5FF-tN-0kE" id="vFL-UE-toK"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="trash" id="fg2-Mx-dOT">
+                                <color key="tintColor" name="Rosa"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="5FF-tN-0kE" id="wqo-xr-hr5"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Salvar" id="1XS-gW-oRt">
+                                <color key="tintColor" name="Rosa"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="5FF-tN-0kE" id="vFL-UE-toK"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="deleteRoutine" destination="fg2-Mx-dOT" id="X9h-9T-uZq"/>
                         <outlet property="routineNome" destination="ao4-7N-JA1" id="Cil-uJ-6KF"/>
                         <outlet property="segmentedControl" destination="kvx-jC-x3r" id="cnr-oo-Ops"/>
                         <outlet property="tableView" destination="RQx-Pw-Ul8" id="rYK-G8-rRv"/>
@@ -1033,25 +1044,25 @@
         <scene sceneID="sCW-A3-1eT">
             <objects>
                 <viewController id="cQp-u9-hye" customClass="SettingsViewController" customModule="Skinfeel" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Rp9-If-Ji9">
+                    <view key="view" contentMode="scaleToFill" id="Rp9-If-Ji9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Seu perfil" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F8I-SL-Umi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu perfil" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F8I-SL-Umi">
                                 <rect key="frame" x="19" y="128" width="375" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aqui você consegue alterar seu perfil e ativar ou desativar as notificações que te lembram da sua rotina" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KPy-cO-03o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aqui você consegue alterar seu perfil e ativar ou desativar as notificações que te lembram da sua rotina" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KPy-cO-03o">
                                 <rect key="frame" x="19" y="189" width="375" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" scrollEnabled="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="89S-7S-7dZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="89S-7S-7dZ">
                                 <rect key="frame" x="19" y="290" width="375" height="473"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Bg"/>
@@ -2441,7 +2452,7 @@
             <color red="0.95300000905990601" green="0.9649999737739563" blue="0.97600001096725464" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gelo botao">
-            <color red="0.8901960784313725" green="0.90196078431372551" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.88999998569488525" green="0.90200001001358032" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

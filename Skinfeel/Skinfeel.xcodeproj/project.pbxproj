@@ -451,10 +451,10 @@
 		A036430427A0764D002606DC /* Suggested */ = {
 			isa = PBXGroup;
 			children = (
-				A036433627A1B7F1002606DC /* Explore */,
 				A03642F7279B673F002606DC /* SuggestedCollectionViewCell.swift */,
 				A036432227A090D4002606DC /* SuggestedCollectionViewDataSource.swift */,
 				A036430D27A080D4002606DC /* SuggestedCollectionViewDelegate.swift */,
+				A036433627A1B7F1002606DC /* Explore */,
 			);
 			path = Suggested;
 			sourceTree = "<group>";
