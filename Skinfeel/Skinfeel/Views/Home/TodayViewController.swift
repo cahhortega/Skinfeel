@@ -106,6 +106,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         numeroDeCelulas()
         oi = CoreDataStack.shared.getAllRoutines()
         self.routineCollectionView.reloadData()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
