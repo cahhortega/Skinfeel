@@ -44,6 +44,7 @@
 		99379465278CCEFC0096F99F /* AddProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99379464278CCEFC0096F99F /* AddProductTableViewCell.swift */; };
 		99379467278CCF1D0096F99F /* ShelfCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99379466278CCF1D0096F99F /* ShelfCell.swift */; };
 		99379469278CCF450096F99F /* ShelfFormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99379468278CCF450096F99F /* ShelfFormTableViewCell.swift */; };
+		99797ED727A8733400A37491 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99797ED527A8733400A37491 /* CoreDataModel.xcdatamodeld */; };
 		99C9B52E2795F3AB00048C33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B52D2795F3AB00048C33 /* AppDelegate.swift */; };
 		99C9B5302795F3AB00048C33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B52F2795F3AB00048C33 /* SceneDelegate.swift */; };
 		99C9B5322795F3AB00048C33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B5312795F3AB00048C33 /* ViewController.swift */; };
@@ -95,7 +96,6 @@
 		A036434127A1BDFD002606DC /* formen.json in Resources */ = {isa = PBXBuildFile; fileRef = A036434027A1BDFD002606DC /* formen.json */; };
 		A036434227A1BDFD002606DC /* formen.json in Resources */ = {isa = PBXBuildFile; fileRef = A036434027A1BDFD002606DC /* formen.json */; };
 		A036434327A1BFA1002606DC /* crueltyFree.json in Resources */ = {isa = PBXBuildFile; fileRef = A036432727A0F8AD002606DC /* crueltyFree.json */; };
-		A050417A278CDE1600BCF86C /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0504178278CDE1600BCF86C /* CoreDataModel.xcdatamodeld */; };
 		A050417D278CDEAA00BCF86C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A050417B278CDEAA00BCF86C /* Main.storyboard */; };
 		A050417E278CDEAA00BCF86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -164,6 +164,7 @@
 		99379464278CCEFC0096F99F /* AddProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductTableViewCell.swift; sourceTree = "<group>"; };
 		99379466278CCF1D0096F99F /* ShelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfCell.swift; sourceTree = "<group>"; };
 		99379468278CCF450096F99F /* ShelfFormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfFormTableViewCell.swift; sourceTree = "<group>"; };
+		99797ED627A8733400A37491 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		99C9B52B2795F3AB00048C33 /* SkinfeelPartial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkinfeelPartial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C9B52D2795F3AB00048C33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99C9B52F2795F3AB00048C33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,7 +196,6 @@
 		A036433A27A1BDE6002606DC /* pelenegra.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pelenegra.json; sourceTree = "<group>"; };
 		A036433D27A1BDF1002606DC /* coreana.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = coreana.json; sourceTree = "<group>"; };
 		A036434027A1BDFD002606DC /* formen.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = formen.json; sourceTree = "<group>"; };
-		A0504179278CDE1600BCF86C /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A050417B278CDEAA00BCF86C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -258,7 +258,7 @@
 		9937940E278CC59C0096F99F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				A0504178278CDE1600BCF86C /* CoreDataModel.xcdatamodeld */,
+				99797ED527A8733400A37491 /* CoreDataModel.xcdatamodeld */,
 				99379412278CC5D50096F99F /* CoreDataStack.swift */,
 			);
 			path = CoreData;
@@ -608,7 +608,6 @@
 				A036431427A08191002606DC /* NewsCollectionViewDataSource.swift in Sources */,
 				A036433827A1B841002606DC /* ExploreCollectionViewDelegate.swift in Sources */,
 				A036431227A08183002606DC /* NewsCollectionViewDelegate.swift in Sources */,
-				A050417A278CDE1600BCF86C /* CoreDataModel.xcdatamodeld in Sources */,
 				A036430727A076AC002606DC /* HighlightedCollectionViewDelegate.swift in Sources */,
 				99379435278CCA630096F99F /* TodayViewControllerDelegate.swift in Sources */,
 				99379448278CCC360096F99F /* Request.swift in Sources */,
@@ -646,6 +645,7 @@
 				9937945A278CCE020096F99F /* DayTableViewCell.swift in Sources */,
 				99379429278CC9260096F99F /* NameViewController.swift in Sources */,
 				9937943B278CCB010096F99F /* YourRoutineViewController.swift in Sources */,
+				99797ED727A8733400A37491 /* CoreDataModel.xcdatamodeld in Sources */,
 				A03642F6279B3E7B002606DC /* HighlightedCollectionViewCell.swift in Sources */,
 				99379467278CCF1D0096F99F /* ShelfCell.swift in Sources */,
 				A036432327A090D4002606DC /* SuggestedCollectionViewDataSource.swift in Sources */,
@@ -991,6 +991,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		99797ED527A8733400A37491 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				99797ED627A8733400A37491 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 99797ED627A8733400A37491 /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		99C9B5362795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
@@ -998,16 +1008,6 @@
 			);
 			currentVersion = 99C9B5372795F3AB00048C33 /* SkinfeelPartial.xcdatamodel */;
 			path = SkinfeelPartial.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		A0504178278CDE1600BCF86C /* CoreDataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A0504179278CDE1600BCF86C /* CoreDataModel.xcdatamodel */,
-			);
-			currentVersion = A0504179278CDE1600BCF86C /* CoreDataModel.xcdatamodel */;
-			path = CoreDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
