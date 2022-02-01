@@ -33,7 +33,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     @IBOutlet var day5: UIButton!
     @IBOutlet var day6: UIButton!
     @IBOutlet var day7: UIButton!
-        
+    
     lazy var days: [UIButton] = [day1, day2, day3, day4, day5, day6, day7]
     
     var oi = try? CoreDataStackRoutine.getRoutine()
@@ -106,7 +106,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         numeroDeCelulas()
         oi = try! CoreDataStackRoutine.getRoutine()
         self.routineCollectionView.reloadData()
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -133,8 +133,6 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     func calendario(){
         var diaDepois = currentDay
         var diaAntes = currentDay
-//        currentMonth = 2
-//        currentYear = 2023
         for i in currentWeekDay ... 6 {
             days[i].setTitle("\(diaDepois)", for: .normal)
             if currentMonth == 2 {
@@ -166,7 +164,29 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
             }
         }
         for j in (0 ... currentWeekDay-1).reversed() {
-            diaAntes -= 1
+            if currentMonth == 1 || currentMonth == 2 || currentMonth == 4 || currentMonth == 6 || currentMonth == 8 || currentMonth == 9 || currentMonth == 11{ //Meses que antecedem um mês de 31 dias
+                if diaAntes == 1 {
+                    diaAntes = 31
+                } else {
+                    diaAntes -= 1
+                }
+            } else if currentMonth == 5 || currentMonth == 7 || currentMonth == 10 || currentMonth == 12 { //Meses que antecedem um mês de 30 dias
+                if diaAntes == 1 {
+                    diaAntes = 30
+                } else {
+                    diaAntes -= 1
+                }
+            } else { //março
+                if diaAntes == 1 {
+                    if currentYear % 4 == 0 {
+                        diaAntes = 29
+                    } else {
+                        diaAntes = 28
+                    }
+                } else {
+                    diaAntes -= 1
+                }
+            }
             days[j].setTitle("\(diaAntes)", for: .normal)
         }
     }
