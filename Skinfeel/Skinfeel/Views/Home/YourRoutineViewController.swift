@@ -11,7 +11,21 @@ import UIKit
 class YourRoutineViewController: UIViewController {
     
     weak var NewRoutineViewControllerDelegate: NewRoutineViewControllerDelegate?
+    @IBOutlet var deleteRoutine: UIBarButtonItem!
+    
     @IBOutlet weak var routineNome: UILabel!
+    @IBAction func deleteButton(_ sender: UIBarButtonItem) {
+        let ac = UIAlertController(title: "", message: "Tem certeza de que deseja deletar esta rotina?", preferredStyle: .actionSheet)
+        ac.addAction(UIAlertAction(title: "Apagar", style: .destructive, handler: {(action: UIAlertAction!) in
+            //acao de deletar
+            self.navigationController?.popViewController(animated: true)
+        }))
+        ac.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
+        
+        present(ac, animated: true, completion: nil)
+//        delegate?.didRegister()
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     var dataFilter = 0
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -25,8 +39,8 @@ class YourRoutineViewController: UIViewController {
     var limpezaNoite: [String] = []
     var esfoliacaoNoite: [String] = []
     var protecaoNoite: [String] = []
-    var nomeRotina = CoreDataStack.shared.getAllRoutines()
-    static var index : Int = -1 
+    var nomeRotina = try? CoreDataStackRoutine.getRoutine()
+    static var index : Int = -1
     
     @IBAction func saveButton(_ sender: Any) {
         let somaManha = limpezaManha.count + hidratacaoManha.count + protecaoManha.count
@@ -35,7 +49,7 @@ class YourRoutineViewController: UIViewController {
         defaults.set(somaManha, forKey: "somaManha")
         defaults.set(somaTarde, forKey: "somaTarde")
         defaults.set(somaNoite, forKey: "somaNoite")
-
+        
         defaults.set(true, forKey: "feito")
         navigationController?.popViewController(animated: true)
     }
@@ -54,7 +68,7 @@ class YourRoutineViewController: UIViewController {
         protecaoNoite = defaults.stringArray(forKey: "protecaoNoite")!
         
         navigationController?.setNavigationBarHidden(false, animated: false)
-        routineNome.text = nomeRotina[YourRoutineViewController.index].routineName
+        routineNome.text = nomeRotina?[YourRoutineViewController.index].routineName
         
         //multi seleção
         self.tableView.allowsMultipleSelection = true
@@ -63,11 +77,11 @@ class YourRoutineViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        routineNome.text = nomeRotina[YourRoutineViewController.index].routineName
+        routineNome.text = nomeRotina?[YourRoutineViewController.index].routineName
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        routineNome.text = nomeRotina[YourRoutineViewController.index].routineName
+        routineNome.text = nomeRotina?[YourRoutineViewController.index].routineName
     }
     //reload da tableView
     func reload() {
@@ -92,7 +106,7 @@ class YourRoutineViewController: UIViewController {
 }
 extension YourRoutineViewController: YourRoutineViewControllerDelegate{
     func didRegister() {
-        nomeRotina = CoreDataStack.shared.getAllRoutines()
+        nomeRotina = try! CoreDataStackRoutine.getRoutine()
     }
 }
 
@@ -145,15 +159,15 @@ extension YourRoutineViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = self.tableView(tableView, cellForRowAt: indexPath)
-            let text = cell.textLabel!.text
-            if let text = text {
-                NSLog("did select and the text is \(text)")
-                    selectedProducts.append(text)
-                    print("Novo array", selectedProducts)
-
+        let text = cell.textLabel!.text
+        if let text = text {
+            NSLog("did select and the text is \(text)")
+            selectedProducts.append(text)
+            print("Novo array", selectedProducts)
+            
         }
     }
-        
+    
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let cell = self.tableView(tableView, cellForRowAt: indexPath)
         let text = cell.textLabel!.text
