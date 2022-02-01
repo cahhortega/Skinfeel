@@ -41,11 +41,11 @@
         <relationship name="routine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Routine" inverseName="task" inverseEntity="Routine"/>
     </entity>
     <elements>
-        <element name="Hidratacao" positionX="-423" positionY="216" width="128" height="74"/>
-        <element name="Limpeza" positionX="-396" positionY="234" width="128" height="74"/>
-        <element name="Products" positionX="-387" positionY="243" width="128" height="89"/>
-        <element name="Protecao" positionX="-414" positionY="225" width="128" height="74"/>
-        <element name="Routine" positionX="-435.4398193359375" positionY="131.9604949951172" width="128" height="194"/>
-        <element name="Task" positionX="-432" positionY="207" width="128" height="89"/>
+        <element name="Hidratacao" positionX="-274.2249755859375" positionY="272.697509765625" width="128" height="74"/>
+        <element name="Limpeza" positionX="-255.7439575195312" positionY="472.171142578125" width="128" height="74"/>
+        <element name="Products" positionX="162.1043701171875" positionY="145.1363525390625" width="128" height="89"/>
+        <element name="Protecao" positionX="-209.3786010742188" positionY="35.49334716796875" width="128" height="74"/>
+        <element name="Routine" positionX="-434.1312866210938" positionY="-112.7335662841797" width="128" height="194"/>
+        <element name="Task" positionX="-629.883544921875" positionY="340.2737426757812" width="128" height="89"/>
     </elements>
 </model>

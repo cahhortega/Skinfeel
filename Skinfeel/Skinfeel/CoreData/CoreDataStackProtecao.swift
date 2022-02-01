@@ -34,6 +34,7 @@ class CoreDataStackProtecao{
         guard let protecao = NSEntityDescription.insertNewObject(forEntityName: "Protecao", into: context) as? Protecao else {preconditionFailure()}
         
         protecao.periodo = periodo
+        protecao.addToProduto(produtos)
         
         try saveContext()
         return protecao
@@ -47,7 +48,7 @@ class CoreDataStackProtecao{
         context.delete(protecao)
         try saveContext()
     }
+   
     
 
-    
 }

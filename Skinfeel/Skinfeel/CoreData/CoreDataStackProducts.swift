@@ -47,6 +47,6 @@ class CoreDataStackProducts{
         context.delete(products)
         try saveContext()
     }
-    
+
     
 }

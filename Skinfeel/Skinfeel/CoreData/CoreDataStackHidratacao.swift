@@ -30,10 +30,11 @@ class CoreDataStackHidratacao{
         }
     }
     
-    static func createHidratacao(periodo: Int32) throws -> Hidratacao{
+    static func createHidratacao(periodo: Int32, produtos:Products) throws -> Hidratacao{
         guard let hidratacao = NSEntityDescription.insertNewObject(forEntityName: "Hidratacao", into: context) as? Hidratacao else {preconditionFailure()}
        
         hidratacao.periodo = periodo
+        hidratacao.addToProduto(produtos)
         
         try saveContext()
         return hidratacao

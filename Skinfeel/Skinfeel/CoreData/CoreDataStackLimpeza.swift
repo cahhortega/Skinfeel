@@ -30,10 +30,11 @@ class CoreDataStackLimpeza{
         }
     }
     
-    static func createLimpeza(periodo: Int32) throws -> Limpeza{
+    static func createLimpeza(periodo: Int32, produtos: Products) throws -> Limpeza{
         guard let limpeza = NSEntityDescription.insertNewObject(forEntityName: "Limpeza", into: context) as? Limpeza else {preconditionFailure()}
         
         limpeza.periodo = periodo
+        limpeza.addToProduto(produtos)
         
         try saveContext()
         return limpeza
@@ -47,5 +48,6 @@ class CoreDataStackLimpeza{
         context.delete(limpeza)
         try saveContext()
     }
+    
     
 }

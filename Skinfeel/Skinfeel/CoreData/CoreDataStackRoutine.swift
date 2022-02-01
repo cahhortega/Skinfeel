@@ -15,7 +15,6 @@ class CoreDataStackRoutine{
             if let erro = error{
                 preconditionFailure(erro.localizedDescription)
             }
-            
         }
         return container
     }()

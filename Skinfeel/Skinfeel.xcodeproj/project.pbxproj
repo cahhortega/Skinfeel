@@ -169,6 +169,8 @@
 		99379464278CCEFC0096F99F /* AddProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductTableViewCell.swift; sourceTree = "<group>"; };
 		99379466278CCF1D0096F99F /* ShelfCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfCell.swift; sourceTree = "<group>"; };
 		99379468278CCF450096F99F /* ShelfFormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfFormTableViewCell.swift; sourceTree = "<group>"; };
+		9950BD9B27A9B49E00DB7A41 /* Routine+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Routine+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9950BD9C27A9B49E00DB7A41 /* Routine+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Routine+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		99797ED627A8733400A37491 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		99797F0927A8771000A37491 /* Limpeza+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Limpeza+CoreDataClass.swift"; sourceTree = "<group>"; };
 		99797F0A27A8771000A37491 /* Limpeza+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Limpeza+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -178,8 +180,6 @@
 		99797F1227A8771000A37491 /* Protecao+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Protecao+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		99797F1327A8771000A37491 /* Hidratacao+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hidratacao+CoreDataClass.swift"; sourceTree = "<group>"; };
 		99797F1427A8771000A37491 /* Hidratacao+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hidratacao+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		99797F2127A87BB500A37491 /* Routine+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Routine+CoreDataClass.swift"; sourceTree = "<group>"; };
-		99797F2227A87BB500A37491 /* Routine+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Routine+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		99797F2327A87BB500A37491 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		99797F2427A87BB500A37491 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		99797F2927A87ED200A37491 /* CoreDataStackTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStackTask.swift; sourceTree = "<group>"; };
@@ -435,8 +435,8 @@
 		99797F0827A874BE00A37491 /* ManageObjects */ = {
 			isa = PBXGroup;
 			children = (
-				99797F2127A87BB500A37491 /* Routine+CoreDataClass.swift */,
-				99797F2227A87BB500A37491 /* Routine+CoreDataProperties.swift */,
+				9950BD9B27A9B49E00DB7A41 /* Routine+CoreDataClass.swift */,
+				9950BD9C27A9B49E00DB7A41 /* Routine+CoreDataProperties.swift */,
 				99797F2327A87BB500A37491 /* Task+CoreDataClass.swift */,
 				99797F2427A87BB500A37491 /* Task+CoreDataProperties.swift */,
 				99797F0927A8771000A37491 /* Limpeza+CoreDataClass.swift */,
