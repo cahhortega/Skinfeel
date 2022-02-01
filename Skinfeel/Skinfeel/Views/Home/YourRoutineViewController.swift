@@ -43,12 +43,12 @@ class YourRoutineViewController: UIViewController {
     static var index : Int = -1
     
     @IBAction func saveButton(_ sender: Any) {
-        let somaManha = limpezaManha.count + hidratacaoManha.count + protecaoManha.count
-        let somaTarde = protecaoTarde.count
-        let somaNoite = limpezaNoite.count + esfoliacaoNoite.count + protecaoNoite.count
-        defaults.set(somaManha, forKey: "somaManha")
-        defaults.set(somaTarde, forKey: "somaTarde")
-        defaults.set(somaNoite, forKey: "somaNoite")
+//        let somaManha = limpezaManha.count + hidratacaoManha.count + protecaoManha.count
+//        let somaTarde = protecaoTarde.count
+//        let somaNoite = limpezaNoite.count + esfoliacaoNoite.count + protecaoNoite.count
+//        defaults.set(somaManha, forKey: "somaManha")
+//        defaults.set(somaTarde, forKey: "somaTarde")
+//        defaults.set(somaNoite, forKey: "somaNoite")
         
         defaults.set(true, forKey: "feito")
         navigationController?.popViewController(animated: true)
@@ -59,13 +59,13 @@ class YourRoutineViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        limpezaManha = defaults.stringArray(forKey: "limpezaManha")!
-        hidratacaoManha = defaults.stringArray(forKey: "hidratacaoManha")!
-        protecaoManha = defaults.stringArray(forKey: "protecaoManha")!
-        protecaoTarde = defaults.stringArray(forKey: "protecaoTarde")!
-        limpezaNoite = defaults.stringArray(forKey: "limpezaNoite")!
-        esfoliacaoNoite = defaults.stringArray(forKey: "esfoliacaoNoite")!
-        protecaoNoite = defaults.stringArray(forKey: "protecaoNoite")!
+//        limpezaManha = defaults.stringArray(forKey: "limpezaManha")!
+//        hidratacaoManha = defaults.stringArray(forKey: "hidratacaoManha")!
+//        protecaoManha = defaults.stringArray(forKey: "protecaoManha")!
+//        protecaoTarde = defaults.stringArray(forKey: "protecaoTarde")!
+//        limpezaNoite = defaults.stringArray(forKey: "limpezaNoite")!
+//        esfoliacaoNoite = defaults.stringArray(forKey: "esfoliacaoNoite")!
+//        protecaoNoite = defaults.stringArray(forKey: "protecaoNoite")!
         
         navigationController?.setNavigationBarHidden(false, animated: false)
         routineNome.text = nomeRotina?[YourRoutineViewController.index].routineName
