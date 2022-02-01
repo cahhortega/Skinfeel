@@ -36,7 +36,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     
     lazy var days: [UIButton] = [day1, day2, day3, day4, day5, day6, day7]
     
-    var oi = CoreDataStack.shared.getAllRoutines()
+    var oi = try? CoreDataStackRoutine.getRoutine()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +88,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         day7.translatesAutoresizingMaskIntoConstraints = false
         day7.addTarget(self, action: #selector(clicarDia7), for: .touchUpInside)
         
-        oi = CoreDataStack.shared.getAllRoutines()
+        oi = try! CoreDataStackRoutine.getRoutine()
         self.routineCollectionView.reloadData()
         
         //Dia atual
@@ -104,19 +104,19 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         let buttonImage = UIImage(named: defaults.string(forKey: "profileImage")!)
         profileAvatar.setImage(buttonImage, for: .normal)
         numeroDeCelulas()
-        oi = CoreDataStack.shared.getAllRoutines()
+        oi = try! CoreDataStackRoutine.getRoutine()
         self.routineCollectionView.reloadData()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        oi = CoreDataStack.shared.getAllRoutines()
+        oi = try! CoreDataStackRoutine.getRoutine()
         self.routineCollectionView.reloadData()
     }
     
     func numeroDeCelulas(){
-        if Int(self.oi.count) != 0 { //Colocar aqui a lista de cards
+        if Int(self.oi?.count ?? 0) != 0 { //Colocar aqui a lista de cards
             routineCollectionView.isHidden = false
             fraseSemRotina.isHidden = true
             imagemBoasVindas.isHidden = true
@@ -277,22 +277,22 @@ extension TodayViewController: UICollectionViewDelegate{
 
 extension TodayViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return oi.count
+        return oi?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as! RoutineCollectionViewCell
-        cell.nameRoutine.text = oi[indexPath.row].routineName
-        let date1 = oi[indexPath.row].dateStart
-        let date2 = oi[indexPath.row].dateEnd
-        let dateInicial = dateFormatter.string(from: date1!)
-        let dateFinal = dateFormatter.string(from: date2!)
-        let dateAtual = "\(currentDay)/\(currentMonth)/\(currentYear)"
-        for cell in oi{
-            if dateInicial <= dateAtual || dateFinal >= dateAtual{
-                
-            }
-        }
+        cell.nameRoutine.text = oi?[indexPath.row].routineName
+//        let date1 = oi?[indexPath.row].dateStart
+//        let date2 = oi?[indexPath.row].dateEnd
+//        let dateInicial = dateFormatter.string(from: date1!)
+//        let dateFinal = dateFormatter.string(from: date2!)
+//        let dateAtual = "\(currentDay)/\(currentMonth)/\(currentYear)"
+//        for cell in oi!{
+//            if dateInicial <= dateAtual || dateFinal >= dateAtual{
+//
+//            }
+//        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -309,7 +309,7 @@ extension TodayViewController: UICollectionViewDataSource{
 }
 extension TodayViewController: TodayViewControllerDelegate{
     func didRegister() {
-        oi = CoreDataStack.shared.getAllRoutines()
+        oi = try! CoreDataStackRoutine.getRoutine()
         routineCollectionView.reloadData()
     }
 }

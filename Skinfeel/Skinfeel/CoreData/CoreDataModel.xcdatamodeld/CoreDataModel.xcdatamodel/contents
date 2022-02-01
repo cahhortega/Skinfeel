@@ -1,35 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G224" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Day" representedClassName="Day" syncable="YES" codeGenerationType="class">
-        <attribute name="diasemana" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="hours" optional="YES" toMany="YES" minCount="1" maxCount="3" deletionRule="Nullify" destinationEntity="Hour" inverseName="day" inverseEntity="Hour"/>
-        <relationship name="routine" maxCount="1" deletionRule="Nullify" destinationEntity="Routine" inverseName="days" inverseEntity="Routine"/>
+    <entity name="Hidratacao" representedClassName="Hidratacao" syncable="YES" codeGenerationType="class">
+        <attribute name="periodo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="produto" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products" inverseName="hidratacaoProd" inverseEntity="Products"/>
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="hidratacao" inverseEntity="Task"/>
     </entity>
-    <entity name="Hour" representedClassName="Hour" syncable="YES" codeGenerationType="class">
-        <attribute name="horario" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="day" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="hours" inverseEntity="Day"/>
-        <relationship name="tasks" optional="YES" toMany="YES" minCount="1" maxCount="4" deletionRule="Nullify" destinationEntity="Task" inverseName="hour" inverseEntity="Task"/>
+    <entity name="Limpeza" representedClassName="Limpeza" syncable="YES" codeGenerationType="class">
+        <attribute name="periodo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="produto" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products" inverseName="limpezaProd" inverseEntity="Products"/>
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="limpeza" inverseEntity="Task"/>
     </entity>
     <entity name="Products" representedClassName="Products" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="products" inverseEntity="Task"/>
+        <attribute name="nome" optional="YES" attributeType="String"/>
+        <relationship name="hidratacaoProd" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hidratacao" inverseName="produto" inverseEntity="Hidratacao"/>
+        <relationship name="limpezaProd" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Limpeza" inverseName="produto" inverseEntity="Limpeza"/>
+        <relationship name="protecaoProd" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Protecao" inverseName="produto" inverseEntity="Protecao"/>
+    </entity>
+    <entity name="Protecao" representedClassName="Protecao" syncable="YES" codeGenerationType="class">
+        <attribute name="periodo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="produto" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products" inverseName="protecaoProd" inverseEntity="Products"/>
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="protecao" inverseEntity="Task"/>
     </entity>
     <entity name="Routine" representedClassName="Routine" syncable="YES" codeGenerationType="class">
         <attribute name="dateEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dom" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="qua" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="qui" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="routineName" optional="YES" attributeType="String"/>
-        <relationship name="days" optional="YES" toMany="YES" minCount="1" maxCount="7" deletionRule="Nullify" ordered="YES" destinationEntity="Day" inverseName="routine" inverseEntity="Day"/>
+        <attribute name="sab" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="seg" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="sex" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="ter" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="routine" inverseEntity="Task"/>
     </entity>
     <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
-        <attribute name="tarefa" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="hour" maxCount="1" deletionRule="Nullify" destinationEntity="Hour" inverseName="tasks" inverseEntity="Hour"/>
-        <relationship name="products" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Products" inverseName="tasks" inverseEntity="Products"/>
+        <relationship name="hidratacao" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Hidratacao" inverseName="task" inverseEntity="Hidratacao"/>
+        <relationship name="limpeza" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Limpeza" inverseName="task" inverseEntity="Limpeza"/>
+        <relationship name="protecao" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Protecao" inverseName="task" inverseEntity="Protecao"/>
+        <relationship name="routine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Routine" inverseName="task" inverseEntity="Routine"/>
     </entity>
     <elements>
-        <element name="Day" positionX="-244.6276245117188" positionY="148.7202758789062" width="128" height="74"/>
-        <element name="Hour" positionX="-61.8372802734375" positionY="160.9318237304688" width="128" height="74"/>
-        <element name="Products" positionX="290.9140014648438" positionY="149.3530578613281" width="128" height="59"/>
-        <element name="Routine" positionX="-435.4398193359375" positionY="131.9604949951172" width="128" height="89"/>
-        <element name="Task" positionX="109.75439453125" positionY="152.6460876464844" width="128" height="74"/>
+        <element name="Hidratacao" positionX="-423" positionY="216" width="128" height="74"/>
+        <element name="Limpeza" positionX="-396" positionY="234" width="128" height="74"/>
+        <element name="Products" positionX="-387" positionY="243" width="128" height="89"/>
+        <element name="Protecao" positionX="-414" positionY="225" width="128" height="74"/>
+        <element name="Routine" positionX="-435.4398193359375" positionY="131.9604949951172" width="128" height="194"/>
+        <element name="Task" positionX="-432" positionY="207" width="128" height="89"/>
     </elements>
 </model>
