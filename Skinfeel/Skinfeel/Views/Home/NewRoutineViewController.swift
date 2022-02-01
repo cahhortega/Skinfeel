@@ -195,7 +195,7 @@ class NewRoutineViewController: UIViewController {
             present(ac, animated: true)
         }
         
-        var _ = try? CoreDataStackRoutine.createRoutine(dateStart: dataStart, dateEnd: dataEnd, dom: dom, sab: sab, sex: sex, qui: qui, qua: qua, ter: ter, seg: seg, routineName: routineName)
+        var _ = try? CoreDataStackRoutine.createRoutine(dateStart: dataStart, dateEnd: dataEnd, dom: dom, sab: sab, sex: sex, qui: qui, qua: qua, ter: ter, seg: seg, routineName: routineName) 
        
         self.navigationController?.popViewController(animated: true)
     }

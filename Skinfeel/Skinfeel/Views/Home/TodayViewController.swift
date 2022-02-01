@@ -128,6 +128,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
             
         }
     }
+ 
     
     func calendario(){
         var diaDepois = currentDay
@@ -283,16 +284,50 @@ extension TodayViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as! RoutineCollectionViewCell
         cell.nameRoutine.text = oi?[indexPath.row].routineName
-//        let date1 = oi?[indexPath.row].dateStart
-//        let date2 = oi?[indexPath.row].dateEnd
-//        let dateInicial = dateFormatter.string(from: date1!)
-//        let dateFinal = dateFormatter.string(from: date2!)
-//        let dateAtual = "\(currentDay)/\(currentMonth)/\(currentYear)"
-//        for cell in oi!{
-//            if dateInicial <= dateAtual || dateFinal >= dateAtual{
-//
-//            }
-//        }
+        let date1 = oi?[indexPath.row].dateStart
+        let date2 = oi?[indexPath.row].dateEnd
+        let dateInicial = dateFormatter.string(from: date1!)
+        let dateFinal = dateFormatter.string(from: date2!)
+        let dateAtual = "\(currentDay)/\(currentMonth)/\(currentYear)"
+        for cell in routineCollectionView.visibleCells{
+            if dateInicial <= dateAtual || dateFinal >= dateAtual{
+                if oi?[indexPath.row].dom == true{
+                    cell.contentView.isHidden = false
+                }else{
+                    cell.contentView.isHidden = true
+                }
+                if oi?[indexPath.row].seg == true{
+                    cell.contentView.isHidden = false
+                }else{
+                    cell.contentView.isHidden = true
+                }
+                if oi?[indexPath.row].ter == true{
+                    cell.contentView.isHidden = false
+                }else{
+                    cell.contentView.isHidden = true
+                }
+                if oi?[indexPath.row].qua == true{
+                    cell.contentView.isHidden = false
+                }else{
+                    cell.contentView.isHidden = true
+                }
+                if oi?[indexPath.row].qui == true{
+                    cell.contentView.isHidden = false
+                }else{
+                    cell.contentView.isHidden = true
+                }
+                if oi?[indexPath.row].sex == true{
+                    cell.contentView.isHidden = false
+                }else{
+                    cell.contentView.isHidden = true
+                }
+                if oi?[indexPath.row].sab == true{
+                    cell.contentView.isHidden = false
+                }else{
+                    cell.contentView.isHidden = true
+                }
+            }
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -300,6 +335,7 @@ extension TodayViewController: UICollectionViewDataSource{
         let vc = storyBoard.instantiateViewController(identifier: "YourRoutineView") as! YourRoutineViewController
         YourRoutineViewController.index = indexPath.row
         vc.NewRoutineViewControllerDelegate = self
+        vc.routine = oi?[indexPath.row] ?? Routine()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

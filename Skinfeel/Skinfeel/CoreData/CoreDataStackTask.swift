@@ -30,8 +30,11 @@ class CoreDataStackTask{
         }
     }
     
-    static func createTask() throws ->Task{
+    static func createTask(protecao:Protecao, hidratacao: Hidratacao, limpeza:Limpeza, routine:Routine) throws ->Task{
         guard let task = NSEntityDescription.insertNewObject(forEntityName: "Task", into: context) as? Task else {preconditionFailure()}
+        task.addToLimpeza(limpeza)
+        task.addToProtecao(protecao)
+        task.addToHidratacao(hidratacao)
         
         try saveContext()
         return task

@@ -12,18 +12,20 @@ class YourRoutineViewController: UIViewController {
     
     weak var NewRoutineViewControllerDelegate: NewRoutineViewControllerDelegate?
     @IBOutlet var deleteRoutine: UIBarButtonItem!
-    
+    var routine: Routine = Routine()
+    weak var delegate: YourRoutineViewControllerDelegate?
     @IBOutlet weak var routineNome: UILabel!
     @IBAction func deleteButton(_ sender: UIBarButtonItem) {
         let ac = UIAlertController(title: "", message: "Tem certeza de que deseja deletar esta rotina?", preferredStyle: .actionSheet)
         ac.addAction(UIAlertAction(title: "Apagar", style: .destructive, handler: {(action: UIAlertAction!) in
             //acao de deletar
+            _ = try! CoreDataStackRoutine.deleteRoutine(routine: self.routine)
             self.navigationController?.popViewController(animated: true)
         }))
         ac.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
         
         present(ac, animated: true, completion: nil)
-//        delegate?.didRegister()
+        delegate?.didRegister()
     }
     
     @IBOutlet weak var tableView: UITableView!
