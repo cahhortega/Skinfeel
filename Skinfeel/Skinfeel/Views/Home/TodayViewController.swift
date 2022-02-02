@@ -25,6 +25,10 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     var rotinasData: [Routine] = []
     weak var NewRoutineViewControllerDelegate: NewRoutineViewControllerDelegate?
     
+    //    var newRoutineViewController = NewRoutineViewController()
+    //    var yourRoutineViewController = YourRoutineViewController()
+    
+    
     var isDone: Bool = false
     
     @IBOutlet weak var profileAvatar: UIButton!
@@ -139,7 +143,6 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         }
     }
     
-
     
     func calendario(){
         var diaDepois = currentDay
@@ -339,7 +342,17 @@ extension TodayViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as! RoutineCollectionViewCell
         cell.nameRoutine.text = self.rotinasData[indexPath.row].routineName
+        // guard let cell = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as? RoutineCollectionViewCell else {return UICollectionViewCell()}
+        cell.morningCircularProgress.image = UIImage(named: "dia")
+        cell.afternoonCircularProgress.image = UIImage(named: "tarde")
+        cell.nightCircularProgress.image = UIImage(named: "lua")
+
         
+//        let soma = (oi?[indexPath.row].somaManha)!/10 //total de itens
+//        let yourSoma = (oi?[indexPath.row].yourSomaManha)!/10 //total de itens selecionados
+//        let isSalvo = oi?[indexPath.row].salvo
+//        let result = Float(yourSoma/soma)
+
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -348,6 +361,9 @@ extension TodayViewController: UICollectionViewDataSource{
         YourRoutineViewController.index = indexPath.row
         vc.NewRoutineViewControllerDelegate = self
         vc.routine = oi?[indexPath.row] ?? Routine()
+        
+        
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
