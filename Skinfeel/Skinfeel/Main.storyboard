@@ -669,7 +669,6 @@
                                                 <constraint firstItem="PvL-JA-s5S" firstAttribute="centerX" secondItem="JOM-Oz-KMu" secondAttribute="centerX" id="Rar-BA-q4t"/>
                                                 <constraint firstItem="yfQ-fu-pr0" firstAttribute="top" secondItem="bLr-Vj-LoN" secondAttribute="top" constant="16" id="ZSz-iL-g23"/>
                                                 <constraint firstItem="KkB-xg-dBs" firstAttribute="leading" secondItem="bLr-Vj-LoN" secondAttribute="leading" constant="275" id="d9Z-we-ERo"/>
-                                                <constraint firstItem="JOM-Oz-KMu" firstAttribute="leading" secondItem="bLr-Vj-LoN" secondAttribute="leading" constant="45" id="gGQ-aD-qyN"/>
                                                 <constraint firstAttribute="bottom" secondItem="JOM-Oz-KMu" secondAttribute="bottom" constant="20" id="gV7-Yf-gFQ"/>
                                                 <constraint firstItem="I8M-PT-nax" firstAttribute="leading" secondItem="JOM-Oz-KMu" secondAttribute="leading" id="kda-Nh-n2r"/>
                                                 <constraint firstItem="I8M-PT-nax" firstAttribute="bottom" secondItem="PvL-JA-s5S" secondAttribute="bottom" id="mjc-V4-v0y"/>
@@ -1086,7 +1085,7 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZsA-Wk-pSe" id="2Eu-MX-BVa">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEU AVATAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7e-cJ-Cut">
                                                     <rect key="frame" x="20" y="11" width="82" height="17"/>

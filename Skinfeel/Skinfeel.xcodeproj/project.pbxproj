@@ -351,7 +351,6 @@
 		9937944D278CCCA30096F99F /* Today Cells */ = {
 			isa = PBXGroup;
 			children = (
-				99379453278CCD410096F99F /* RoutineCollectionViewCell.swift */,
 				99379455278CCD610096F99F /* CircularProgressBarView.swift */,
 			);
 			path = "Today Cells";
@@ -360,6 +359,7 @@
 		9937944E278CCCB10096F99F /* Settings Cells */ = {
 			isa = PBXGroup;
 			children = (
+				99379453278CCD410096F99F /* RoutineCollectionViewCell.swift */,
 				99379457278CCDD60096F99F /* NameTableViewCell.swift */,
 				99379459278CCE020096F99F /* DayTableViewCell.swift */,
 				9937945B278CCE280096F99F /* SwitchDayTableViewCell.swift */,

@@ -21,6 +21,8 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     let fraseSemRotina = UILabel()
     let imagemBoasVindas = UIImageView()
     let dateFormatter = DateFormatter()
+    var dataSelecionada: Date?
+    var rotinasData: [Routine] = []
     weak var NewRoutineViewControllerDelegate: NewRoutineViewControllerDelegate?
     
     //    var newRoutineViewController = NewRoutineViewController()
@@ -52,6 +54,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         self.routineCollectionView.dataSource = self
         view.addSubview(fraseSemRotina)
         view.addSubview(imagemBoasVindas)
+        
         
         imagemBoasVindas.image = UIImage(named: "menina triste")
         imagemBoasVindas.translatesAutoresizingMaskIntoConstraints = false
@@ -203,6 +206,14 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
                          day5: UIButton,
                          day6: UIButton,
                          day7: UIButton) {
+
+        for rotinas in oi!{
+            if day2.isSelected == true{
+                if rotinas.qui == true{
+                rotinasData.append(rotinas)
+            }
+            }
+        }
         
         if !selected.isSelected{
             selected.backgroundColor = UIColor(named: "Rosa")
@@ -219,6 +230,8 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
             day6.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
             day7.backgroundColor = UIColor(named: "Bg")
             day7.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
+            
+           
             
         }
         else {
@@ -237,6 +250,8 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
             titleLabel.text = "Boa noite, \(defaults.string(forKey: "name") ?? "")!"
         }
     }
+    
+    
     
     //Ações dos botões
     @objc func clicarDia1() {
@@ -282,6 +297,12 @@ extension TodayViewController: UICollectionViewDelegate{
 
 extension TodayViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+      
+//        for rotinas in oi!{
+//            if dataSelecionada == rotinas.dateStart{
+//                rotinasData.append(rotinas)
+//            }
+//        }
         return oi?.count ?? 0
     }
     
@@ -297,27 +318,6 @@ extension TodayViewController: UICollectionViewDataSource{
 //        let yourSoma = (oi?[indexPath.row].yourSomaManha)!/10 //total de itens selecionados
 //        let isSalvo = oi?[indexPath.row].salvo
 //        let result = Float(yourSoma/soma)
-        
-//        cell.morningCircularProgress.setProgress(duration: 1.0, value: 0.2)
-//        cell.afternoonCircularProgress.setProgress(duration: 1.0, value: 0.2)
-//        cell.nightCircularProgress.setProgress(duration: 1.0, value: 0.2)
-//        cell.morningCircularProgress.circleColor = UIColor(named: "Bg")!
-//        cell.morningCircularProgress.progressColor = UIColor(named: "Rosa")!
-//        cell.afternoonCircularProgress.circleColor = UIColor(named: "Bg")!
-//        cell.afternoonCircularProgress.progressColor = UIColor(named: "Rosa")!
-//        cell.nightCircularProgress.circleColor = UIColor(named: "Bg")!
-//        cell.nightCircularProgress.progressColor = UIColor(named: "Rosa")!
-//
-//        if isSalvo == false {
-//            cell.morningCircularProgress.setProgress(duration: 1.0, value: 0.0)
-//            cell.morningCircularProgress.circleColor = UIColor(named: "Bg")!
-//            cell.morningCircularProgress.progressColor = UIColor(named: "Rosa")!
-//        } else {
-//            cell.morningCircularProgress.setProgress(duration: 1.0, value: Float(soma))
-//            cell.morningCircularProgress.circleColor = UIColor(named: "Bg")!
-//            cell.morningCircularProgress.progressColor = UIColor(named: "Rosa")!
-//
-//        }
 
         return cell
     }
