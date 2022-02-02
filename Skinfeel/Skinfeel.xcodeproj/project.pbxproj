@@ -48,9 +48,7 @@
 		99C9B52E2795F3AB00048C33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B52D2795F3AB00048C33 /* AppDelegate.swift */; };
 		99C9B5302795F3AB00048C33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B52F2795F3AB00048C33 /* SceneDelegate.swift */; };
 		99C9B5352795F3AB00048C33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C9B5332795F3AB00048C33 /* Main.storyboard */; };
-		99C9B5382795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B5362795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld */; };
 		99C9B53A2795F3AE00048C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99C9B5392795F3AE00048C33 /* Assets.xcassets */; };
-		99C9B53D2795F3AE00048C33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C9B53B2795F3AE00048C33 /* LaunchScreen.storyboard */; };
 		99C9B5422795F3AE00048C33 /* SkinfeelPartial.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 99C9B52B2795F3AB00048C33 /* SkinfeelPartial.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A03642F4279B3E35002606DC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03642F3279B3E35002606DC /* FeedViewController.swift */; };
 		A03642F6279B3E7B002606DC /* HighlightedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03642F5279B3E7B002606DC /* HighlightedCollectionViewCell.swift */; };
@@ -82,6 +80,7 @@
 		A050417D278CDEAA00BCF86C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A050417B278CDEAA00BCF86C /* Main.storyboard */; };
 		A050417E278CDEAA00BCF86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */; };
 		A0E7647727AB35B400A90486 /* FeedAppClips.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E7647627AB35B400A90486 /* FeedAppClips.swift */; };
+		A0E7647827AB38FF00A90486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,11 +154,8 @@
 		99C9B52D2795F3AB00048C33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99C9B52F2795F3AB00048C33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		99C9B5342795F3AB00048C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		99C9B5372795F3AB00048C33 /* SkinfeelPartial.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SkinfeelPartial.xcdatamodel; sourceTree = "<group>"; };
 		99C9B5392795F3AE00048C33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		99C9B53C2795F3AE00048C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99C9B53E2795F3AE00048C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99C9B53F2795F3AE00048C33 /* SkinfeelPartial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkinfeelPartial.entitlements; sourceTree = "<group>"; };
 		A03642F3279B3E35002606DC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		A03642F5279B3E7B002606DC /* HighlightedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedCollectionViewCell.swift; sourceTree = "<group>"; };
 		A03642F7279B673F002606DC /* SuggestedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -208,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				99797F0827A874BE00A37491 /* ManageObjects */,
-				A0834FA62795F890009F756A /* Shared */,
 				9924050B2771139200CF0946 /* Skinfeel */,
 				99C9B52C2795F3AB00048C33 /* SkinfeelPartial */,
 				9924050A2771139200CF0946 /* Products */,
@@ -227,11 +222,13 @@
 		9924050B2771139200CF0946 /* Skinfeel */ = {
 			isa = PBXGroup;
 			children = (
+				992405182771139400CF0946 /* Assets.xcassets */,
 				A050417C278CDEAA00BCF86C /* LaunchScreen.storyboard */,
 				A050417B278CDEAA00BCF86C /* Main.storyboard */,
 				9937940C278CC5110096F99F /* SceneDelegate.swift */,
 				9924050C2771139200CF0946 /* AppDelegate.swift */,
 				9924051D2771139400CF0946 /* Info.plist */,
+				A03642F2279B3E23002606DC /* Feed */,
 				9937944B278CCC770096F99F /* Cells */,
 				9937940E278CC59C0096F99F /* CoreData */,
 				99379418278CC7710096F99F /* Notifications */,
@@ -407,10 +404,7 @@
 				99C9B52F2795F3AB00048C33 /* SceneDelegate.swift */,
 				99C9B5332795F3AB00048C33 /* Main.storyboard */,
 				99C9B5392795F3AE00048C33 /* Assets.xcassets */,
-				99C9B53B2795F3AE00048C33 /* LaunchScreen.storyboard */,
 				99C9B53E2795F3AE00048C33 /* Info.plist */,
-				99C9B53F2795F3AE00048C33 /* SkinfeelPartial.entitlements */,
-				99C9B5362795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld */,
 				A0E7647627AB35B400A90486 /* FeedAppClips.swift */,
 			);
 			path = SkinfeelPartial;
@@ -474,16 +468,6 @@
 				A036433127A1B4FC002606DC /* ExploreCollectionViewDataSource.swift */,
 			);
 			path = Explore;
-			sourceTree = "<group>";
-		};
-		A0834FA62795F890009F756A /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				992405182771139400CF0946 /* Assets.xcassets */,
-				A03642F2279B3E23002606DC /* Feed */,
-			);
-			name = Shared;
-			path = Skinfeel/Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -582,9 +566,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99C9B53D2795F3AE00048C33 /* LaunchScreen.storyboard in Resources */,
 				99C9B53A2795F3AE00048C33 /* Assets.xcassets in Resources */,
 				99C9B5352795F3AB00048C33 /* Main.storyboard in Resources */,
+				A0E7647827AB38FF00A90486 /* LaunchScreen.storyboard in Resources */,
 				A036431827A09086002606DC /* cards.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,7 +642,6 @@
 			files = (
 				99C9B52E2795F3AB00048C33 /* AppDelegate.swift in Sources */,
 				A0E7647727AB35B400A90486 /* FeedAppClips.swift in Sources */,
-				99C9B5382795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld in Sources */,
 				A036431627A09080002606DC /* ReadContent.swift in Sources */,
 				A036431A27A0908B002606DC /* NewsCollectionViewDelegate.swift in Sources */,
 				99C9B5302795F3AB00048C33 /* SceneDelegate.swift in Sources */,
@@ -685,14 +668,6 @@
 				99C9B5342795F3AB00048C33 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		99C9B53B2795F3AE00048C33 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				99C9B53C2795F3AE00048C33 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -978,16 +953,6 @@
 			);
 			currentVersion = 9950BDA627AADB9000DB7A41 /* CoreDataModel.xcdatamodel */;
 			path = CoreDataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		99C9B5362795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				99C9B5372795F3AB00048C33 /* SkinfeelPartial.xcdatamodel */,
-			);
-			currentVersion = 99C9B5372795F3AB00048C33 /* SkinfeelPartial.xcdatamodel */;
-			path = SkinfeelPartial.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
