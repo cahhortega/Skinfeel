@@ -34,13 +34,13 @@ class YourRoutineViewController: UIViewController {
     var defaults = UserDefaults.standard
     var selectedSection: Int?
     var selectedProducts: [String] = []
-
-    var hidratacaoManha: [String] = []
-    var protecaoManha: [String] = []
-    var protecaoTarde: [String] = []
-    var limpezaNoite: [String] = []
-    var esfoliacaoNoite: [String] = []
-    var protecaoNoite: [String] = []
+//
+//    var hidratacaoManha: [String] = []
+//    var protecaoManha: [String] = []
+//    var protecaoTarde: [String] = []
+//    var limpezaNoite: [String] = []
+//    var esfoliacaoNoite: [String] = []
+//    var protecaoNoite: [String] = []
     var nomeRotina = try? CoreDataStackRoutine.getRoutine()
     static var index : Int = -1
     
@@ -122,25 +122,23 @@ extension YourRoutineViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if dataFilter == 0 {
             if section == 0 {
-              //  return limpeza.count
+                return routine.limpezamanha?.count ?? 0
             } else if section == 1 {
-             //   return hidratacao.count
+                return routine.hidratacaomanha?.count ?? 0
             } else {
-                return defaults.stringArray(forKey: "protecaoManha")!.count
+                return routine.protecaomanha?.count ?? 0
             }
         }
         else if dataFilter == 1 {
-         //   return defaults.stringArray(forKey: "protecaoTarde")!.count
-            
+            return routine.protecaotarde?.count ?? 0
+
         } else {
             if section == 0 {
-           //     return defaults.stringArray(forKey: "limpezaNoite")!.count
+                return routine.limpezanoite?.count ?? 0
             } else if section == 1 {
-            //    return defaults.stringArray(forKey: "esfoliacaoNoite")!.count
-                
+                return routine.esfoliacaonoite?.count ?? 0
             } else {
-            //    return defaults.stringArray(forKey: "protecaoNoite")!.count
-                
+                return routine.protecaonoite?.count ?? 0
             }
         }
         return 1
@@ -241,39 +239,40 @@ extension YourRoutineViewController: UITableViewDataSource {
         if dataFilter == 0 {
             if indexPath.section == 0 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
-     //           cell.textLabel?.text = limpezaManha[indexPath.row]
+                cell.textLabel?.text = routine.limpezamanha?[indexPath.row]
+                
                 return cell
                 
             } else if indexPath.section == 1 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
-                cell.textLabel?.text = hidratacaoManha[indexPath.row]
+                cell.textLabel?.text = routine.hidratacaomanha?[indexPath.row]
                 return cell
                 
             } else if indexPath.section == 2 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
-                cell.textLabel?.text = protecaoManha[indexPath.row]
+                cell.textLabel?.text = routine.protecaomanha?[indexPath.row]
                 return cell
                 
             }
         } else if dataFilter == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
-          //  cell.textLabel?.text = protecaoTarde[indexPath.row]
+            cell.textLabel?.text = routine.protecaotarde?[indexPath.row]
             return cell
             
         } else {
             if indexPath.section == 0 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
-           //     cell.textLabel?.text = limpezaNoite[indexPath.row]
+                cell.textLabel?.text = routine.limpezanoite?[indexPath.row]
                 return cell
             } else if indexPath.section == 1 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
-           //     cell.textLabel?.text = esfoliacaoNoite[indexPath.row]
+                cell.textLabel?.text = routine.esfoliacaonoite?[indexPath.row]
                 return cell
                 
                 
             } else if indexPath.section == 2{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
-           //     cell.textLabel?.text = protecaoNoite[indexPath.row]
+                cell.textLabel?.text = routine.protecaonoite?[indexPath.row]
                 return cell
                 
             }
