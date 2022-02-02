@@ -47,7 +47,6 @@
 		9950BDA727AADB9100DB7A41 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9950BDA527AADB9000DB7A41 /* CoreDataModel.xcdatamodeld */; };
 		99C9B52E2795F3AB00048C33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B52D2795F3AB00048C33 /* AppDelegate.swift */; };
 		99C9B5302795F3AB00048C33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B52F2795F3AB00048C33 /* SceneDelegate.swift */; };
-		99C9B5322795F3AB00048C33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B5312795F3AB00048C33 /* ViewController.swift */; };
 		99C9B5352795F3AB00048C33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C9B5332795F3AB00048C33 /* Main.storyboard */; };
 		99C9B5382795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B5362795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld */; };
 		99C9B53A2795F3AE00048C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99C9B5392795F3AE00048C33 /* Assets.xcassets */; };
@@ -72,7 +71,6 @@
 		A036431A27A0908B002606DC /* NewsCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036431127A08183002606DC /* NewsCollectionViewDelegate.swift */; };
 		A036431B27A0908E002606DC /* NewsCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036431327A08191002606DC /* NewsCollectionViewDataSource.swift */; };
 		A036432327A090D4002606DC /* SuggestedCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036432227A090D4002606DC /* SuggestedCollectionViewDataSource.swift */; };
-		A036432527A09186002606DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992405182771139400CF0946 /* Assets.xcassets */; };
 		A036432827A0F8AD002606DC /* crueltyFree.json in Resources */ = {isa = PBXBuildFile; fileRef = A036432727A0F8AD002606DC /* crueltyFree.json */; };
 		A036432A27A1B14D002606DC /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036432927A1B14D002606DC /* ExploreViewController.swift */; };
 		A036432E27A1B4DE002606DC /* ExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036432D27A1B4DE002606DC /* ExploreCollectionViewCell.swift */; };
@@ -156,7 +154,6 @@
 		99C9B52B2795F3AB00048C33 /* SkinfeelPartial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkinfeelPartial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C9B52D2795F3AB00048C33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99C9B52F2795F3AB00048C33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		99C9B5312795F3AB00048C33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		99C9B5342795F3AB00048C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99C9B5372795F3AB00048C33 /* SkinfeelPartial.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SkinfeelPartial.xcdatamodel; sourceTree = "<group>"; };
 		99C9B5392795F3AE00048C33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -408,7 +405,6 @@
 			children = (
 				99C9B52D2795F3AB00048C33 /* AppDelegate.swift */,
 				99C9B52F2795F3AB00048C33 /* SceneDelegate.swift */,
-				99C9B5312795F3AB00048C33 /* ViewController.swift */,
 				99C9B5332795F3AB00048C33 /* Main.storyboard */,
 				99C9B5392795F3AE00048C33 /* Assets.xcassets */,
 				99C9B53B2795F3AE00048C33 /* LaunchScreen.storyboard */,
@@ -590,7 +586,6 @@
 				99C9B53A2795F3AE00048C33 /* Assets.xcassets in Resources */,
 				99C9B5352795F3AB00048C33 /* Main.storyboard in Resources */,
 				A036431827A09086002606DC /* cards.json in Resources */,
-				A036432527A09186002606DC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,7 +656,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99C9B5322795F3AB00048C33 /* ViewController.swift in Sources */,
 				99C9B52E2795F3AB00048C33 /* AppDelegate.swift in Sources */,
 				A0E7647727AB35B400A90486 /* FeedAppClips.swift in Sources */,
 				99C9B5382795F3AB00048C33 /* SkinfeelPartial.xcdatamodeld in Sources */,
