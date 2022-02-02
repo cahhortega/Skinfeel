@@ -23,6 +23,10 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     let dateFormatter = DateFormatter()
     weak var NewRoutineViewControllerDelegate: NewRoutineViewControllerDelegate?
     
+    //    var newRoutineViewController = NewRoutineViewController()
+    //    var yourRoutineViewController = YourRoutineViewController()
+    
+    
     var isDone: Bool = false
     
     @IBOutlet weak var profileAvatar: UIButton!
@@ -128,7 +132,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
             
         }
     }
- 
+    
     
     func calendario(){
         var diaDepois = currentDay
@@ -282,52 +286,39 @@ extension TodayViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as! RoutineCollectionViewCell
+        guard let cell = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as? RoutineCollectionViewCell else {return UICollectionViewCell()}
         cell.nameRoutine.text = oi?[indexPath.row].routineName
-        let date1 = oi?[indexPath.row].dateStart
-        let date2 = oi?[indexPath.row].dateEnd
-        let dateInicial = dateFormatter.string(from: date1!)
-        let dateFinal = dateFormatter.string(from: date2!)
-        let dateAtual = "\(currentDay)/\(currentMonth)/\(currentYear)"
-        for cell in routineCollectionView.visibleCells{
-            if dateInicial <= dateAtual || dateFinal >= dateAtual{
-                if oi?[indexPath.row].dom == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-                if oi?[indexPath.row].seg == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-                if oi?[indexPath.row].ter == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-                if oi?[indexPath.row].qua == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-                if oi?[indexPath.row].qui == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-                if oi?[indexPath.row].sex == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-                if oi?[indexPath.row].sab == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-            }
-        }
+        cell.morningCircularProgress.image = UIImage(named: "dia")
+        cell.afternoonCircularProgress.image = UIImage(named: "tarde")
+        cell.nightCircularProgress.image = UIImage(named: "lua")
+
+        
+//        let soma = (oi?[indexPath.row].somaManha)!/10 //total de itens
+//        let yourSoma = (oi?[indexPath.row].yourSomaManha)!/10 //total de itens selecionados
+//        let isSalvo = oi?[indexPath.row].salvo
+//        let result = Float(yourSoma/soma)
+        
+//        cell.morningCircularProgress.setProgress(duration: 1.0, value: 0.2)
+//        cell.afternoonCircularProgress.setProgress(duration: 1.0, value: 0.2)
+//        cell.nightCircularProgress.setProgress(duration: 1.0, value: 0.2)
+//        cell.morningCircularProgress.circleColor = UIColor(named: "Bg")!
+//        cell.morningCircularProgress.progressColor = UIColor(named: "Rosa")!
+//        cell.afternoonCircularProgress.circleColor = UIColor(named: "Bg")!
+//        cell.afternoonCircularProgress.progressColor = UIColor(named: "Rosa")!
+//        cell.nightCircularProgress.circleColor = UIColor(named: "Bg")!
+//        cell.nightCircularProgress.progressColor = UIColor(named: "Rosa")!
+//
+//        if isSalvo == false {
+//            cell.morningCircularProgress.setProgress(duration: 1.0, value: 0.0)
+//            cell.morningCircularProgress.circleColor = UIColor(named: "Bg")!
+//            cell.morningCircularProgress.progressColor = UIColor(named: "Rosa")!
+//        } else {
+//            cell.morningCircularProgress.setProgress(duration: 1.0, value: Float(soma))
+//            cell.morningCircularProgress.circleColor = UIColor(named: "Bg")!
+//            cell.morningCircularProgress.progressColor = UIColor(named: "Rosa")!
+//
+//        }
+
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -336,6 +327,9 @@ extension TodayViewController: UICollectionViewDataSource{
         YourRoutineViewController.index = indexPath.row
         vc.NewRoutineViewControllerDelegate = self
         vc.routine = oi?[indexPath.row] ?? Routine()
+        
+        
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

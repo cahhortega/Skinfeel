@@ -1,25 +1,19 @@
 //
-//  FeedViewController.swift
-//  Skinfeel
+//  FeedAppClips.swift
+//  SkinfeelPartial
 //
-//  Created by Carolina Ortega on 21/01/22.
+//  Created by Carolina Ortega on 02/02/22.
 //
 
 import Foundation
 import UIKit
 import SafariServices
 
-class FeedViewController: UIViewController {
+class FeedAppClipsViewController: UIViewController {
     @IBOutlet var highlightedCollectionView: UICollectionView!
     @IBOutlet var suggestedCollectionView: UICollectionView!
     @IBOutlet var newsCollectionView: UICollectionView!
-    
-    private lazy var highDataSource = HighlightedCollectionViewDataSource()
-    private lazy var highDelegate = HighlightedCollectionViewDelegate()
-    
-    private lazy var sugDataSource = SuggestedCollectionViewDataSource()
-    private lazy var sugDelegate = SuggestedCollectionViewDelegate()
-    
+        
     private lazy var newsDataSource = NewsCollectionViewDataSource()
     private lazy var newsDelegate = NewsCollectionViewDelegate()
     
@@ -30,18 +24,6 @@ class FeedViewController: UIViewController {
         navigationController?.navigationBar.topItem?.title = "Feed"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.setHidesBackButton(true, animated: false)
-        
-        highlightedCollectionView.dataSource = highDataSource
-        highlightedCollectionView.delegate = highDelegate
-        highlightedCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "ID")
-        highlightedCollectionView.isPagingEnabled = true
-        highlightedCollectionView.showsHorizontalScrollIndicator = false
-        
-        suggestedCollectionView.dataSource = sugDataSource
-        suggestedCollectionView.delegate = sugDelegate
-        suggestedCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "ID")
-        suggestedCollectionView.isPagingEnabled = true
-        suggestedCollectionView.showsHorizontalScrollIndicator = false
         
         newsCollectionView.dataSource = newsDataSource
         newsCollectionView.delegate = newsDelegate

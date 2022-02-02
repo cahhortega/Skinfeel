@@ -15,11 +15,18 @@
         <attribute name="qui" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="routineName" optional="YES" attributeType="String"/>
         <attribute name="sab" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="salvo" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="seg" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="sex" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="somaManha" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="somaNoite" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="somaTarde" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="ter" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="yourSomaManha" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="yourSomaNoite" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="yourSomaTarde" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Routine" positionX="-434.1312866210938" positionY="-112.7335662841797" width="128" height="284"/>
+        <element name="Routine" positionX="-434.1312866210938" positionY="-112.7335662841797" width="128" height="389"/>
     </elements>
 </model>

@@ -62,4 +62,28 @@ class CoreDataStackRoutine{
         try saveContext()
     }
     
+    static func saveRoutine(salvo: Bool, routine: Routine) throws -> Bool{
+        routine.salvo = salvo
+        try saveContext()
+        return salvo
+    }
+    
+    static func createSum(routine: Routine, protecaomanha: [String], protecaotarde: [String], protecaonoite: [String], limpezamanha: [String], limpezanoite: [String], hidratacaomanha: [String], esfoliacaonoite: [String], somaManha: Float, somaTarde: Float, somaNoite: Float) throws -> [Float] {
+        routine.somaManha = somaManha
+        routine.somaTarde = somaTarde
+        routine.somaNoite = somaNoite
+        try saveContext()
+        return [somaManha, somaTarde, somaNoite]
+
+    }
+    
+    static func createSumYour(routine: Routine, protecaomanha: [String], protecaotarde: [String], protecaonoite: [String], limpezamanha: [String], limpezanoite: [String], hidratacaomanha: [String], esfoliacaonoite: [String], yourSomaManha: Float, yourSomaTarde: Float, yourSomaNoite: Float) throws -> [Float] {
+        routine.yourSomaManha = yourSomaManha
+        routine.yourSomaTarde = yourSomaTarde
+        routine.yourSomaNoite = yourSomaNoite
+        try saveContext()
+        return [yourSomaManha, yourSomaTarde, yourSomaNoite]
+
+    }
+    
 }

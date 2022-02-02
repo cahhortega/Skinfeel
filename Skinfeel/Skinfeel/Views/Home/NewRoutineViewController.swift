@@ -194,8 +194,14 @@ class NewRoutineViewController: UIViewController {
             present(ac, animated: true)
         }
         
-        var _ = try? CoreDataStackRoutine.createRoutine(dateStart: dataStart, dateEnd: dataEnd, dom: dom, sab: sab, sex: sex, qui: qui, qua: qua, ter: ter, seg: seg, routineName: routineName, protecaomanha: protecaoManha, protecaotarde: protecaoTarde, protecaonoite: protecaoNoite, limpezamanha: limpezaManha, limpezanoite: limpezaNoite, hidratacaomanha: hidratacaoManha, esfoliacaonoite: esfoliacaoNoite)
+        let routine = try? CoreDataStackRoutine.createRoutine(dateStart: dataStart, dateEnd: dataEnd, dom: dom, sab: sab, sex: sex, qui: qui, qua: qua, ter: ter, seg: seg, routineName: routineName, protecaomanha: protecaoManha, protecaotarde: protecaoTarde, protecaonoite: protecaoNoite, limpezamanha: limpezaManha, limpezanoite: limpezaNoite, hidratacaomanha: hidratacaoManha, esfoliacaonoite: esfoliacaoNoite)
         
+        var soma = try? CoreDataStackRoutine.createSum(routine: routine!, protecaomanha: protecaoManha, protecaotarde: protecaoTarde, protecaonoite: protecaoNoite, limpezamanha: limpezaManha, limpezanoite: limpezaNoite, hidratacaomanha: hidratacaoManha, esfoliacaonoite: esfoliacaoNoite, somaManha: Float(limpezaManha.count + protecaoManha.count + hidratacaoManha.count), somaTarde: Float(protecaoTarde.count), somaNoite: Float(limpezaNoite.count + protecaoNoite.count + esfoliacaoNoite.count))
+        var salvo = try? CoreDataStackRoutine.saveRoutine(salvo: false, routine: routine!)
+
+        print("batata \(soma!)")
+        print("batata \(salvo!)")
+                
         self.navigationController?.popViewController(animated: true)
     }
 }
