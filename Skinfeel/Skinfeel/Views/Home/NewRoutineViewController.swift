@@ -41,6 +41,15 @@ class NewRoutineViewController: UIViewController {
     var esfoliacaoNoite: [String] = []
     var protecaoNoite: [String] = []
     
+    var selectedDays: [Int:Bool] = [
+        1:false,
+        2:false,
+        3:false,
+        4:false,
+        5:false,
+        6:false,
+        7:false
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,18 +78,25 @@ class NewRoutineViewController: UIViewController {
         //botões de repetição
         dom.translatesAutoresizingMaskIntoConstraints = false
         dom.addTarget(self, action: #selector(click(button:)), for: .touchUpInside)
+        dom.tag = 1
         seg.translatesAutoresizingMaskIntoConstraints = false
         seg.addTarget(self, action: #selector(click(button:)), for: .touchUpInside)
+        seg.tag = 2
         ter.translatesAutoresizingMaskIntoConstraints = false
         ter.addTarget(self, action: #selector(click(button:)), for: .touchUpInside)
+        ter.tag = 3
         qua.translatesAutoresizingMaskIntoConstraints = false
         qua.addTarget(self, action: #selector(click(button:)), for: .touchUpInside)
+        qua.tag = 4
         qui.translatesAutoresizingMaskIntoConstraints = false
         qui.addTarget(self, action: #selector(click(button:)), for: .touchUpInside)
+        qui.tag = 5
         sex.translatesAutoresizingMaskIntoConstraints = false
         sex.addTarget(self, action: #selector(click(button:)), for: .touchUpInside)
+        sex.tag = 6
         sab.translatesAutoresizingMaskIntoConstraints = false
         sab.addTarget(self, action: #selector(click(button:)), for: .touchUpInside)
+        sab.tag = 7
     }
     override func viewWillAppear(_ animated: Bool) {
         limpezaManha = defaults.stringArray(forKey: "limpezaManha") ?? []
@@ -99,11 +115,13 @@ class NewRoutineViewController: UIViewController {
             //            botao.setTitleColor(.white, for: .normal)
             button.backgroundColor = UIColor(named: "Rosa")
             button.titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
+            self.selectedDays[button.tag] = true
             
         } else {
             //            botao.setTitleColor(.black, for: .normal)
             button.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
             button.backgroundColor = UIColor(named: "Bg")
+            self.selectedDays[button.tag] = false
             
         }
         button.isSelected = !button.isSelected
@@ -130,6 +148,10 @@ class NewRoutineViewController: UIViewController {
         self.tasksTableView.reloadData()
     }
     
+    func getSelected(){
+        
+    }
+    
     @objc func dismissKeyboard(){
         routineName.resignFirstResponder()
         view.endEditing(true)
@@ -142,13 +164,14 @@ class NewRoutineViewController: UIViewController {
         }
         let dataEnd: Date = self.dataEnd.date
         let dataStart: Date = self.dataStart.date
-        let seg: Bool = (self.seg != nil)
-        let ter: Bool = (self.ter != nil)
-        let qua: Bool = (self.qua != nil)
-        let qui: Bool = (self.qui != nil)
-        let sex: Bool = (self.sex != nil)
-        let sab: Bool = (self.sab != nil)
-        let dom: Bool = (self.dom != nil)
+        let dom: Bool = self.selectedDays[1]!
+        let seg: Bool = self.selectedDays[2]!
+        let ter: Bool = self.selectedDays[3]!
+        let qua: Bool = self.selectedDays[4]!
+        let qui: Bool = self.selectedDays[5]!
+        let sex: Bool = self.selectedDays[6]!
+        let sab: Bool = self.selectedDays[7]!
+
         //Nome da rotina vazio
         if routineName == "" {
             let ac = UIAlertController(title: "Dados incompletos", message: "O campo 'Nome' não está preenchido", preferredStyle: .alert)

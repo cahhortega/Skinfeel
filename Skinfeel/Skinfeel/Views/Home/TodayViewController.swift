@@ -72,24 +72,31 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         //Botões dos dias da semana
         day1.translatesAutoresizingMaskIntoConstraints = false
         day1.addTarget(self, action: #selector(clicarDia1), for: .touchUpInside)
+        day1.tag = 1
         
         day2.translatesAutoresizingMaskIntoConstraints = false
         day2.addTarget(self, action: #selector(clicarDia2), for: .touchUpInside)
+        day2.tag = 2
         
         day3.translatesAutoresizingMaskIntoConstraints = false
         day3.addTarget(self, action: #selector(clicarDia3), for: .touchUpInside)
+        day3.tag = 3
         
         day4.translatesAutoresizingMaskIntoConstraints = false
         day4.addTarget(self, action: #selector(clicarDia4), for: .touchUpInside)
+        day4.tag = 4
         
         day5.translatesAutoresizingMaskIntoConstraints = false
         day5.addTarget(self, action: #selector(clicarDia5), for: .touchUpInside)
+        day5.tag = 5
         
         day6.translatesAutoresizingMaskIntoConstraints = false
         day6.addTarget(self, action: #selector(clicarDia6), for: .touchUpInside)
+        day6.tag = 6
         
         day7.translatesAutoresizingMaskIntoConstraints = false
         day7.addTarget(self, action: #selector(clicarDia7), for: .touchUpInside)
+        day7.tag = 7
         
         oi = try! CoreDataStackRoutine.getRoutine()
         self.routineCollectionView.reloadData()
@@ -204,13 +211,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
                          day6: UIButton,
                          day7: UIButton) {
 
-        for rotinas in oi!{
-            if day2.isSelected == true{
-                if rotinas.qui == true{
-                rotinasData.append(rotinas)
-            }
-            }
-        }
+        self.rotinasData = []
         
         if !selected.isSelected{
             selected.backgroundColor = UIColor(named: "Rosa")
@@ -228,13 +229,51 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
             day7.backgroundColor = UIColor(named: "Bg")
             day7.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
             
-           
-            
+            for rotinas in 0..<oi!.count{
+                switch selected.tag {
+                case 1:
+                    if oi![rotinas].dom == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].dom)
+                    }
+                case 2:
+                    if oi![rotinas].seg == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].seg)
+                    }
+                case 3:
+                    if oi![rotinas].ter == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].ter)
+                    }
+                case 4:
+                    if oi![rotinas].qua == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].qua)
+                    }
+                case 5:
+                    if oi![rotinas].qui == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].qui)
+                    }
+                case 6:
+                    if oi![rotinas].sex == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].sex)
+                    }
+                default:
+                    if oi![rotinas].sab == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].sab)
+                    }
+                }
+            }
+            routineCollectionView.reloadData()
+            print("AQUI", self.rotinasData.count, selected.tag)
         }
         else {
             selected.backgroundColor = UIColor(named: "Bg")
             selected.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
-            
         }
     }
     
@@ -294,18 +333,12 @@ extension TodayViewController: UICollectionViewDelegate{
 
 extension TodayViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      
-//        for rotinas in oi!{
-//            if dataSelecionada == rotinas.dateStart{
-//                rotinasData.append(rotinas)
-//            }
-//        }
-        return oi?.count ?? 0
+        return self.rotinasData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as! RoutineCollectionViewCell
-        cell.nameRoutine.text = oi?[indexPath.row].routineName
+        cell.nameRoutine.text = self.rotinasData[indexPath.row].routineName
         
         return cell
     }
@@ -324,7 +357,8 @@ extension TodayViewController: UICollectionViewDataSource{
 }
 extension TodayViewController: TodayViewControllerDelegate{
     func didRegister() {
-        oi = try! CoreDataStackRoutine.getRoutine()
+        self.rotinasData = try! CoreDataStackRoutine.getRoutine()
         routineCollectionView.reloadData()
+        routineCollectionView.reloadInputViews()
     }
 }

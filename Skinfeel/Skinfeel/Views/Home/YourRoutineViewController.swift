@@ -19,7 +19,7 @@ class YourRoutineViewController: UIViewController {
         let ac = UIAlertController(title: "", message: "Tem certeza de que deseja deletar esta rotina?", preferredStyle: .actionSheet)
         ac.addAction(UIAlertAction(title: "Apagar", style: .destructive, handler: {(action: UIAlertAction!) in
             //acao de deletar
-            _ = try! CoreDataStackRoutine.deleteRoutine(routine: self.routine)
+            _ = try! CoreDataStackRoutine.deleteRoutine(routine: (self.nomeRotina?[YourRoutineViewController.index])!)
             self.navigationController?.popViewController(animated: true)
         }))
         ac.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
@@ -60,7 +60,7 @@ class YourRoutineViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
+        print("AQUI",nomeRotina?[YourRoutineViewController.index].qui)
 //        limpezaManha = defaults.stringArray(forKey: "limpezaManha")!
 //        hidratacaoManha = defaults.stringArray(forKey: "hidratacaoManha")!
 //        protecaoManha = defaults.stringArray(forKey: "protecaoManha")!
@@ -71,7 +71,7 @@ class YourRoutineViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(false, animated: false)
         routineNome.text = nomeRotina?[YourRoutineViewController.index].routineName
-        
+    
         //multi seleção
         self.tableView.allowsMultipleSelection = true
         self.tableView.allowsMultipleSelectionDuringEditing = true
