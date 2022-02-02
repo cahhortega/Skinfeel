@@ -606,7 +606,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="rotine" translatesAutoresizingMaskIntoConstraints="NO" id="0Kr-Hd-NGa" customClass="RoutineCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="rotine" translatesAutoresizingMaskIntoConstraints="NO" id="0Kr-Hd-NGa" customClass="RoutineCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
                                         <rect key="frame" x="23" y="8" width="370" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bLr-Vj-LoN">
@@ -678,7 +678,6 @@
                                                 <constraint firstItem="PvL-JA-s5S" firstAttribute="centerX" secondItem="JOM-Oz-KMu" secondAttribute="centerX" id="Rar-BA-q4t"/>
                                                 <constraint firstItem="yfQ-fu-pr0" firstAttribute="top" secondItem="bLr-Vj-LoN" secondAttribute="top" constant="16" id="ZSz-iL-g23"/>
                                                 <constraint firstItem="KkB-xg-dBs" firstAttribute="leading" secondItem="bLr-Vj-LoN" secondAttribute="leading" constant="275" id="d9Z-we-ERo"/>
-                                                <constraint firstItem="JOM-Oz-KMu" firstAttribute="leading" secondItem="bLr-Vj-LoN" secondAttribute="leading" constant="45" id="gGQ-aD-qyN"/>
                                                 <constraint firstAttribute="bottom" secondItem="JOM-Oz-KMu" secondAttribute="bottom" constant="20" id="gV7-Yf-gFQ"/>
                                                 <constraint firstItem="I8M-PT-nax" firstAttribute="leading" secondItem="JOM-Oz-KMu" secondAttribute="leading" id="kda-Nh-n2r"/>
                                                 <constraint firstItem="I8M-PT-nax" firstAttribute="bottom" secondItem="PvL-JA-s5S" secondAttribute="bottom" id="mjc-V4-v0y"/>
@@ -1105,7 +1104,7 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZsA-Wk-pSe" id="2Eu-MX-BVa">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEU AVATAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7e-cJ-Cut">
                                                     <rect key="frame" x="20" y="11" width="82" height="17"/>
@@ -2076,7 +2075,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="high" translatesAutoresizingMaskIntoConstraints="NO" id="QXv-lW-O07" customClass="HighlightedCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="high" translatesAutoresizingMaskIntoConstraints="NO" id="QXv-lW-O07" customClass="HighlightedCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
                                                         <rect key="frame" x="8" y="5" width="359" height="170"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="R6v-MS-ItK">
@@ -2144,7 +2143,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="sug" translatesAutoresizingMaskIntoConstraints="NO" id="BG4-g7-Re3" customClass="SuggestedCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="sug" translatesAutoresizingMaskIntoConstraints="NO" id="BG4-g7-Re3" customClass="SuggestedCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
                                                         <rect key="frame" x="8" y="6" width="170" height="170.5"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="A1o-QM-Ng5">
@@ -2189,7 +2188,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="new" translatesAutoresizingMaskIntoConstraints="NO" id="SCM-Tw-3oQ" customClass="NewsCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="new" translatesAutoresizingMaskIntoConstraints="NO" id="SCM-Tw-3oQ" customClass="NewsCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
                                                         <rect key="frame" x="8" y="8" width="359" height="170"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ewh-ri-lcc">
@@ -2329,7 +2328,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="exp" translatesAutoresizingMaskIntoConstraints="NO" id="zp2-kE-eRh" customClass="ExploreCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="exp" translatesAutoresizingMaskIntoConstraints="NO" id="zp2-kE-eRh" customClass="ExploreCollectionViewCell" customModule="Skinfeel" customModuleProvider="target">
                                                 <rect key="frame" x="7.5" y="8" width="359" height="170"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="grZ-qO-39E">

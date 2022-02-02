@@ -21,6 +21,8 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     let fraseSemRotina = UILabel()
     let imagemBoasVindas = UIImageView()
     let dateFormatter = DateFormatter()
+    var dataSelecionada: Date?
+    var rotinasData: [Routine] = []
     weak var NewRoutineViewControllerDelegate: NewRoutineViewControllerDelegate?
     
     var isDone: Bool = false
@@ -48,6 +50,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         self.routineCollectionView.dataSource = self
         view.addSubview(fraseSemRotina)
         view.addSubview(imagemBoasVindas)
+        
         
         imagemBoasVindas.image = UIImage(named: "menina triste")
         imagemBoasVindas.translatesAutoresizingMaskIntoConstraints = false
@@ -128,7 +131,8 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
             
         }
     }
- 
+    
+
     
     func calendario(){
         var diaDepois = currentDay
@@ -199,6 +203,14 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
                          day5: UIButton,
                          day6: UIButton,
                          day7: UIButton) {
+
+        for rotinas in oi!{
+            if day2.isSelected == true{
+                if rotinas.qui == true{
+                rotinasData.append(rotinas)
+            }
+            }
+        }
         
         if !selected.isSelected{
             selected.backgroundColor = UIColor(named: "Rosa")
@@ -215,6 +227,8 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
             day6.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
             day7.backgroundColor = UIColor(named: "Bg")
             day7.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
+            
+           
             
         }
         else {
@@ -233,6 +247,8 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
             titleLabel.text = "Boa noite, \(defaults.string(forKey: "name") ?? "")!"
         }
     }
+    
+    
     
     //Ações dos botões
     @objc func clicarDia1() {
@@ -278,56 +294,19 @@ extension TodayViewController: UICollectionViewDelegate{
 
 extension TodayViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+      
+//        for rotinas in oi!{
+//            if dataSelecionada == rotinas.dateStart{
+//                rotinasData.append(rotinas)
+//            }
+//        }
         return oi?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as! RoutineCollectionViewCell
         cell.nameRoutine.text = oi?[indexPath.row].routineName
-        let date1 = oi?[indexPath.row].dateStart
-        let date2 = oi?[indexPath.row].dateEnd
-        let dateInicial = dateFormatter.string(from: date1!)
-        let dateFinal = dateFormatter.string(from: date2!)
-        let dateAtual = "\(currentDay)/\(currentMonth)/\(currentYear)"
-        for cell in routineCollectionView.visibleCells{
-            if dateInicial <= dateAtual || dateFinal >= dateAtual{
-                if oi?[indexPath.row].dom == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-                if oi?[indexPath.row].seg == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-                if oi?[indexPath.row].ter == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-                if oi?[indexPath.row].qua == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-                if oi?[indexPath.row].qui == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-                if oi?[indexPath.row].sex == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-                if oi?[indexPath.row].sab == true{
-                    cell.contentView.isHidden = false
-                }else{
-                    cell.contentView.isHidden = true
-                }
-            }
-        }
+        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -27,6 +27,7 @@ class RoutineCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
+    
     override var isSelected: Bool {
         didSet {
             if isInEditingMode {
