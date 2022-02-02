@@ -13,7 +13,7 @@ class YourRoutineViewController: UIViewController {
     weak var NewRoutineViewControllerDelegate: NewRoutineViewControllerDelegate?
     @IBOutlet var deleteRoutine: UIBarButtonItem!
     var routine: Routine = Routine()
-    weak var delegate: YourRoutineViewControllerDelegate?
+    weak var YourRoutineViewControllerDelegate: YourRoutineViewControllerDelegate?
     @IBOutlet weak var routineNome: UILabel!
     @IBAction func deleteButton(_ sender: UIBarButtonItem) {
         let ac = UIAlertController(title: "", message: "Tem certeza de que deseja deletar esta rotina?", preferredStyle: .actionSheet)
@@ -25,7 +25,7 @@ class YourRoutineViewController: UIViewController {
         ac.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: nil))
         
         present(ac, animated: true, completion: nil)
-        delegate?.didRegister()
+        YourRoutineViewControllerDelegate?.didRegister()
     }
     
     @IBOutlet weak var tableView: UITableView!
@@ -34,7 +34,7 @@ class YourRoutineViewController: UIViewController {
     var defaults = UserDefaults.standard
     var selectedSection: Int?
     var selectedProducts: [String] = []
-    var limpezaManha: [String] = []
+
     var hidratacaoManha: [String] = []
     var protecaoManha: [String] = []
     var protecaoTarde: [String] = []
@@ -109,6 +109,7 @@ class YourRoutineViewController: UIViewController {
 extension YourRoutineViewController: YourRoutineViewControllerDelegate{
     func didRegister() {
         nomeRotina = try! CoreDataStackRoutine.getRoutine()
+        
     }
 }
 
@@ -121,24 +122,24 @@ extension YourRoutineViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if dataFilter == 0 {
             if section == 0 {
-                return defaults.stringArray(forKey: "limpezaManha")!.count
+              //  return limpeza.count
             } else if section == 1 {
-                return defaults.stringArray(forKey: "hidratacaoManha")!.count
+             //   return hidratacao.count
             } else {
                 return defaults.stringArray(forKey: "protecaoManha")!.count
             }
         }
         else if dataFilter == 1 {
-            return defaults.stringArray(forKey: "protecaoTarde")!.count
+         //   return defaults.stringArray(forKey: "protecaoTarde")!.count
             
         } else {
             if section == 0 {
-                return defaults.stringArray(forKey: "limpezaNoite")!.count
+           //     return defaults.stringArray(forKey: "limpezaNoite")!.count
             } else if section == 1 {
-                return defaults.stringArray(forKey: "esfoliacaoNoite")!.count
+            //    return defaults.stringArray(forKey: "esfoliacaoNoite")!.count
                 
             } else {
-                return defaults.stringArray(forKey: "protecaoNoite")!.count
+            //    return defaults.stringArray(forKey: "protecaoNoite")!.count
                 
             }
         }
@@ -236,10 +237,11 @@ extension YourRoutineViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
         if dataFilter == 0 {
             if indexPath.section == 0 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
-                cell.textLabel?.text = limpezaManha[indexPath.row]
+     //           cell.textLabel?.text = limpezaManha[indexPath.row]
                 return cell
                 
             } else if indexPath.section == 1 {
@@ -255,29 +257,31 @@ extension YourRoutineViewController: UITableViewDataSource {
             }
         } else if dataFilter == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
-            cell.textLabel?.text = protecaoTarde[indexPath.row]
+          //  cell.textLabel?.text = protecaoTarde[indexPath.row]
             return cell
             
         } else {
             if indexPath.section == 0 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
-                cell.textLabel?.text = limpezaNoite[indexPath.row]
+           //     cell.textLabel?.text = limpezaNoite[indexPath.row]
                 return cell
             } else if indexPath.section == 1 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
-                cell.textLabel?.text = esfoliacaoNoite[indexPath.row]
+           //     cell.textLabel?.text = esfoliacaoNoite[indexPath.row]
                 return cell
                 
                 
             } else if indexPath.section == 2{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "yourRoutine", for: indexPath) as! YourRoutineTableViewCell
-                cell.textLabel?.text = protecaoNoite[indexPath.row]
+           //     cell.textLabel?.text = protecaoNoite[indexPath.row]
                 return cell
                 
             }
             
         }
+    
         
         return UITableViewCell()
     }
 }
+

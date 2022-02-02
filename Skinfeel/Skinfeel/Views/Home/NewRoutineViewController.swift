@@ -46,13 +46,13 @@ class NewRoutineViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: false)
         
-//        defaults.set(limpezaManha, forKey: "limpezaManha")
-//        defaults.set(hidratacaoManha, forKey: "hidratacaoManha")
-//        defaults.set(protecaoManha, forKey: "protecaoManha")
-//        defaults.set(protecaoTarde, forKey: "protecaoTarde")
-//        defaults.set(limpezaNoite, forKey: "limpezaNoite")
-//        defaults.set(esfoliacaoNoite, forKey: "esfoliacaoNoite")
-//        defaults.set(protecaoNoite, forKey: "protecaoNoite")
+        defaults.set(limpezaManha, forKey: "limpezaManha")
+        defaults.set(hidratacaoManha, forKey: "hidratacaoManha")
+        defaults.set(protecaoManha, forKey: "protecaoManha")
+        defaults.set(protecaoTarde, forKey: "protecaoTarde")
+        defaults.set(limpezaNoite, forKey: "limpezaNoite")
+        defaults.set(esfoliacaoNoite, forKey: "esfoliacaoNoite")
+        defaults.set(protecaoNoite, forKey: "protecaoNoite")
         
         //picker
         UIDatePicker.appearance().tintColor = UIColor(named: "Rosa")
@@ -83,13 +83,13 @@ class NewRoutineViewController: UIViewController {
         sab.addTarget(self, action: #selector(click(button:)), for: .touchUpInside)
     }
     override func viewWillAppear(_ animated: Bool) {
-//        limpezaManha = defaults.stringArray(forKey: "limpezaManha") ?? []
-//        hidratacaoManha = defaults.stringArray(forKey: "hidratacaoManha") ?? []
-//        protecaoManha = defaults.stringArray(forKey: "protecaoManha") ?? []
-//        protecaoTarde = defaults.stringArray(forKey: "protecaoTarde") ?? []
-//        limpezaNoite = defaults.stringArray(forKey: "limpezaNoite") ?? []
-//        esfoliacaoNoite = defaults.stringArray(forKey: "esfoliacaoNoite") ?? []
-//        protecaoNoite = defaults.stringArray(forKey: "protecaoNoite") ?? []
+        limpezaManha = defaults.stringArray(forKey: "limpezaManha") ?? []
+        hidratacaoManha = defaults.stringArray(forKey: "hidratacaoManha") ?? []
+        protecaoManha = defaults.stringArray(forKey: "protecaoManha") ?? []
+        protecaoTarde = defaults.stringArray(forKey: "protecaoTarde") ?? []
+        limpezaNoite = defaults.stringArray(forKey: "limpezaNoite") ?? []
+        esfoliacaoNoite = defaults.stringArray(forKey: "esfoliacaoNoite") ?? []
+        protecaoNoite = defaults.stringArray(forKey: "protecaoNoite") ?? []
         reload()
         
     }
@@ -149,7 +149,6 @@ class NewRoutineViewController: UIViewController {
         let sex: Bool = (self.sex != nil)
         let sab: Bool = (self.sab != nil)
         let dom: Bool = (self.dom != nil)
-        
         //Nome da rotina vazio
         if routineName == "" {
             let ac = UIAlertController(title: "Dados incompletos", message: "O campo 'Nome' não está preenchido", preferredStyle: .alert)
@@ -195,8 +194,8 @@ class NewRoutineViewController: UIViewController {
             present(ac, animated: true)
         }
         
-        var _ = try? CoreDataStackRoutine.createRoutine(dateStart: dataStart, dateEnd: dataEnd, dom: dom, sab: sab, sex: sex, qui: qui, qua: qua, ter: ter, seg: seg, routineName: routineName) 
-       
+        var _ = try? CoreDataStackRoutine.createRoutine(dateStart: dataStart, dateEnd: dataEnd, dom: dom, sab: sab, sex: sex, qui: qui, qua: qua, ter: ter, seg: seg, routineName: routineName, protecaomanha: protecaoManha, protecaotarde: protecaoTarde, protecaonoite: protecaoNoite, limpezamanha: limpezaManha, limpezanoite: limpezaNoite, hidratacaomanha: hidratacaoManha, esfoliacaonoite: esfoliacaoNoite)
+        
         self.navigationController?.popViewController(animated: true)
     }
 }

@@ -2,7 +2,7 @@
 //  Routine+CoreDataProperties.swift
 //  Skinfeel
 //
-//  Created by Gabriele Namie on 01/02/22.
+//  Created by Gabriele Namie on 02/02/22.
 //
 //
 
@@ -24,9 +24,15 @@ extension Routine {
     @NSManaged public var routineName: String?
     @NSManaged public var sab: Bool
     @NSManaged public var seg: Bool
-    @NSManaged public var sex: Bool 
+    @NSManaged public var sex: Bool
     @NSManaged public var ter: Bool
-    @NSManaged public var task: Task?
+    @NSManaged public var protecaomanha: [String]?
+    @NSManaged public var protecaonoite: [String]?
+    @NSManaged public var hidratacaomanha: [String]?
+    @NSManaged public var protecaotarde: [String]?
+    @NSManaged public var esfoliacaonoite: [String]?
+    @NSManaged public var limpezamanha: [String]?
+    @NSManaged public var limpezanoite: [String]?
 
 }
 
