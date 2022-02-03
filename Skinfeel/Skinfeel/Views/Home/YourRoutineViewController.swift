@@ -29,6 +29,7 @@ class YourRoutineViewController: UIViewController {
         YourRoutineViewControllerDelegate?.didRegister()
     }
     
+    
     @IBOutlet weak var tableView: UITableView!
     var dataFilter = 0
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -70,7 +71,9 @@ class YourRoutineViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
         navigationController?.setNavigationBarHidden(false, animated: false)
         routineNome.text = nomeRotina?[YourRoutineViewController.index].routineName
     
@@ -81,10 +84,16 @@ class YourRoutineViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
         routineNome.text = nomeRotina?[YourRoutineViewController.index].routineName
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
         routineNome.text = nomeRotina?[YourRoutineViewController.index].routineName
     }
     //reload da tableView
@@ -107,7 +116,11 @@ class YourRoutineViewController: UIViewController {
         reload()
         
     }
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
 }
+
 extension YourRoutineViewController: YourRoutineViewControllerDelegate{
     func didRegister() {
         nomeRotina = try! CoreDataStackRoutine.getRoutine()

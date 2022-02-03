@@ -10,8 +10,8 @@ import UIKit
 import SafariServices
 
 class FeedAppClipsViewController: UIViewController {
-    @IBOutlet var highlightedCollectionView: UICollectionView!
-    @IBOutlet var suggestedCollectionView: UICollectionView!
+   // @IBOutlet var highlightedCollectionView: UICollectionView!
+    //@IBOutlet var suggestedCollectionView: UICollectionView!
     @IBOutlet var newsCollectionView: UICollectionView!
         
     private lazy var newsDataSource = NewsCollectionViewDataSource()
