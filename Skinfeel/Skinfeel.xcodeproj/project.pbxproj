@@ -51,6 +51,8 @@
 		99C9B5352795F3AB00048C33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C9B5332795F3AB00048C33 /* Main.storyboard */; };
 		99C9B53A2795F3AE00048C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99C9B5392795F3AE00048C33 /* Assets.xcassets */; };
 		99C9B5422795F3AE00048C33 /* SkinfeelPartial.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 99C9B52B2795F3AB00048C33 /* SkinfeelPartial.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A026CDA227ACA2080026289C /* cardsAppClip.json in Resources */ = {isa = PBXBuildFile; fileRef = A026CDA127ACA2080026289C /* cardsAppClip.json */; };
+		A026CDA327ACA4290026289C /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = A036430127A06FCE002606DC /* cards.json */; };
 		A03642F4279B3E35002606DC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03642F3279B3E35002606DC /* FeedViewController.swift */; };
 		A03642F6279B3E7B002606DC /* HighlightedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03642F5279B3E7B002606DC /* HighlightedCollectionViewCell.swift */; };
 		A03642F8279B673F002606DC /* SuggestedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03642F7279B673F002606DC /* SuggestedCollectionViewCell.swift */; };
@@ -65,7 +67,6 @@
 		A036431427A08191002606DC /* NewsCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036431327A08191002606DC /* NewsCollectionViewDataSource.swift */; };
 		A036431627A09080002606DC /* ReadContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03642FD27A0574B002606DC /* ReadContent.swift */; };
 		A036431727A09084002606DC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03642FB27A0569A002606DC /* Card.swift */; };
-		A036431827A09086002606DC /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = A036430127A06FCE002606DC /* cards.json */; };
 		A036431927A09089002606DC /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036430F27A08172002606DC /* NewsCollectionViewCell.swift */; };
 		A036431A27A0908B002606DC /* NewsCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036431127A08183002606DC /* NewsCollectionViewDelegate.swift */; };
 		A036431B27A0908E002606DC /* NewsCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036431327A08191002606DC /* NewsCollectionViewDataSource.swift */; };
@@ -157,6 +158,7 @@
 		99C9B5342795F3AB00048C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99C9B5392795F3AE00048C33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99C9B53E2795F3AE00048C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A026CDA127ACA2080026289C /* cardsAppClip.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cardsAppClip.json; sourceTree = "<group>"; };
 		A03642F3279B3E35002606DC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		A03642F5279B3E7B002606DC /* HighlightedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedCollectionViewCell.swift; sourceTree = "<group>"; };
 		A03642F7279B673F002606DC /* SuggestedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 				99C9B5392795F3AE00048C33 /* Assets.xcassets */,
 				99C9B53E2795F3AE00048C33 /* Info.plist */,
 				A0E7647627AB35B400A90486 /* FeedAppClips.swift */,
+				A026CDA127ACA2080026289C /* cardsAppClip.json */,
 			);
 			path = SkinfeelPartial;
 			sourceTree = "<group>";
@@ -569,7 +572,8 @@
 				99C9B53A2795F3AE00048C33 /* Assets.xcassets in Resources */,
 				99C9B5352795F3AB00048C33 /* Main.storyboard in Resources */,
 				A0E7647827AB38FF00A90486 /* LaunchScreen.storyboard in Resources */,
-				A036431827A09086002606DC /* cards.json in Resources */,
+				A026CDA327ACA4290026289C /* cards.json in Resources */,
+				A026CDA227ACA2080026289C /* cardsAppClip.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

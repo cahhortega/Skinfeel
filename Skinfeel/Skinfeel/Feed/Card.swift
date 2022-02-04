@@ -17,6 +17,14 @@ struct Card: Codable {
         return rc.load(filename: "cards")
         
     }
+    
+    static var cardsAppClip: [Card] {
+        let rc = ReadContent()
+        return rc.load(filename: "cardsAppClip")
+        
+    }
+    
+    
     static var cardsCf: [Card] {
         let rcCf = ReadContent()
         return rcCf.load(filename: "crueltyFree")
