@@ -477,7 +477,7 @@
                                 <rect key="frame" x="40" y="456.5" width="334.5" height="50"/>
                                 <subviews>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" placeholderIntrinsicWidth="69" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="0jt-Mg-TP7">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="79" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="663850800.73192406">
                                             <!--2022-01-14 11:00:00 +0000-->
@@ -485,7 +485,7 @@
                                         <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="center" placeholderIntrinsicWidth="69" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="kes-Nk-86j">
-                                        <rect key="frame" x="128" y="0.0" width="79" height="50"/>
+                                        <rect key="frame" x="127" y="0.0" width="80" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="663876000.30323803">
                                             <!--2022-01-14 18:00:00 +0000-->
@@ -493,7 +493,7 @@
                                         <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="G3Y-Y3-PHH">
-                                        <rect key="frame" x="255" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="255" y="0.0" width="79" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <date key="date" timeIntervalSinceReferenceDate="663897600.28867805">
                                             <!--2022-01-15 00:00:00 +0000-->
@@ -620,33 +620,38 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="JOM-Oz-KMu">
-                                                    <rect key="frame" x="45" y="129" width="280" height="21"/>
+                                                    <rect key="frame" x="45.5" y="129" width="279" height="21"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manhã" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7lo-eq-iWF">
-                                                            <rect key="frame" x="0.0" y="0.0" width="51.5" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="51" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarde" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LzN-cs-EH0">
-                                                            <rect key="frame" x="115" y="0.0" width="51" height="21"/>
+                                                            <rect key="frame" x="114" y="0.0" width="51" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GCf-9R-TJy">
-                                                            <rect key="frame" x="229" y="0.0" width="51" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                                            <rect key="frame" x="228" y="0.0" width="51" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="LzN-cs-EH0" firstAttribute="leading" secondItem="7lo-eq-iWF" secondAttribute="trailing" constant="50" id="6YV-Gf-XRL"/>
+                                                        <constraint firstItem="GCf-9R-TJy" firstAttribute="leading" secondItem="LzN-cs-EH0" secondAttribute="trailing" constant="50" id="K4E-iI-aCl"/>
+                                                    </constraints>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8M-PT-nax" customClass="UIImageView">
+                                                <view contentMode="scaleToFill" id="I8M-PT-nax" customClass="UIImageView">
                                                     <rect key="frame" x="45" y="60" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" name="gelo botao"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvL-JA-s5S" customClass="UIImageView">
@@ -667,10 +672,10 @@
                                                 <constraint firstItem="I8M-PT-nax" firstAttribute="top" secondItem="PvL-JA-s5S" secondAttribute="top" id="D44-i7-k10"/>
                                                 <constraint firstItem="I8M-PT-nax" firstAttribute="top" secondItem="yfQ-fu-pr0" secondAttribute="bottom" constant="20" id="Q6Q-eI-QWx"/>
                                                 <constraint firstItem="PvL-JA-s5S" firstAttribute="centerX" secondItem="JOM-Oz-KMu" secondAttribute="centerX" id="Rar-BA-q4t"/>
+                                                <constraint firstItem="I8M-PT-nax" firstAttribute="leading" secondItem="bLr-Vj-LoN" secondAttribute="leading" constant="45" id="Y95-bT-2U1"/>
                                                 <constraint firstItem="yfQ-fu-pr0" firstAttribute="top" secondItem="bLr-Vj-LoN" secondAttribute="top" constant="16" id="ZSz-iL-g23"/>
                                                 <constraint firstItem="KkB-xg-dBs" firstAttribute="leading" secondItem="bLr-Vj-LoN" secondAttribute="leading" constant="275" id="d9Z-we-ERo"/>
                                                 <constraint firstAttribute="bottom" secondItem="JOM-Oz-KMu" secondAttribute="bottom" constant="20" id="gV7-Yf-gFQ"/>
-                                                <constraint firstItem="I8M-PT-nax" firstAttribute="leading" secondItem="JOM-Oz-KMu" secondAttribute="leading" id="kda-Nh-n2r"/>
                                                 <constraint firstItem="I8M-PT-nax" firstAttribute="bottom" secondItem="PvL-JA-s5S" secondAttribute="bottom" id="mjc-V4-v0y"/>
                                                 <constraint firstItem="PvL-JA-s5S" firstAttribute="leading" secondItem="bLr-Vj-LoN" secondAttribute="leading" constant="160" id="qbu-KM-F0d"/>
                                                 <constraint firstItem="JOM-Oz-KMu" firstAttribute="top" secondItem="I8M-PT-nax" secondAttribute="bottom" constant="19" id="qtS-wN-iar"/>
