@@ -15,7 +15,6 @@ class CoreDataStackRoutine{
             if let erro = error{
                 preconditionFailure(erro.localizedDescription)
             }
-            
         }
         return container
     }()
@@ -30,7 +29,7 @@ class CoreDataStackRoutine{
         }
     }
     
-    static func createRoutine(dateStart: Date, dateEnd: Date, dom: Bool, sab: Bool, sex: Bool, qui: Bool, qua:Bool, ter:Bool, seg:Bool, routineName:String) throws -> Routine{
+    static func createRoutine(dateStart: Date, dateEnd: Date, dom: Bool, sab: Bool, sex: Bool, qui: Bool, qua:Bool, ter:Bool, seg:Bool, routineName:String, protecaomanha: [String], protecaotarde: [String], protecaonoite: [String], limpezamanha: [String], limpezanoite: [String], hidratacaomanha: [String], esfoliacaonoite: [String]) throws -> Routine{
         guard let routine = NSEntityDescription.insertNewObject(forEntityName: "Routine", into: context) as? Routine else {preconditionFailure()}
         routine.dateStart = dateStart
         routine.dateEnd = dateEnd
@@ -42,6 +41,13 @@ class CoreDataStackRoutine{
         routine.ter = ter
         routine.seg = seg
         routine.routineName = routineName
+        routine.protecaomanha = protecaomanha
+        routine.protecaotarde = protecaotarde
+        routine.protecaonoite = protecaonoite
+        routine.limpezamanha = limpezamanha
+        routine.limpezanoite = limpezanoite
+        routine.hidratacaomanha = hidratacaomanha
+        routine.esfoliacaonoite = esfoliacaonoite
         
         try saveContext()
         return routine
@@ -54,6 +60,30 @@ class CoreDataStackRoutine{
     static func deleteRoutine(routine: Routine) throws{
         context.delete(routine)
         try saveContext()
+    }
+    
+    static func saveRoutine(salvo: Bool, routine: Routine) throws -> Bool{
+        routine.salvo = salvo
+        try saveContext()
+        return salvo
+    }
+    
+    static func createSum(routine: Routine, protecaomanha: [String], protecaotarde: [String], protecaonoite: [String], limpezamanha: [String], limpezanoite: [String], hidratacaomanha: [String], esfoliacaonoite: [String], somaManha: Float, somaTarde: Float, somaNoite: Float) throws -> [Float] {
+        routine.somaManha = somaManha
+        routine.somaTarde = somaTarde
+        routine.somaNoite = somaNoite
+        try saveContext()
+        return [somaManha, somaTarde, somaNoite]
+
+    }
+    
+    static func createSumYour(routine: Routine, protecaomanha: [String], protecaotarde: [String], protecaonoite: [String], limpezamanha: [String], limpezanoite: [String], hidratacaomanha: [String], esfoliacaonoite: [String], yourSomaManha: Float, yourSomaTarde: Float, yourSomaNoite: Float) throws -> [Float] {
+        routine.yourSomaManha = yourSomaManha
+        routine.yourSomaTarde = yourSomaTarde
+        routine.yourSomaNoite = yourSomaNoite
+        try saveContext()
+        return [yourSomaManha, yourSomaTarde, yourSomaNoite]
+
     }
     
 }

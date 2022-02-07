@@ -1,51 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G224" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Hidratacao" representedClassName="Hidratacao" syncable="YES" codeGenerationType="class">
-        <attribute name="periodo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="produto" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products" inverseName="hidratacaoProd" inverseEntity="Products"/>
-        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="hidratacao" inverseEntity="Task"/>
-    </entity>
-    <entity name="Limpeza" representedClassName="Limpeza" syncable="YES" codeGenerationType="class">
-        <attribute name="periodo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="produto" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products" inverseName="limpezaProd" inverseEntity="Products"/>
-        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="limpeza" inverseEntity="Task"/>
-    </entity>
-    <entity name="Products" representedClassName="Products" syncable="YES" codeGenerationType="class">
-        <attribute name="nome" optional="YES" attributeType="String"/>
-        <relationship name="hidratacaoProd" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hidratacao" inverseName="produto" inverseEntity="Hidratacao"/>
-        <relationship name="limpezaProd" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Limpeza" inverseName="produto" inverseEntity="Limpeza"/>
-        <relationship name="protecaoProd" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Protecao" inverseName="produto" inverseEntity="Protecao"/>
-    </entity>
-    <entity name="Protecao" representedClassName="Protecao" syncable="YES" codeGenerationType="class">
-        <attribute name="periodo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="produto" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products" inverseName="protecaoProd" inverseEntity="Products"/>
-        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="protecao" inverseEntity="Task"/>
-    </entity>
     <entity name="Routine" representedClassName="Routine" syncable="YES" codeGenerationType="class">
         <attribute name="dateEnd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dom" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="esfoliacaonoite" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="hidratacaomanha" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="limpezamanha" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="limpezanoite" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="protecaomanha" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="protecaonoite" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="protecaotarde" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="qua" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="qui" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="routineName" optional="YES" attributeType="String"/>
         <attribute name="sab" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="salvo" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="seg" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="sex" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="somaManha" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="somaNoite" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="somaTarde" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="ter" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="routine" inverseEntity="Task"/>
-    </entity>
-    <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
-        <relationship name="hidratacao" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Hidratacao" inverseName="task" inverseEntity="Hidratacao"/>
-        <relationship name="limpeza" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Limpeza" inverseName="task" inverseEntity="Limpeza"/>
-        <relationship name="protecao" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Protecao" inverseName="task" inverseEntity="Protecao"/>
-        <relationship name="routine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Routine" inverseName="task" inverseEntity="Routine"/>
+        <attribute name="yourSomaManha" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="yourSomaNoite" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="yourSomaTarde" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Hidratacao" positionX="-423" positionY="216" width="128" height="74"/>
-        <element name="Limpeza" positionX="-396" positionY="234" width="128" height="74"/>
-        <element name="Products" positionX="-387" positionY="243" width="128" height="89"/>
-        <element name="Protecao" positionX="-414" positionY="225" width="128" height="74"/>
-        <element name="Routine" positionX="-435.4398193359375" positionY="131.9604949951172" width="128" height="194"/>
-        <element name="Task" positionX="-432" positionY="207" width="128" height="89"/>
+        <element name="Routine" positionX="-434.1312866210938" positionY="-112.7335662841797" width="128" height="389"/>
     </elements>
 </model>
