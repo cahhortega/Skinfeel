@@ -175,91 +175,52 @@ extension YourRoutineViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = self.tableView(tableView, cellForRowAt: indexPath)
         let text = cell.textLabel!.text
-        if let text = text {
-            if dataFilter == 0 {
-                if indexPath.section == 0 {
-                    NSLog("did select and the text is \(text)")
-                    limpezaManha.append(text)
-                    
-                } else if indexPath.section == 1 {
-                    NSLog("did select and the text is \(text)")
-                    hidratacaoManha.append(text)
-                    
-                } else {
-                    NSLog("did select and the text is \(text)")
-                    protecaoManha.append(text)
-                }
-            }
-            else if dataFilter == 1 {
-                NSLog("did select and the text is \(text)")
-                protecaoTarde.append(text)
-            } else {
-                if indexPath.section == 0 {
-                    NSLog("did select and the text is \(text)")
-                    limpezaNoite.append(text)
-                    
-                } else if indexPath.section == 1 {
-                    NSLog("did select and the text is \(text)")
-                    esfoliacaoNoite.append(text)
+            if let text = text {
+                if dataFilter == 0 {
+                    if indexPath.section == 0 {
+                        NSLog("did deselect and the text is \(text)")
+                        if let index = limpezaManha.firstIndex(of: text) {
+                            limpezaManha.remove(at: index)
+                        }
+                    } else if indexPath.section == 1 {
+                        NSLog("did deselect and the text is \(text)")
+                        if let index = hidratacaoManha.firstIndex(of: text) {
+                            hidratacaoManha.remove(at: index)
+                        }
+                    } else {
+                        NSLog("did deselect and the text is \(text)")
+                        if let index = protecaoManha.firstIndex(of: text) {
+                            protecaoManha.remove(at: index)
+                        }
+                    }
+                } else if dataFilter == 1 {
+                    NSLog("did deselect and the text is \(text)")
+                    if let index = protecaoTarde.firstIndex(of: text) {
+                        protecaoTarde.remove(at: index)
+                    }
                     
                 } else {
-                    NSLog("did select and the text is \(text)")
-                    protecaoNoite.append(text)
+                    if indexPath.section == 0 {
+                        NSLog("did deselect and the text is \(text)")
+                        if let index = limpezaNoite.firstIndex(of: text) {
+                            limpezaNoite.remove(at: index)
+                        }
+                    } else if indexPath.section == 1 {
+                        NSLog("did deselect and the text is \(text)")
+                        if let index = esfoliacaoNoite.firstIndex(of: text) {
+                            esfoliacaoNoite.remove(at: index)
+                        }
+                    } else {
+                        NSLog("did select and the text is \(text)")
+                        if let index = protecaoNoite.firstIndex(of: text) {
+                            protecaoNoite.remove(at: index)
+                        }
+                        
+                    }
                 }
                 
             }
         }
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let cell = self.tableView(tableView, cellForRowAt: indexPath)
-        let text = cell.textLabel!.text
-        if let text = text {
-            if dataFilter == 0 {
-                if indexPath.section == 0 {
-                    NSLog("did deselect and the text is \(text)")
-                    if let index = limpezaManha.firstIndex(of: text) {
-                        limpezaManha.remove(at: index)
-                    }
-                } else if indexPath.section == 1 {
-                    NSLog("did deselect and the text is \(text)")
-                    if let index = hidratacaoManha.firstIndex(of: text) {
-                        hidratacaoManha.remove(at: index)
-                    }
-                } else {
-                    NSLog("did deselect and the text is \(text)")
-                    if let index = protecaoManha.firstIndex(of: text) {
-                        protecaoManha.remove(at: index)
-                    }
-                }
-            } else if dataFilter == 1 {
-                NSLog("did deselect and the text is \(text)")
-                if let index = protecaoTarde.firstIndex(of: text) {
-                    protecaoTarde.remove(at: index)
-                }
-                
-            } else {
-                if indexPath.section == 0 {
-                    NSLog("did deselect and the text is \(text)")
-                    if let index = limpezaNoite.firstIndex(of: text) {
-                        limpezaNoite.remove(at: index)
-                    }
-                } else if indexPath.section == 1 {
-                    NSLog("did deselect and the text is \(text)")
-                    if let index = esfoliacaoNoite.firstIndex(of: text) {
-                        esfoliacaoNoite.remove(at: index)
-                    }
-                } else {
-                    NSLog("did select and the text is \(text)")
-                    if let index = protecaoNoite.firstIndex(of: text) {
-                        protecaoNoite.remove(at: index)
-                    }
-                    
-                }
-                
-            }
-        }
-    }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch dataFilter {
