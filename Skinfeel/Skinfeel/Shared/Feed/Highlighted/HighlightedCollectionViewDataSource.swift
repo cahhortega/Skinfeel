@@ -29,25 +29,19 @@ class HighlightedCollectionViewDataSource: NSObject, UICollectionViewDataSource 
         
         if indexPath.item == 0 {
             cell.imagem.image = UIImage(named: "high1")
-//            cell.titulo.text = "Avon é a marca mais comentada do BBB e triplica faturamento no e-commerce"
-            cell.titulo.text = NSLocalizedString("Avon is the most commented brand on the BBB and triples its e-commerce billing", comment: "Avon is the most commented brand on the BBB and triples its e-commerce billing")
+            cell.titulo.text = "Avon é a marca mais comentada do BBB e triplica faturamento no e-commerce"
             
         } else if indexPath.item == 1 {
             cell.imagem.image = UIImage(named: "high2")
-//            cell.titulo.text = "Pele madura: qual o melhor jeito de cuidar?"
-            cell.titulo.text = NSLocalizedString("Mature skin: what's the best way to take care of it?", comment: "Mature skin: what's the best way to take care of it?")
+            cell.titulo.text = "Pele madura: qual o melhor jeito de cuidar?"
 
         } else if indexPath.item == 2 {
             cell.imagem.image = UIImage(named: "high3")
-//            cell.titulo.text = "Consumidor simplifica rotina de skincare e maquiagem no pós-Covid"
-            cell.titulo.text = NSLocalizedString("Consumers simplify skincare and makeup routine in the post-Covid", comment: "Consumers simplify skincare and makeup routine in the post-Covid")
-
+            cell.titulo.text = "Consumidor simplifica rotina de skincare e maquiagem no pós-Covid"
 
         } else{
             cell.imagem.image = UIImage(named: "high4")
-//            cell.titulo.text = "Skincare em alta na pandemia ajuda a prevenir doenças dermatológicas"
-            cell.titulo.text = NSLocalizedString("Skincare on the rise in the pandemic helps prevent dermatological diseases", comment: "Skincare on the rise in the pandemic helps prevent dermatological diseases")
-
+            cell.titulo.text = "Skincare em alta na pandemia ajuda a prevenir doenças dermatológicas"
 
         }
         return cell

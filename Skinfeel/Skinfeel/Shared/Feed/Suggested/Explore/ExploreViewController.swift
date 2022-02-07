@@ -16,32 +16,27 @@ class ExploreViewController: UIViewController {
     
     private lazy var expDataSource = ExploreCollectionViewDataSource()
     private lazy var expDelegate = ExploreCollectionViewDelegate()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        
+
         exploreCollectionView.delegate = expDelegate
         exploreCollectionView.dataSource = expDataSource
         switch defaults.integer(forKey: "botao") {
         case 0:
-            //            bar.title = "Cruelty Free"
-            bar.title = NSLocalizedString("Cruelty Free", comment: "Cruelty Free")
+            bar.title = "Cruelty Free"
         case 1:
-            //            bar.title = "For men"
-            bar.title = NSLocalizedString("For men", comment: "For men")
-            
+            bar.title = "For men"
+
         case 2:
-            //            bar.title = "Pele negra"
-            bar.title = NSLocalizedString("Black skin", comment: "Black Skin")
-            
+            bar.title = "Pele negra"
+
         case 3:
-            //            bar.title = "Skincare Coreana"
-            bar.title = NSLocalizedString("Korean Skincare", comment: "Korean Skincare")
-            
-            
+            bar.title = "Skincare Coreana"
+
         default:
             print("oi")
         }

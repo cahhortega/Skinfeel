@@ -55,9 +55,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         imagemBoasVindas.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 50).isActive = true
         imagemBoasVindas.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-//        fraseSemRotina.text = "Clique em ”+” para criar sua primeira rotina"
-        fraseSemRotina.text = NSLocalizedString("empty state", comment: "You still don't have any routine today")
-        print(fraseSemRotina.text)
+        fraseSemRotina.text = "Clique em ”+” para criar sua primeira rotina"
         
         fraseSemRotina.numberOfLines = 0
         fraseSemRotina.textAlignment = .center
@@ -207,16 +205,11 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     
     func titleText(){
         if hour <= 12 {
-//            titleLabel.text = "Bom dia, \(defaults.string(forKey: "name") ?? "")!"
-            titleLabel.text = NSLocalizedString("morning", comment: "Good morning, \(defaults.string(forKey: "name") ?? "")!")
+            titleLabel.text = "Bom dia, \(defaults.string(forKey: "name") ?? "")!"
         } else if hour > 12 && hour <= 18 {
-//            titleLabel.text = "Boa tarde, \(defaults.string(forKey: "name") ?? "")!"
-            titleLabel.text = NSLocalizedString("afternoon", comment: "Good afternoon, \(defaults.string(forKey: "name") ?? "")!")
-
+            titleLabel.text = "Boa tarde, \(defaults.string(forKey: "name") ?? "")!"
         } else {
-//            titleLabel.text = "Boa noite, \(defaults.string(forKey: "name") ?? "")!"
-            titleLabel.text = NSLocalizedString("night", comment: "Good night, \(defaults.string(forKey: "name") ?? "")!")
-
+            titleLabel.text = "Boa noite, \(defaults.string(forKey: "name") ?? "")!"
         }
     }
     
