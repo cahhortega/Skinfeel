@@ -21,7 +21,13 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     let fraseSemRotina = UILabel()
     let imagemBoasVindas = UIImageView()
     let dateFormatter = DateFormatter()
+    var dataSelecionada: Date?
+    var rotinasData: [Routine] = []
     weak var NewRoutineViewControllerDelegate: NewRoutineViewControllerDelegate?
+    
+    //    var newRoutineViewController = NewRoutineViewController()
+    //    var yourRoutineViewController = YourRoutineViewController()
+    
     
     var isDone: Bool = false
     
@@ -33,7 +39,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     @IBOutlet var day5: UIButton!
     @IBOutlet var day6: UIButton!
     @IBOutlet var day7: UIButton!
-        
+    
     lazy var days: [UIButton] = [day1, day2, day3, day4, day5, day6, day7]
     
     var oi = try? CoreDataStackRoutine.getRoutine()
@@ -48,6 +54,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         self.routineCollectionView.dataSource = self
         view.addSubview(fraseSemRotina)
         view.addSubview(imagemBoasVindas)
+        
         
         imagemBoasVindas.image = UIImage(named: "menina triste")
         imagemBoasVindas.translatesAutoresizingMaskIntoConstraints = false
@@ -69,24 +76,31 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         //Botões dos dias da semana
         day1.translatesAutoresizingMaskIntoConstraints = false
         day1.addTarget(self, action: #selector(clicarDia1), for: .touchUpInside)
+        day1.tag = 1
         
         day2.translatesAutoresizingMaskIntoConstraints = false
         day2.addTarget(self, action: #selector(clicarDia2), for: .touchUpInside)
+        day2.tag = 2
         
         day3.translatesAutoresizingMaskIntoConstraints = false
         day3.addTarget(self, action: #selector(clicarDia3), for: .touchUpInside)
+        day3.tag = 3
         
         day4.translatesAutoresizingMaskIntoConstraints = false
         day4.addTarget(self, action: #selector(clicarDia4), for: .touchUpInside)
+        day4.tag = 4
         
         day5.translatesAutoresizingMaskIntoConstraints = false
         day5.addTarget(self, action: #selector(clicarDia5), for: .touchUpInside)
+        day5.tag = 5
         
         day6.translatesAutoresizingMaskIntoConstraints = false
         day6.addTarget(self, action: #selector(clicarDia6), for: .touchUpInside)
+        day6.tag = 6
         
         day7.translatesAutoresizingMaskIntoConstraints = false
         day7.addTarget(self, action: #selector(clicarDia7), for: .touchUpInside)
+        day7.tag = 7
         
         oi = try! CoreDataStackRoutine.getRoutine()
         self.routineCollectionView.reloadData()
@@ -106,7 +120,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         numeroDeCelulas()
         oi = try! CoreDataStackRoutine.getRoutine()
         self.routineCollectionView.reloadData()
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -129,11 +143,10 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         }
     }
     
+    
     func calendario(){
         var diaDepois = currentDay
         var diaAntes = currentDay
-//        currentMonth = 2
-//        currentYear = 2023
         for i in currentWeekDay ... 6 {
             days[i].setTitle("\(diaDepois)", for: .normal)
             if currentMonth == 2 {
@@ -165,7 +178,29 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
             }
         }
         for j in (0 ... currentWeekDay-1).reversed() {
-            diaAntes -= 1
+            if currentMonth == 1 || currentMonth == 2 || currentMonth == 4 || currentMonth == 6 || currentMonth == 8 || currentMonth == 9 || currentMonth == 11{ //Meses que antecedem um mês de 31 dias
+                if diaAntes == 1 {
+                    diaAntes = 31
+                } else {
+                    diaAntes -= 1
+                }
+            } else if currentMonth == 5 || currentMonth == 7 || currentMonth == 10 || currentMonth == 12 { //Meses que antecedem um mês de 30 dias
+                if diaAntes == 1 {
+                    diaAntes = 30
+                } else {
+                    diaAntes -= 1
+                }
+            } else { //março
+                if diaAntes == 1 {
+                    if currentYear % 4 == 0 {
+                        diaAntes = 29
+                    } else {
+                        diaAntes = 28
+                    }
+                } else {
+                    diaAntes -= 1
+                }
+            }
             days[j].setTitle("\(diaAntes)", for: .normal)
         }
     }
@@ -178,6 +213,8 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
                          day5: UIButton,
                          day6: UIButton,
                          day7: UIButton) {
+
+        self.rotinasData = []
         
         if !selected.isSelected{
             selected.backgroundColor = UIColor(named: "Rosa")
@@ -195,11 +232,51 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
             day7.backgroundColor = UIColor(named: "Bg")
             day7.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
             
+            for rotinas in 0..<oi!.count{
+                switch selected.tag {
+                case 1:
+                    if oi![rotinas].dom == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].dom)
+                    }
+                case 2:
+                    if oi![rotinas].seg == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].seg)
+                    }
+                case 3:
+                    if oi![rotinas].ter == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].ter)
+                    }
+                case 4:
+                    if oi![rotinas].qua == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].qua)
+                    }
+                case 5:
+                    if oi![rotinas].qui == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].qui)
+                    }
+                case 6:
+                    if oi![rotinas].sex == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].sex)
+                    }
+                default:
+                    if oi![rotinas].sab == true{
+                        rotinasData.append(oi![rotinas])
+                        print("AQUIadd na lista", oi![rotinas].sab)
+                    }
+                }
+            }
+            routineCollectionView.reloadData()
+            print("AQUI", self.rotinasData.count, selected.tag)
         }
         else {
             selected.backgroundColor = UIColor(named: "Bg")
             selected.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
-            
         }
     }
     
@@ -212,6 +289,8 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
             titleLabel.text = "Boa noite, \(defaults.string(forKey: "name") ?? "")!"
         }
     }
+    
+    
     
     //Ações dos botões
     @objc func clicarDia1() {
@@ -257,22 +336,23 @@ extension TodayViewController: UICollectionViewDelegate{
 
 extension TodayViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return oi?.count ?? 0
+        return self.rotinasData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as! RoutineCollectionViewCell
-        cell.nameRoutine.text = oi?[indexPath.row].routineName
-//        let date1 = oi?[indexPath.row].dateStart
-//        let date2 = oi?[indexPath.row].dateEnd
-//        let dateInicial = dateFormatter.string(from: date1!)
-//        let dateFinal = dateFormatter.string(from: date2!)
-//        let dateAtual = "\(currentDay)/\(currentMonth)/\(currentYear)"
-//        for cell in oi!{
-//            if dateInicial <= dateAtual || dateFinal >= dateAtual{
-//
-//            }
-//        }
+        cell.nameRoutine.text = self.rotinasData[indexPath.row].routineName
+        // guard let cell = routineCollectionView.dequeueReusableCell(withReuseIdentifier: "rotine", for: indexPath) as? RoutineCollectionViewCell else {return UICollectionViewCell()}
+        cell.morningCircularProgress.image = UIImage(named: "dia")
+        cell.afternoonCircularProgress.image = UIImage(named: "tarde")
+        cell.nightCircularProgress.image = UIImage(named: "lua")
+
+        
+//        let soma = (oi?[indexPath.row].somaManha)!/10 //total de itens
+//        let yourSoma = (oi?[indexPath.row].yourSomaManha)!/10 //total de itens selecionados
+//        let isSalvo = oi?[indexPath.row].salvo
+//        let result = Float(yourSoma/soma)
+
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -280,6 +360,10 @@ extension TodayViewController: UICollectionViewDataSource{
         let vc = storyBoard.instantiateViewController(identifier: "YourRoutineView") as! YourRoutineViewController
         YourRoutineViewController.index = indexPath.row
         vc.NewRoutineViewControllerDelegate = self
+        vc.routine = oi?[indexPath.row] ?? Routine()
+        
+        
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -289,7 +373,8 @@ extension TodayViewController: UICollectionViewDataSource{
 }
 extension TodayViewController: TodayViewControllerDelegate{
     func didRegister() {
-        oi = try! CoreDataStackRoutine.getRoutine()
+        self.rotinasData = try! CoreDataStackRoutine.getRoutine()
         routineCollectionView.reloadData()
+        routineCollectionView.reloadInputViews()
     }
 }
