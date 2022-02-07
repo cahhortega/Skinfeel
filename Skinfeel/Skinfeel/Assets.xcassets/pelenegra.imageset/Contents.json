@@ -47,10 +47,121 @@
       "filename" : "negra-d@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
+    },
+    {
+      "filename" : "negra-l-2.png",
+      "idiom" : "universal",
+      "locale" : "en",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "negra-d-2.png",
+      "idiom" : "universal",
+      "locale" : "en",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "negra-l@2x-2.png",
+      "idiom" : "universal",
+      "locale" : "en",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "negra-d@2x-2.png",
+      "idiom" : "universal",
+      "locale" : "en",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "negra-l@3x-2.png",
+      "idiom" : "universal",
+      "locale" : "en",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "negra-d@3x-2.png",
+      "idiom" : "universal",
+      "locale" : "en",
+      "scale" : "3x"
+    },
+    {
+      "filename" : "negra-l-1.png",
+      "idiom" : "universal",
+      "locale" : "pt-BR",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "negra-d-1.png",
+      "idiom" : "universal",
+      "locale" : "pt-BR",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "negra-l@2x-1.png",
+      "idiom" : "universal",
+      "locale" : "pt-BR",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "negra-d@2x-1.png",
+      "idiom" : "universal",
+      "locale" : "pt-BR",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "negra-l@3x-1.png",
+      "idiom" : "universal",
+      "locale" : "pt-BR",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "negra-d@3x-1.png",
+      "idiom" : "universal",
+      "locale" : "pt-BR",
+      "scale" : "3x"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
   }
 }
