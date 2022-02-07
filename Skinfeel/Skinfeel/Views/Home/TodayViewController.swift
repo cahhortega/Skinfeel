@@ -62,7 +62,7 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
         imagemBoasVindas.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 50).isActive = true
         imagemBoasVindas.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        fraseSemRotina.text = "Clique em ”+” para criar sua primeira rotina"
+        fraseSemRotina.text = "Clique em ”+” para criar sua primeira rotina".localized()
         
         fraseSemRotina.numberOfLines = 0
         fraseSemRotina.textAlignment = .center
@@ -281,12 +281,13 @@ class TodayViewController: UIViewController, NewRoutineViewControllerDelegate {
     }
     
     func titleText(){
+        let nome = defaults.string(forKey: "name") ?? ""
         if hour <= 12 {
-            titleLabel.text = "Bom dia, \(defaults.string(forKey: "name") ?? "")!"
+            titleLabel.text = "\("Bom dia,".localized()) \(nome)!"
         } else if hour > 12 && hour <= 18 {
-            titleLabel.text = "Boa tarde, \(defaults.string(forKey: "name") ?? "")!"
+            titleLabel.text = "\("Boa tarde,".localized()) \(nome)!"
         } else {
-            titleLabel.text = "Boa noite, \(defaults.string(forKey: "name") ?? "")!"
+            titleLabel.text = "\("Boa noite,".localized()) \(nome)!"
         }
     }
     

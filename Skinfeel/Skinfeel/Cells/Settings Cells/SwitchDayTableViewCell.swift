@@ -21,11 +21,11 @@ class SwitchDayTableViewCell: UITableViewCell {
         switchDay.isOn = defaults.bool(forKey: notificationId.rawValue)
         switch notificationId {
         case .Morning:
-            labelDay.text = "Manhã"
+            labelDay.text = "Manhã".localized()
         case .Afternoon:
-            labelDay.text = "Tarde"
+            labelDay.text = "Tarde".localized()
         case .Night:
-            labelDay.text = "Noite"
+            labelDay.text = "Noite".localized()
         }
     }
     

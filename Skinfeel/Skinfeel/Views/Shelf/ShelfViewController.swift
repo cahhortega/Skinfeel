@@ -29,7 +29,7 @@ class ShelfViewController: UIViewController {
         imagemBoasVindas.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50).isActive = true
         imagemBoasVindas.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        fraseSemRotina.text = "Clique no botão abaixo para adicionar novos produtos"
+        fraseSemRotina.text = "Clique no botão abaixo para adicionar novos produtos".localized()
         
         fraseSemRotina.numberOfLines = 0
         fraseSemRotina.textAlignment = .center
