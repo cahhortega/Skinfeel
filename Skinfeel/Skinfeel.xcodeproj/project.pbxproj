@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990E15FF27B18B8100116648 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 990E15FE27B18B8100116648 /* Stickers.xcassets */; };
+		990E160327B18B8100116648 /* SkinfeelStickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 990E15FC27B18B8000116648 /* SkinfeelStickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9924050D2771139200CF0946 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924050C2771139200CF0946 /* AppDelegate.swift */; };
 		992405192771139400CF0946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992405182771139400CF0946 /* Assets.xcassets */; };
 		9937940D278CC5110096F99F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9937940C278CC5110096F99F /* SceneDelegate.swift */; };
@@ -85,6 +87,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		990E160127B18B8100116648 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 992405012771139200CF0946 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 990E15FB27B18B8000116648;
+			remoteInfo = SkinfeelStickers;
+		};
 		99C9B5402795F3AE00048C33 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 992405012771139200CF0946 /* Project object */;
@@ -95,6 +104,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		990E160427B18B8100116648 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				990E160327B18B8100116648 /* SkinfeelStickers.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99C9B5232795F1BF00048C33 /* Embed App Clips */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -109,6 +129,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		990E15FC27B18B8000116648 /* SkinfeelStickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SkinfeelStickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		990E15FE27B18B8100116648 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		990E160027B18B8100116648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		992405092771139200CF0946 /* Skinfeel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skinfeel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9924050C2771139200CF0946 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		992405182771139400CF0946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,12 +225,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		990E15FD27B18B8000116648 /* SkinfeelStickers */ = {
+			isa = PBXGroup;
+			children = (
+				990E15FE27B18B8100116648 /* Stickers.xcassets */,
+				990E160027B18B8100116648 /* Info.plist */,
+			);
+			path = SkinfeelStickers;
+			sourceTree = "<group>";
+		};
 		992405002771139200CF0946 = {
 			isa = PBXGroup;
 			children = (
 				99797F0827A874BE00A37491 /* ManageObjects */,
 				9924050B2771139200CF0946 /* Skinfeel */,
 				99C9B52C2795F3AB00048C33 /* SkinfeelPartial */,
+				990E15FD27B18B8000116648 /* SkinfeelStickers */,
 				9924050A2771139200CF0946 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -217,6 +250,7 @@
 			children = (
 				992405092771139200CF0946 /* Skinfeel.app */,
 				99C9B52B2795F3AB00048C33 /* SkinfeelPartial.app */,
+				990E15FC27B18B8000116648 /* SkinfeelStickers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -476,6 +510,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		990E15FB27B18B8000116648 /* SkinfeelStickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 990E160727B18B8100116648 /* Build configuration list for PBXNativeTarget "SkinfeelStickers" */;
+			buildPhases = (
+				990E15FA27B18B8000116648 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkinfeelStickers;
+			productName = SkinfeelStickers;
+			productReference = 990E15FC27B18B8000116648 /* SkinfeelStickers.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 		992405082771139200CF0946 /* Skinfeel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 992405202771139400CF0946 /* Build configuration list for PBXNativeTarget "Skinfeel" */;
@@ -484,11 +533,13 @@
 				992405062771139200CF0946 /* Frameworks */,
 				992405072771139200CF0946 /* Resources */,
 				99C9B5232795F1BF00048C33 /* Embed App Clips */,
+				990E160427B18B8100116648 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				99C9B5412795F3AE00048C33 /* PBXTargetDependency */,
+				990E160227B18B8100116648 /* PBXTargetDependency */,
 			);
 			name = Skinfeel;
 			productName = Skinfeel;
@@ -522,6 +573,9 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					990E15FB27B18B8000116648 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					992405082771139200CF0946 = {
 						CreatedOnToolsVersion = 13.2;
 					};
@@ -545,11 +599,20 @@
 			targets = (
 				992405082771139200CF0946 /* Skinfeel */,
 				99C9B52A2795F3AB00048C33 /* SkinfeelPartial */,
+				990E15FB27B18B8000116648 /* SkinfeelStickers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		990E15FA27B18B8000116648 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				990E15FF27B18B8100116648 /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		992405072771139200CF0946 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -658,6 +721,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		990E160227B18B8100116648 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 990E15FB27B18B8000116648 /* SkinfeelStickers */;
+			targetProxy = 990E160127B18B8100116648 /* PBXContainerItemProxy */;
+		};
 		99C9B5412795F3AE00048C33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 99C9B52A2795F3AB00048C33 /* SkinfeelPartial */;
@@ -677,6 +745,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		990E160527B18B8100116648 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y74F655Y8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SkinfeelStickers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .GabiNamie.Skinfeel.SkinfeelStickers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		990E160627B18B8100116648 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Y74F655Y8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SkinfeelStickers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .GabiNamie.Skinfeel.SkinfeelStickers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		9924051E2771139400CF0946 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -920,6 +1026,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		990E160727B18B8100116648 /* Build configuration list for PBXNativeTarget "SkinfeelStickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				990E160527B18B8100116648 /* Debug */,
+				990E160627B18B8100116648 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		992405042771139200CF0946 /* Build configuration list for PBXProject "Skinfeel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
