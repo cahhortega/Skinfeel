@@ -1,0 +1,357 @@
+
+/* Class = "UILabel"; text = "Produto"; ObjectID = "0Oa-qs-Pio"; */
+"0Oa-qs-Pio.text" = "Produto";
+
+/* Class = "UILabel"; text = "dslnsdkjdnadsjkdnsakjdnasjkdnaskjdnsjkandjskajdakndjknd"; ObjectID = "0uE-vY-Nr7"; */
+"0uE-vY-Nr7.text" = "dslnsdkjdnadsjkdnsakjdnasjkdnaskjdnsjkandjskajdakndjknd";
+
+/* Class = "UIBarButtonItem"; title = "Voltar"; ObjectID = "0zZ-QI-n4a"; */
+"0zZ-QI-n4a.title" = "Voltar";
+
+/* Class = "UILabel"; text = "QUI"; ObjectID = "1py-UP-K0q"; */
+"1py-UP-K0q.text" = "QUI";
+
+/* Class = "UILabel"; text = "Rotinas "; ObjectID = "2zh-LX-y6n"; */
+"2zh-LX-y6n.text" = "Rotinas ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4cz-rp-qQL"; */
+"4cz-rp-qQL.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "DOM"; ObjectID = "4nR-HD-7Wk"; */
+"4nR-HD-7Wk.text" = "DOM";
+
+/* Class = "UILabel"; text = "A rotina da Maria vai te ajudar a começar "; ObjectID = "6Vo-dz-d2u"; */
+"6Vo-dz-d2u.text" = "A rotina da Maria vai te ajudar a começar ";
+
+/* Class = "UILabel"; text = "SÁB"; ObjectID = "7LT-zS-iEz"; */
+"7LT-zS-iEz.text" = "SÁB";
+
+/* Class = "UILabel"; text = "Manhã"; ObjectID = "7lo-eq-iWF"; */
+"7lo-eq-iWF.text" = "Manhã";
+
+/* Class = "UILabel"; text = "Selecione o que você vai usar na sua rotina"; ObjectID = "8MR-JN-9Wj"; */
+"8MR-JN-9Wj.text" = "Selecione o que você vai usar na sua rotina";
+
+/* Class = "UIButton"; normalTitle = "T"; ObjectID = "8xk-8r-O35"; */
+"8xk-8r-O35.normalTitle" = "T";
+
+/* Class = "UILabel"; text = "Produto"; ObjectID = "9I1-uy-qum"; */
+"9I1-uy-qum.text" = "Produto";
+
+/* Class = "UILabel"; text = "Início"; ObjectID = "9Q9-KA-C9x"; */
+"9Q9-KA-C9x.text" = "Início";
+
+/* Class = "UITabBarItem"; title = "Hoje"; ObjectID = "9ue-FL-Sm9"; */
+"9ue-FL-Sm9.title" = "Hoje";
+
+/* Class = "UIButton"; normalTitle = "05"; ObjectID = "Ayf-BB-fT5"; */
+"Ayf-BB-fT5.normalTitle" = "05";
+
+/* Class = "UIBarButtonItem"; title = "Salvar"; ObjectID = "B0D-8Y-sUh"; */
+"B0D-8Y-sUh.title" = "Salvar";
+
+/* Class = "UILabel"; text = "Explorar"; ObjectID = "B3x-6t-1gG"; */
+"B3x-6t-1gG.text" = "Explorar";
+
+/* Class = "UIBarButtonItem"; title = "Voltar"; ObjectID = "B9M-Uj-cNB"; */
+"B9M-Uj-cNB.title" = "Voltar";
+
+/* Class = "UIButton"; normalTitle = "02"; ObjectID = "BWL-WN-Ss5"; */
+"BWL-WN-Ss5.normalTitle" = "02";
+
+/* Class = "UIButton"; normalTitle = "D"; ObjectID = "C5S-Uj-mMs"; */
+"C5S-Uj-mMs.normalTitle" = "D";
+
+/* Class = "UILabel"; text = "Bom dia, Thais! "; ObjectID = "CS7-LM-awc"; */
+"CS7-LM-awc.text" = "Bom dia, Thais! ";
+
+/* Class = "UILabel"; text = "Bem vindo ao Skinfeel"; ObjectID = "DY3-XV-H71"; */
+"DY3-XV-H71.text" = "Bem vindo ao Skinfeel";
+
+/* Class = "UIBarButtonItem"; title = "Voltar"; ObjectID = "DfS-LW-opJ"; */
+"DfS-LW-opJ.title" = "Voltar";
+
+/* Class = "UISegmentedControl"; E7q-lF-TJd.segmentTitles[0] = "Manhã"; ObjectID = "E7q-lF-TJd"; */
+"E7q-lF-TJd.segmentTitles[0]" = "Manhã";
+
+/* Class = "UISegmentedControl"; E7q-lF-TJd.segmentTitles[1] = "Tarde"; ObjectID = "E7q-lF-TJd"; */
+"E7q-lF-TJd.segmentTitles[1]" = "Tarde";
+
+/* Class = "UISegmentedControl"; E7q-lF-TJd.segmentTitles[2] = "Noite"; ObjectID = "E7q-lF-TJd"; */
+"E7q-lF-TJd.segmentTitles[2]" = "Noite";
+
+/* Class = "UILabel"; text = "Nome"; ObjectID = "F6G-P8-SJx"; */
+"F6G-P8-SJx.text" = "Nome";
+
+/* Class = "UILabel"; text = "SEU AVATAR"; ObjectID = "F7e-cJ-Cut"; */
+"F7e-cJ-Cut.text" = "SEU AVATAR";
+
+/* Class = "UILabel"; text = "Seu perfil"; ObjectID = "F8I-SL-Umi"; */
+"F8I-SL-Umi.text" = "Seu perfil";
+
+/* Class = "UILabel"; text = "Atualidades"; ObjectID = "FFC-vD-OYY"; */
+"FFC-vD-OYY.text" = "Atualidades";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "FM4-8g-m1H"; */
+"FM4-8g-m1H.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "FM4-8g-m1H"; */
+"FM4-8g-m1H.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "S"; ObjectID = "FrK-zJ-QnX"; */
+"FrK-zJ-QnX.normalTitle" = "S";
+
+/* Class = "UILabel"; text = "Noite"; ObjectID = "GCf-9R-TJy"; */
+"GCf-9R-TJy.text" = "Noite";
+
+/* Class = "UIBarButtonItem"; title = "Voltar"; ObjectID = "HYk-a9-i2Y"; */
+"HYk-a9-i2Y.title" = "Voltar";
+
+/* Class = "UILabel"; text = "Seu dia"; ObjectID = "HyV-Jv-5MZ"; */
+"HyV-Jv-5MZ.text" = "Seu dia";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "IT1-fR-7vd"; */
+"IT1-fR-7vd.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IT1-fR-7vd"; */
+"IT1-fR-7vd.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Q"; ObjectID = "IiN-eX-x0c"; */
+"IiN-eX-x0c.normalTitle" = "Q";
+
+/* Class = "UIBarButtonItem"; title = "Salvar"; ObjectID = "J4q-Wg-oz2"; */
+"J4q-Wg-oz2.title" = "Salvar";
+
+/* Class = "UIBarButtonItem"; title = "Concluir"; ObjectID = "J67-M2-AKZ"; */
+"J67-M2-AKZ.title" = "Concluir";
+
+/* Class = "UILabel"; text = "Inspirado no questionário de Baumann"; ObjectID = "KFV-kk-ojq"; */
+"KFV-kk-ojq.text" = "Inspirado no questionário de Baumann";
+
+/* Class = "UILabel"; text = "Aqui você consegue alterar seu perfil e ativar ou desativar as notificações que te lembram da sua rotina"; ObjectID = "KPy-cO-03o"; */
+"KPy-cO-03o.text" = "Aqui você consegue alterar seu perfil e ativar ou desativar as notificações que te lembram da sua rotina";
+
+/* Class = "UILabel"; text = "Sua pele é oleosa"; ObjectID = "KVe-NZ-AQa"; */
+"KVe-NZ-AQa.text" = "Sua pele é oleosa";
+
+/* Class = "UILabel"; text = "TER"; ObjectID = "LJS-II-I54"; */
+"LJS-II-I54.text" = "TER";
+
+/* Class = "UILabel"; text = "Produto"; ObjectID = "LNX-hL-afn"; */
+"LNX-hL-afn.text" = "Produto";
+
+/* Class = "UILabel"; text = "Tarde"; ObjectID = "LzN-cs-EH0"; */
+"LzN-cs-EH0.text" = "Tarde";
+
+/* Class = "UILabel"; text = "SEX"; ObjectID = "NK4-O2-j6G"; */
+"NK4-O2-j6G.text" = "SEX";
+
+/* Class = "UILabel"; text = "Selecione os horários que você quer iniciar suas rotinas."; ObjectID = "Ngb-iI-RcU"; */
+"Ngb-iI-RcU.text" = "Selecione os horários que você quer iniciar suas rotinas.";
+
+/* Class = "UILabel"; text = "Manhã"; ObjectID = "OyD-he-1Pj"; */
+"OyD-he-1Pj.text" = "Manhã";
+
+/* Class = "UITabBarItem"; title = "Feed"; ObjectID = "PZu-FC-4KW"; */
+"PZu-FC-4KW.title" = "Feed";
+
+/* Class = "UILabel"; text = "Tarefa"; ObjectID = "PwW-GR-tNU"; */
+"PwW-GR-tNU.text" = "Tarefa";
+
+/* Class = "UIButton"; normalTitle = "Q"; ObjectID = "Q5a-Qm-R8v"; */
+"Q5a-Qm-R8v.normalTitle" = "Q";
+
+/* Class = "UILabel"; text = "SEU DIA"; ObjectID = "RKY-uZ-95R"; */
+"RKY-uZ-95R.text" = "SEU DIA";
+
+/* Class = "UILabel"; text = "Produto"; ObjectID = "SPd-CD-l1Q"; */
+"SPd-CD-l1Q.text" = "Produto";
+
+/* Class = "UILabel"; text = "Sua estante"; ObjectID = "SVE-lw-GZF"; */
+"SVE-lw-GZF.text" = "Sua estante";
+
+/* Class = "UILabel"; text = "Aqui estão os produtos que você escolheu para ter em sua estante"; ObjectID = "Tbi-Pf-w3J"; */
+"Tbi-Pf-w3J.text" = "Aqui estão os produtos que você escolheu para ter em sua estante";
+
+/* Class = "UIBarButtonItem"; title = "Voltar"; ObjectID = "U9c-lz-PFy"; */
+"U9c-lz-PFy.title" = "Voltar";
+
+/* Class = "UIBarButtonItem"; title = "Próximo"; ObjectID = "ViL-mL-aGn"; */
+"ViL-mL-aGn.title" = "Próximo";
+
+/* Class = "UIBarButtonItem"; title = "Próximo"; ObjectID = "Vlt-Ag-VeS"; */
+"Vlt-Ag-VeS.title" = "Próximo";
+
+/* Class = "UIBarButtonItem"; title = "Voltar"; ObjectID = "Vmj-6a-Co6"; */
+"Vmj-6a-Co6.title" = "Voltar";
+
+/* Class = "UILabel"; text = "Vamos nos apresentar"; ObjectID = "WGF-gx-3P1"; */
+"WGF-gx-3P1.text" = "Vamos nos apresentar";
+
+/* Class = "UISegmentedControl"; Wd2-9k-ekU.segmentTitles[0] = "Manhã"; ObjectID = "Wd2-9k-ekU"; */
+"Wd2-9k-ekU.segmentTitles[0]" = "Manhã";
+
+/* Class = "UISegmentedControl"; Wd2-9k-ekU.segmentTitles[1] = "Tarde"; ObjectID = "Wd2-9k-ekU"; */
+"Wd2-9k-ekU.segmentTitles[1]" = "Tarde";
+
+/* Class = "UISegmentedControl"; Wd2-9k-ekU.segmentTitles[2] = "Noite"; ObjectID = "Wd2-9k-ekU"; */
+"Wd2-9k-ekU.segmentTitles[2]" = "Noite";
+
+/* Class = "UILabel"; text = "Vamos descobrir o seu tipo de pele"; ObjectID = "WdT-TV-fSr"; */
+"WdT-TV-fSr.text" = "Vamos descobrir o seu tipo de pele";
+
+/* Class = "UIButton"; configuration.title = "  adicionar produto"; ObjectID = "Wqo-6w-mBz"; */
+"Wqo-6w-mBz.configuration.title" = "  adicionar produto";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Wqo-6w-mBz"; */
+"Wqo-6w-mBz.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Noite"; ObjectID = "X3u-Gg-BFn"; */
+"X3u-Gg-BFn.text" = "Noite";
+
+/* Class = "UILabel"; text = "QUA"; ObjectID = "XtJ-4v-QZ7"; */
+"XtJ-4v-QZ7.text" = "QUA";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "YYq-I7-S4L"; */
+"YYq-I7-S4L.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "dslnsdkjdnadsjkdnsakjdnasjkdnaskjdnsjkandjskajdakndjknd"; ObjectID = "Yq2-ir-3eG"; */
+"Yq2-ir-3eG.text" = "dslnsdkjdnadsjkdnsakjdnasjkdnaskjdnsjkandjskajdakndjknd";
+
+/* Class = "UILabel"; text = "Sua estante"; ObjectID = "ZfD-fg-mkY"; */
+"ZfD-fg-mkY.text" = "Sua estante";
+
+/* Class = "UITabBarItem"; title = "Estante"; ObjectID = "Zmx-1Q-CIE"; */
+"Zmx-1Q-CIE.title" = "Estante";
+
+/* Class = "UILabel"; text = "How many times a day do you feel the need to wash your face?"; ObjectID = "Zpd-N7-r6G"; */
+"Zpd-N7-r6G.text" = "How many times a day do you feel the need to wash your face?";
+
+/* Class = "UILabel"; text = "Produto"; ObjectID = "afV-vs-Xuf"; */
+"afV-vs-Xuf.text" = "Produto";
+
+/* Class = "UILabel"; text = "Rotina caseira"; ObjectID = "ao4-7N-JA1"; */
+"ao4-7N-JA1.text" = "Rotina caseira";
+
+/* Class = "UITextField"; placeholder = "Ex: \"Minha rotina caseira”"; ObjectID = "arF-Al-JeW"; */
+"arF-Al-JeW.placeholder" = "Ex: \"Minha rotina caseira”";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "b2T-sL-oEY"; */
+"b2T-sL-oEY.text" = "Title";
+
+/* Class = "UIBarButtonItem"; title = "Próximo"; ObjectID = "boK-oO-lex"; */
+"boK-oO-lex.title" = "Próximo";
+
+/* Class = "UILabel"; text = "dslnsdkjdnadsjkdnsakjdnasjkdnaskjdnsjkandjskajdakndjknd"; ObjectID = "brZ-q6-eCh"; */
+"brZ-q6-eCh.text" = "dslnsdkjdnadsjkdnsakjdnasjkdnaskjdnsjkandjskajdakndjknd";
+
+/* Class = "UILabel"; text = "Clique nos cards para saber dicas de como cuidar da sua pele"; ObjectID = "dMA-Xu-Z9p"; */
+"dMA-Xu-Z9p.text" = "Clique nos cards para saber dicas de como cuidar da sua pele";
+
+/* Class = "UIButton"; normalTitle = "04"; ObjectID = "eDm-M1-NhY"; */
+"eDm-M1-NhY.normalTitle" = "04";
+
+/* Class = "UILabel"; text = "Tarde"; ObjectID = "eYO-q7-9PM"; */
+"eYO-q7-9PM.text" = "Tarde";
+
+/* Class = "UILabel"; text = "Manhã"; ObjectID = "ebL-ct-oht"; */
+"ebL-ct-oht.text" = "Manhã";
+
+/* Class = "UILabel"; text = "Nome"; ObjectID = "eiQ-Sc-ebi"; */
+"eiQ-Sc-ebi.text" = "Nome";
+
+/* Class = "UIButton"; normalTitle = "07"; ObjectID = "erx-va-Jad"; */
+"erx-va-Jad.normalTitle" = "07";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "gQz-1m-2NX"; */
+"gQz-1m-2NX.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gQz-1m-2NX"; */
+"gQz-1m-2NX.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Como você quer que a gente te chame? "; ObjectID = "gWX-wz-fqV"; */
+"gWX-wz-fqV.text" = "Como você quer que a gente te chame? ";
+
+/* Class = "UILabel"; text = "Novo produto"; ObjectID = "gav-mY-JPG"; */
+"gav-mY-JPG.text" = "Novo produto";
+
+/* Class = "UILabel"; text = "Fim"; ObjectID = "hKs-Zr-f0e"; */
+"hKs-Zr-f0e.text" = "Fim";
+
+/* Class = "UILabel"; text = "Tarefas"; ObjectID = "i6l-Ss-HlU"; */
+"i6l-Ss-HlU.text" = "Tarefas";
+
+/* Class = "UILabel"; text = "Thais"; ObjectID = "iaC-JB-gjL"; */
+"iaC-JB-gjL.text" = "Thais";
+
+/* Class = "UIButton"; normalTitle = "06"; ObjectID = "ial-El-yMJ"; */
+"ial-El-yMJ.normalTitle" = "06";
+
+/* Class = "UIButton"; normalTitle = " Adicionar produtos na estante"; ObjectID = "j4W-d0-f1i"; */
+"j4W-d0-f1i.normalTitle" = " Adicionar produtos na estante";
+
+/* Class = "UIBarButtonItem"; title = "Próximo"; ObjectID = "jfa-GC-gDj"; */
+"jfa-GC-gDj.title" = "Próximo";
+
+/* Class = "UIButton"; normalTitle = "S"; ObjectID = "jqE-sZ-F0E"; */
+"jqE-sZ-F0E.normalTitle" = "S";
+
+/* Class = "UILabel"; text = "Este aplicativo não é apenas sobre cuidados com a pele, é sobre você se sentir bem consigo mesmo, adotando bons hábitos de cuidados com a pele."; ObjectID = "jyw-8x-IrN"; */
+"jyw-8x-IrN.text" = "Este aplicativo não é apenas sobre cuidados com a pele, é sobre você se sentir bem consigo mesmo, adotando bons hábitos de cuidados com a pele.";
+
+/* Class = "UILabel"; text = "Repetir"; ObjectID = "k7l-Js-3tw"; */
+"k7l-Js-3tw.text" = "Repetir";
+
+/* Class = "UISegmentedControl"; kvx-jC-x3r.segmentTitles[0] = "Manhã"; ObjectID = "kvx-jC-x3r"; */
+"kvx-jC-x3r.segmentTitles[0]" = "Manhã";
+
+/* Class = "UISegmentedControl"; kvx-jC-x3r.segmentTitles[1] = "Tarde"; ObjectID = "kvx-jC-x3r"; */
+"kvx-jC-x3r.segmentTitles[1]" = "Tarde";
+
+/* Class = "UISegmentedControl"; kvx-jC-x3r.segmentTitles[2] = "Noite"; ObjectID = "kvx-jC-x3r"; */
+"kvx-jC-x3r.segmentTitles[2]" = "Noite";
+
+/* Class = "UIButton"; normalTitle = "S"; ObjectID = "lDj-M0-2f0"; */
+"lDj-M0-2f0.normalTitle" = "S";
+
+/* Class = "UILabel"; text = "Novo produto"; ObjectID = "lI0-WV-DoH"; */
+"lI0-WV-DoH.text" = "Novo produto";
+
+/* Class = "UIBarButtonItem"; title = "Salvar"; ObjectID = "mBZ-gf-Pku"; */
+"mBZ-gf-Pku.title" = "Salvar";
+
+/* Class = "UIButton"; normalTitle = "01"; ObjectID = "nLk-L0-veb"; */
+"nLk-L0-veb.normalTitle" = "01";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "o7a-au-ERr"; */
+"o7a-au-ERr.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "o7a-au-ERr"; */
+"o7a-au-ERr.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "03"; ObjectID = "pY8-wP-h47"; */
+"pY8-wP-h47.normalTitle" = "03";
+
+/* Class = "UILabel"; text = "Nova rotina"; ObjectID = "rnn-GK-wAL"; */
+"rnn-GK-wAL.text" = "Nova rotina";
+
+/* Class = "UILabel"; text = "Notícias"; ObjectID = "t37-bI-ftc"; */
+"t37-bI-ftc.text" = "Notícias";
+
+/* Class = "UIBarButtonItem"; title = "Próximo"; ObjectID = "tWW-Ek-trr"; */
+"tWW-Ek-trr.title" = "Próximo";
+
+/* Class = "UILabel"; text = "Conheça Maria"; ObjectID = "tlY-RJ-dAc"; */
+"tlY-RJ-dAc.text" = "Conheça Maria";
+
+/* Class = "UILabel"; text = "SEG"; ObjectID = "tuC-8I-e4r"; */
+"tuC-8I-e4r.text" = "SEG";
+
+/* Class = "UITextField"; placeholder = "Digite seu nome aqui"; ObjectID = "u1p-4a-scJ"; */
+"u1p-4a-scJ.placeholder" = "Digite seu nome aqui";
+
+/* Class = "UIBarButtonItem"; title = "Voltar"; ObjectID = "xKi-g4-Y5V"; */
+"xKi-g4-Y5V.title" = "Voltar";
+
+/* Class = "UILabel"; text = "Nome rotina "; ObjectID = "yfQ-fu-pr0"; */
+"yfQ-fu-pr0.text" = "Nome rotina ";
