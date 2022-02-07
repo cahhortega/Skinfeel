@@ -16,7 +16,7 @@ class NewProductRoutineViewController: UIViewController{
     let defaults = UserDefaults.standard
     var chosenProducts: [String] = []
 
-    var array: [String] = [] //trocar!!!
+    var array: [String] = []
     var selectedSection: Int = 0
     
     @IBAction func saveButton(_ sender: Any) {

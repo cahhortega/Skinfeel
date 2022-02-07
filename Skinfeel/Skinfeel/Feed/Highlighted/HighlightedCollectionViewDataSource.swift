@@ -29,19 +29,19 @@ class HighlightedCollectionViewDataSource: NSObject, UICollectionViewDataSource 
         
         if indexPath.item == 0 {
             cell.imagem.image = UIImage(named: "high1")
-            cell.titulo.text = "Avon é a marca mais comentada do BBB e triplica faturamento no e-commerce"
+            cell.titulo.text = "Avon é a marca mais comentada do BBB e triplica faturamento no e-commerce".localized()
             
         } else if indexPath.item == 1 {
             cell.imagem.image = UIImage(named: "high2")
-            cell.titulo.text = "Pele madura: qual o melhor jeito de cuidar?"
+            cell.titulo.text = "Pele madura: qual o melhor jeito de cuidar?".localized()
 
         } else if indexPath.item == 2 {
             cell.imagem.image = UIImage(named: "high3")
-            cell.titulo.text = "Consumidor simplifica rotina de skincare e maquiagem no pós-Covid"
+            cell.titulo.text = "Consumidor simplifica rotina de skincare e maquiagem no pós-Covid".localized()
 
         } else{
             cell.imagem.image = UIImage(named: "high4")
-            cell.titulo.text = "Skincare em alta na pandemia ajuda a prevenir doenças dermatológicas"
+            cell.titulo.text = "Skincare em alta na pandemia ajuda a prevenir doenças dermatológicas".localized()
 
         }
         return cell

@@ -16,8 +16,8 @@ class YourRoutineViewController: UIViewController {
     weak var YourRoutineViewControllerDelegate: YourRoutineViewControllerDelegate?
     @IBOutlet weak var routineNome: UILabel!
     @IBAction func deleteButton(_ sender: UIBarButtonItem) {
-        let ac = UIAlertController(title: "", message: "Tem certeza de que deseja deletar esta rotina?", preferredStyle: .actionSheet)
-        ac.addAction(UIAlertAction(title: "Apagar", style: .destructive, handler: {(action: UIAlertAction!) in
+        let ac = UIAlertController(title: "", message: "Tem certeza de que deseja deletar esta rotina?".localized(), preferredStyle: .actionSheet)
+        ac.addAction(UIAlertAction(title: "Apagar".localized(), style: .destructive, handler: {(action: UIAlertAction!) in
             
             //acao de deletar
             _ = try! CoreDataStackRoutine.deleteRoutine(routine: (self.nomeRotina?[YourRoutineViewController.index])!)
@@ -266,45 +266,45 @@ extension YourRoutineViewController: UITableViewDataSource {
         case 0:
             switch section {
             case 0:
-                return "Limpeza"
+                return "Limpeza".localized()
             case 1:
-                return "Hidratação"
+                return "Hidratação".localized()
             case 2:
-                return "Proteção"
+                return "Proteção".localized()
             default:
-                return "Limpeza"
+                return "Limpeza".localized()
                 
             }
         case 1:
             switch section {
             case 0:
-                return "Proteção"
+                return "Proteção".localized()
             default:
-                return "Proteção"
+                return "Proteção".localized()
                 
             }
         case 2:
             switch section {
             case 0:
-                return "Limpeza"
+                return "Limpeza".localized()
             case 1:
-                return "Esfoliação"
+                return "Esfoliação".localized()
             case 2:
-                return "Proteção"
+                return "Proteção".localized()
             default:
-                return "Limpeza"
+                return "Limpeza".localized()
                 
             }
         default:
             switch section {
             case 0:
-                return "Limpeza"
+                return "Limpeza".localized()
             case 1:
-                return "Hidratação"
+                return "Hidratação".localized()
             case 2:
-                return "Proteção"
+                return "Proteção".localized()
             default:
-                return "Limpeza"
+                return "Limpeza".localized()
                 
             }
             

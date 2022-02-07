@@ -18,10 +18,10 @@ class NewRoutineViewController: UIViewController {
     weak var TodayViewControllerDelegate: TodayViewControllerDelegate?
     var dataFilter = 0
     var defaults = UserDefaults.standard
-    var morningTasks: [String] = ["Limpeza", "Hidratação", "Proteção"]
+    var morningTasks: [String] = ["Limpeza".localized(), "Hidratação".localized(), "Proteção".localized()]
     // Data for home tasks
-    var nightTasks: [String] = ["Limpeza", "Esfoliação", "Hidratação"]
-    var afternoonTasks: [String] = ["Proteção"]
+    var nightTasks: [String] = ["Limpeza".localized(), "Esfoliação".localized(), "Hidratação".localized()]
+    var afternoonTasks: [String] = ["Proteção".localized()]
     
     @IBOutlet var dom: UIButton!
     @IBOutlet var seg: UIButton!
@@ -174,28 +174,28 @@ class NewRoutineViewController: UIViewController {
 
         //Nome da rotina vazio
         if routineName == "" {
-            let ac = UIAlertController(title: "Dados incompletos", message: "O campo 'Nome' não está preenchido", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Dados incompletos".localized(), message: "O campo 'Nome' não está preenchido".localized(), preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             ac.view.tintColor = UIColor(named: "Rosa")
             present(ac, animated: true)
         }
         //Tarefas vazias
         if limpezaManha == [] || hidratacaoManha == [] || protecaoManha == [] || protecaoTarde == [] || limpezaNoite == [] || esfoliacaoNoite == [] || protecaoNoite == [] {
-            let ac = UIAlertController(title: "Dados incompletos", message: "Uma das tarefas não está preenchida", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Dados incompletos".localized(), message: "Uma das tarefas não está preenchida".localized(), preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             ac.view.tintColor = UIColor(named: "Rosa")
             present(ac, animated: true)
         }
         //Data de inicio e fim invalidas
         if dataStart < Date() && dataEnd <= dataStart {
-            let ac = UIAlertController(title: "Dados inválidos", message: "A data de início e fim da sua rotina estão inválidas", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Dados inválidos".localized(), message: "A data de início e fim da sua rotina estão inválidas".localized(), preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             ac.view.tintColor = UIColor(named: "Rosa")
             present(ac, animated: true)
         }
         //Data de inicio invalida
         if dataStart < Date(){ //nao ta funcionando certo
-            let ac = UIAlertController(title: "Dados inválidos", message: "A data de início da sua rotina está inválida", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Dados inválidos".localized(), message: "A data de início da sua rotina está inválida".localized(), preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             ac.view.tintColor = UIColor(named: "Rosa")
             present(ac, animated: true)
@@ -204,14 +204,14 @@ class NewRoutineViewController: UIViewController {
         }
         //Data de fim inválida
         if dataEnd <= dataStart{
-            let ac = UIAlertController(title: "Dados inválidos", message: "A data do fim da sua rotina está inválida", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Dados inválidos".localized(), message: "A data do fim da sua rotina está inválida".localized(), preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             ac.view.tintColor = UIColor(named: "Rosa")
             present(ac, animated: true)
         }
         //Campo "repetir" vazio
         if seg == false && ter == false && qua == false && qui == false && sex == false && sab == false && dom == false{
-            let ac = UIAlertController(title: "Dados incompletos", message: "O campo 'Repetir' não está preenchido.", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Dados incompletos", message: "O campo 'Repetir' não está preenchido.".localized(), preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             ac.view.tintColor = UIColor(named: "Rosa")
             present(ac, animated: true)
@@ -277,45 +277,45 @@ extension NewRoutineViewController: UITableViewDataSource{
         case 0:
             switch section {
             case 0:
-                return "Limpeza"
+                return "Limpeza".localized()
             case 1:
-                return "Hidratação"
+                return "Hidratação".localized()
             case 2:
-                return "Proteção"
+                return "Proteção".localized()
             default:
-                return "Limpeza"
+                return "Limpeza".localized()
                 
             }
         case 1:
             switch section {
             case 0:
-                return "Proteção"
+                return "Proteção".localized()
             default:
-                return "Proteção"
+                return "Proteção".localized()
                 
             }
         case 2:
             switch section {
             case 0:
-                return "Limpeza"
+                return "Limpeza".localized()
             case 1:
-                return "Esfoliação"
+                return "Esfoliação".localized()
             case 2:
-                return "Proteção"
+                return "Proteção".localized()
             default:
-                return "Limpeza"
+                return "Limpeza".localized()
                 
             }
         default:
             switch section {
             case 0:
-                return "Limpeza"
+                return "Limpeza".localized()
             case 1:
-                return "Hidratação"
+                return "Hidratação".localized()
             case 2:
-                return "Proteção"
+                return "Proteção".localized()
             default:
-                return "Limpeza"
+                return "Limpeza".localized()
                 
             }
             

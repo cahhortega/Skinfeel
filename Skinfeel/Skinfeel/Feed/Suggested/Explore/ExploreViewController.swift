@@ -32,10 +32,10 @@ class ExploreViewController: UIViewController {
             bar.title = "For men"
 
         case 2:
-            bar.title = "Pele negra"
+            bar.title = "Pele negra".localized()
 
         case 3:
-            bar.title = "Skincare Coreana"
+            bar.title = "Skincare Coreana".localized()
 
         default:
             print("oi")

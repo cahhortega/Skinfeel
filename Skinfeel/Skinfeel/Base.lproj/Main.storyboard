@@ -482,7 +482,6 @@
                                         <date key="date" timeIntervalSinceReferenceDate="663850800.73192406">
                                             <!--2022-01-14 11:00:00 +0000-->
                                         </date>
-                                        <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="center" placeholderIntrinsicWidth="69" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="kes-Nk-86j">
                                         <rect key="frame" x="128" y="0.0" width="79" height="50"/>
@@ -490,7 +489,6 @@
                                         <date key="date" timeIntervalSinceReferenceDate="663876000.30323803">
                                             <!--2022-01-14 18:00:00 +0000-->
                                         </date>
-                                        <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
                                     <datePicker verifyAmbiguity="ignoreSizes" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" useCurrentDate="NO" id="G3Y-Y3-PHH">
                                         <rect key="frame" x="255" y="0.0" width="80" height="50"/>
@@ -498,7 +496,6 @@
                                         <date key="date" timeIntervalSinceReferenceDate="663897600.28867805">
                                             <!--2022-01-15 00:00:00 +0000-->
                                         </date>
-                                        <locale key="locale" localeIdentifier="pt_BR"/>
                                     </datePicker>
                                 </subviews>
                                 <constraints>
@@ -1653,7 +1650,6 @@
                                 <rect key="frame" x="208" y="301" width="0.0" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="Ciano"/>
-                                <locale key="locale" localeIdentifier="pt_BR"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repetir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k7l-Js-3tw">
                                 <rect key="frame" x="19" y="354" width="375" height="20"/>
@@ -1747,7 +1743,6 @@
                                 <rect key="frame" x="19" y="301" width="0.0" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="Ciano"/>
-                                <locale key="locale" localeIdentifier="pt_BR"/>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" id="JGa-69-XLf">
                                 <rect key="frame" x="24" y="384" width="387" height="50"/>

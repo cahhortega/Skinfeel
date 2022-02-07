@@ -5,3 +5,80 @@
   Created by Carolina Ortega on 07/02/22.
   
 */
+"Avon é a marca mais comentada do BBB e triplica faturamento no e-commerce" = "Avon is the most commented brand on the BBB and triples its e-commerce billing";
+"Pele madura: qual o melhor jeito de cuidar?" = "Mature skin: what's the best way to take care of it?";
+"Consumidor simplifica rotina de skincare e maquiagem no pós-Covid" = "Consumers simplify skincare and makeup routine in the post-Covid";
+"Skincare em alta na pandemia ajuda a prevenir doenças dermatológicas" = "Skincare on the rise in the pandemic helps prevent dermatological diseases";
+"Limpeza" = "Cleaning";
+"Hidratação" = "Moisturizing";
+"Proteção" = "Protecting";
+"Esfoliação" = "Exfoliating";
+"Anterior" = "Previous";
+"Clique em ”+” para criar sua primeira rotina" = "Click ”+” to create your first routine";
+"Manhã" = "Morning";
+"Tarde" = "Afternoon";
+"Noite" = "Night";
+"Boa tarde," = "Good afternoon,";
+"Boa noite," = "Good night,";
+"Bom dia," = "Good morning,";
+"Dados incompletos" = "Incomplete data";
+"O campo 'Nome' não está preenchido" = "The field 'Name' isn't filled in";
+"Uma das tarefas não está preenchida" = "One of the tasks isn't completed";
+"Dados inválidos" = "Invalid data";
+"A data de início e fim da sua rotina estão inválidas" = "The start and end date of your routine are invalid";
+"A data de início da sua rotina está inválida" = "Your routine start date is invalid";
+"A data do fim da sua rotina está inválida" = "Your routine end date is invalid";
+"O campo 'Repetir' não está preenchido." = "The field 'Repeats on' isn't populated.";
+"Tem certeza de que deseja deletar esta rotina?" = "Are you sure you want to delete this routine?";
+"Apagar" = "Delete";
+"Quantas vezes por dia você sente necessidade de lavar o rosto?" = "How many times a day do you feel the need to wash your face?";
+"Como você descreveria sua pele?" = "How would you describe your skin?";
+"Poros são buraquinhos na pele. Ao se olhar no espelho, você consegue observá-los?" = "Pores are little holes in the skin. When you look in the mirror, can you see them?";
+"Você costuma ter espinhas ou cravos?" = "Do you usually get pimples or blackheads?";
+"Depois de praticar uma atividade física, seu rosto fica como?" = "After practicing a physical activity, what does your face look like?";
+
+"Em dias úmidos ou no verão sinto mais necessidade" = "On humid days or in summer I feel more need";
+"Só uma vez, geralmente para tirar a maquiagem" = "Just once, usually to remove makeup";
+"Várias vezes, sinto minha pele com aspecto sujo" = "I often feel my skin looks dirty";
+"Não sinto necessidade, somente no banho" = "I don't feel the need, only in the bath";
+
+
+"Em alguns locais parece oleosa e em outros não" = "In some places it looks oily and in others it doesn't";
+"Não possuo oleosidade aparente, estando sempre com aspecto hidratado" = "I don't have any apparent oiliness, always looking hydrated";
+"Muita oleosidade por todo o rosto, podendo aparecer espinhas" = "Too much oil all over the face, and pimples may appear";
+"Minha pele é opaca e sem brilho, às vezes avermelhada ou ressecada" = "My skin is opaque and lackluster, sometimes reddened or dry";
+
+"Posso vê-los mais no queixo, nariz ou testa" = "I can see them more on chin, nose or forehead";
+"Não muito, são pouco aparentes" = "Not much, they're barely apparent";
+"Sim, posso ver no rosto todo" = "Yes, I can see it all over the face";
+"Não, minha pele é completamente lisa" = "No, my skin is completely smooth";
+            
+"De vez em quando" = "Occasionally";
+"É bem difícil" = "It's pretty hard";
+"Quase sempre" = "Almost always";
+"Nunca" = "Never";
+               
+"Um pouco oleoso e suado" = "A little oily and sweaty";
+"Com as bochechas avermelhadas e suado" = "With reddened cheeks and sweaty";
+"Muito oleoso e 'pegajoso'" = "Too oily and 'sticky'";
+"Avermelhado e ardendo" = "Red and burning";
+"oleosa" = "oily";
+"mista" = "mixed";
+"seca" = "dry";
+"Maria" = "Mary";
+"Luiz" = "John";
+"Carlos" = "Carl";
+"Olivia" = "Olivia";
+"Sua pele é" = "Your skin is";
+"vai te ajudar a começar" = "'s routine will help you get started";
+"Conheça" = "Meet";
+"Pele negra" = "Black skin";
+"Skincare Coreana" = "Korean Skincare";
+"Clique no botão abaixo para adicionar novos produtos" = "Click the button below to add new products";
+"Vamos lá!" = "C'mon!";
+"Que tal começar o seu dia iniciando sua rotina de cuidados com a pele?" = "How about starting your day with your skin care routine?";
+"Não se esqueça de reforçar a proteção da sua pele." = "Don't forget to reinforce your skin protection.";
+"Vamos finalizar o dia cuidando da sua pele?" = "Shall we finish the day by taking care of your skin?";
+"A rotina de" = "";
+
+

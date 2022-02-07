@@ -42,7 +42,7 @@ class ShelfFormViewController: UIViewController{
         
         //navigationBar
         navigationItem.leftBarButtonItem = UIBarButtonItem(
-            title: "Anterior",
+            title: "Anterior".localized(),
             style: .plain,
             target: self,
             action: #selector(back)

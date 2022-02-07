@@ -83,6 +83,7 @@
 		A0B98F7627B1927800541A41 /* formen.json in Resources */ = {isa = PBXBuildFile; fileRef = A0B98F7827B1927800541A41 /* formen.json */; };
 		A0B98F7A27B1928000541A41 /* pelenegra.json in Resources */ = {isa = PBXBuildFile; fileRef = A0B98F7C27B1928000541A41 /* pelenegra.json */; };
 		A0B98F7E27B1928700541A41 /* coreana.json in Resources */ = {isa = PBXBuildFile; fileRef = A0B98F8027B1928700541A41 /* coreana.json */; };
+		A0B98F8327B194BF00541A41 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B98F8227B194BF00541A41 /* Localizable.swift */; };
 		A0E7647727AB35B400A90486 /* FeedAppClips.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E7647627AB35B400A90486 /* FeedAppClips.swift */; };
 /* End PBXBuildFile section */
 
@@ -181,7 +182,6 @@
 		A0B98F5727B17CBB00541A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0B98F5827B17CC900541A41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		A0B98F5C27B17D1C00541A41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A0B98F5E27B17D2100541A41 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A0B98F6227B17DA500541A41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/cardsAppClip.json; sourceTree = "<group>"; };
 		A0B98F6427B17DA800541A41 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-BR"; path = "pt-BR.lproj/cardsAppClip.json"; sourceTree = "<group>"; };
 		A0B98F6727B17F5300541A41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/cards.json; sourceTree = "<group>"; };
@@ -195,6 +195,8 @@
 		A0B98F7D27B1928100541A41 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-BR"; path = "pt-BR.lproj/pelenegra.json"; sourceTree = "<group>"; };
 		A0B98F7F27B1928700541A41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/coreana.json; sourceTree = "<group>"; };
 		A0B98F8127B1928A00541A41 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-BR"; path = "pt-BR.lproj/coreana.json"; sourceTree = "<group>"; };
+		A0B98F8227B194BF00541A41 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		A0B98F8427B1988500541A41 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A0E7647627AB35B400A90486 /* FeedAppClips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAppClips.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +240,7 @@
 		9924050B2771139200CF0946 /* Skinfeel */ = {
 			isa = PBXGroup;
 			children = (
+				A0B98F8227B194BF00541A41 /* Localizable.swift */,
 				A0B98F5D27B17D1C00541A41 /* Localizable.strings */,
 				992405182771139400CF0946 /* Assets.xcassets */,
 				A0B98F6D27B1871600541A41 /* LaunchScreen.storyboard */,
@@ -641,6 +644,7 @@
 				99379452278CCD150096F99F /* YourRoutineTableViewCell.swift in Sources */,
 				A03642FC27A0569A002606DC /* Card.swift in Sources */,
 				9937945A278CCE020096F99F /* DayTableViewCell.swift in Sources */,
+				A0B98F8327B194BF00541A41 /* Localizable.swift in Sources */,
 				99379429278CC9260096F99F /* NameViewController.swift in Sources */,
 				9937943B278CCB010096F99F /* YourRoutineViewController.swift in Sources */,
 				996BB5F227AB48CA001DD47F /* SuggestedCollectionViewDataSource.swift in Sources */,
@@ -708,7 +712,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A0B98F5C27B17D1C00541A41 /* en */,
-				A0B98F5E27B17D2100541A41 /* pt-BR */,
+				A0B98F8427B1988500541A41 /* pt-BR */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

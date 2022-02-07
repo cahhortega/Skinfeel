@@ -11,35 +11,35 @@ class FormViewController: UIViewController {
     
     @IBOutlet weak var progressView: UIProgressView!
     
-    let questions = ["Quantas vezes por dia você sente necessidade de lavar o rosto?",
-                     "Como você descreveria sua pele?",
-                     "Poros são buraquinhos na pele. Ao se olhar no espelho, você consegue observá-los?",
-                     "Você costuma ter espinhas ou cravos?",
-                     "Depois de praticar uma atividade física, seu rosto fica como?"]
+    let questions = ["Quantas vezes por dia você sente necessidade de lavar o rosto?".localized(),
+                     "Como você descreveria sua pele?".localized(),
+                     "Poros são buraquinhos na pele. Ao se olhar no espelho, você consegue observá-los?".localized(),
+                     "Você costuma ter espinhas ou cravos?".localized(),
+                     "Depois de praticar uma atividade física, seu rosto fica como?".localized()]
     
-    let answers = [["Em dias úmidos ou no verão sinto mais necessidade",
-                    "Só uma vez, geralmente para tirar a maquiagem",
-                    "Várias vezes,sinto minha pele com aspecto sujo",
-                    "Não sinto necessidade, somente no banho"],
+    let answers = [["Em dias úmidos ou no verão sinto mais necessidade".localized(),
+                    "Só uma vez, geralmente para tirar a maquiagem".localized(),
+                    "Várias vezes, sinto minha pele com aspecto sujo".localized(),
+                    "Não sinto necessidade, somente no banho".localized()],
                    
-                   ["Em alguns locais parece oleosa e em outros não",
-                    "Não possuo oleosidade aparente, estando sempre com aspecto hidratado",
-                    "Muita oleosidade por todo o rosto, podendo aparecer espinhas",
-                    "Minha pele é opaca e sem brilho, às vezes avermelhada ou recssecada"],
+                   ["Em alguns locais parece oleosa e em outros não".localized(),
+                    "Não possuo oleosidade aparente, estando sempre com aspecto hidratado".localized(),
+                    "Muita oleosidade por todo o rosto, podendo aparecer espinhas".localized(),
+                    "Minha pele é opaca e sem brilho, às vezes avermelhada ou ressecada".localized()],
                    
-                   ["Posso vê-los mais no queixo, nariz ou testa",
-                    "Não muito, são pouco aparentes",
-                    "Sim, posso ver no rosto todo",
-                    "Não, minha pele é completamente lisa"],
+                   ["Posso vê-los mais no queixo, nariz ou testa".localized(),
+                    "Não muito, são pouco aparentes".localized(),
+                    "Sim, posso ver no rosto todo".localized(),
+                    "Não, minha pele é completamente lisa".localized()],
                    
-                   ["De vez em quando",
-                    "É bem difícil",
-                    "Quase sempre",
-                    "Nunca"],
+                   ["De vez em quando".localized(),
+                    "É bem difícil".localized(),
+                    "Quase sempre".localized(),
+                    "Nunca".localized()],
                    
-                   ["Um pouco oleoso e suado",
-                    "Com as bochechas avermelhadas e suado",
-                    "Muito oleoso e 'pegajoso'","Avermelhado e ardendo"]]
+                   ["Um pouco oleoso e suado".localized(),
+                    "Com as bochechas avermelhadas e suado".localized(),
+                    "Muito oleoso e 'pegajoso'".localized(),"Avermelhado e ardendo".localized()]]
     
     var currentQuestion = 0 //0 a 4
     var defaults = UserDefaults.standard
@@ -62,7 +62,7 @@ class FormViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationItem.leftBarButtonItem = UIBarButtonItem(
-            title: "Anterior",
+            title: "Anterior".localized(),
             style: .plain,
             target: self,
             action: #selector(backButton)
@@ -96,7 +96,7 @@ class FormViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationItem.leftBarButtonItem = UIBarButtonItem(
-            title: "Anterior",
+            title: "Anterior".localized(),
             style: .plain,
             target: self,
             action: #selector(backButton)

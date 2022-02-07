@@ -28,9 +28,9 @@ class SkinTypeViewController: UIViewController {
     var currentColorCounter = UserDefaults.standard.array(forKey: "corContador") as? [String] ?? ["","","","",""] //Pega novo defaults
     
     var dataFilter = 0
-    var morningTasks: [String] = ["Limpeza", "Hidratação", "Proteção"]
-    var nightTasks: [String] = ["Limpeza", "Esfoliação", "Hidratação"]
-    var afternoonTasks: [String] = ["Proteção"]
+    var morningTasks: [String] = ["Limpeza".localized(), "Hidratação".localized(), "Proteção".localized()]
+    var nightTasks: [String] = ["Limpeza".localized(), "Esfoliação".localized(), "Hidratação".localized()]
+    var afternoonTasks: [String] = ["Proteção".localized()]
     var skinType = ""
     
     
@@ -57,7 +57,7 @@ class SkinTypeViewController: UIViewController {
         //Caso existem chaves que estão se repetindo, ele pega a maior
         setupColor()
         
-        let mainString = "Sua pele é \(skinType)"
+        let mainString = "\("Sua pele é".localized()) \(skinType)"
         progressView.progress = 0.75
         navigationController?.setNavigationBarHidden(false, animated: false)
         
@@ -68,17 +68,17 @@ class SkinTypeViewController: UIViewController {
         skinTypeLabel.attributedText = mutableAttributedString
         
         switch skinType {
-        case "oleosa":
-            setupPage(girl: "girl1", skin: "oleosa", name: "Maria")
+        case "oleosa".localized():
+            setupPage(girl: "girl1", skin: "oleosa".localized(), name: "Maria".localized())
             
-        case "normal":
-            setupPage(girl: "boy2", skin: "normal", name: "Luiz")
+        case "normal".localized():
+            setupPage(girl: "boy2", skin: "normal".localized(), name: "Luiz".localized())
             
-        case "seca":
-            setupPage(girl: "boy3", skin: "seca", name: "Carlos")
+        case "seca".localized():
+            setupPage(girl: "boy3", skin: "seca".localized(), name: "Carlos".localized())
             
-        case "mista":
-            setupPage(girl: "girl4", skin: "mista", name: "Olivia")
+        case "mista".localized():
+            setupPage(girl: "girl4", skin: "mista".localized(), name: "Olivia".localized())
             
         default:
             print("erro")
@@ -92,7 +92,7 @@ class SkinTypeViewController: UIViewController {
         
         //        //navigationBar
         navigationItem.leftBarButtonItem = UIBarButtonItem(
-            title: "Anterior",
+            title: "Anterior".localized(),
             style: .plain,
             target: self,
             action: #selector(back)
@@ -161,13 +161,13 @@ class SkinTypeViewController: UIViewController {
 
             switch maxValueOfSomeDictionary!.key { //Verifica qual é a key
             case 1:
-                skinType = "mista"
+                skinType = "mista".localized()
             case 2:
-                skinType = "normal"
+                skinType = "normal".localized()
             case 3:
-                skinType = "oleosa"
+                skinType = "oleosa".localized()
             case 4:
-                skinType = "seca"
+                skinType = "seca".localized()
             default:
                 skinType = "erro"
             }
@@ -184,35 +184,35 @@ class SkinTypeViewController: UIViewController {
         switch maxValueOfSomeDictionary!.key { //Verifica qual é a key
         case 1:
             if (valor1 == 2 && valor2 == 3) || (valor1 == 3 && valor2 == 2) {
-                skinType = "oleosa"
+                skinType = "oleosa".localized()
             } else if (valor1 == 4 && valor2 == 2) || (valor1 == 2 && valor2 == 4) {
-                skinType = "seca"
+                skinType = "seca".localized()
             } else if (valor1 == 3 && valor2 == 4) || (valor1 == 4 && valor2 == 3) {
-                skinType = "oleosa"
+                skinType = "oleosa".localized()
             }
         case 2:
             if (valor1 == 1 && valor2 == 3) || (valor1 == 3 && valor2 == 1) {
-                skinType = "oleosa"
+                skinType = "oleosa".localized()
             } else if (valor1 == 4 && valor2 == 1) || (valor1 == 1 && valor2 == 4) {
-                skinType = "seca"
+                skinType = "seca".localized()
             } else if (valor1 == 3 && valor2 == 4) || (valor1 == 4 && valor2 == 3) {
-                skinType = "seca"
+                skinType = "seca".localized()
             }
         case 3:
             if (valor1 == 2 && valor2 == 1) || (valor1 == 1 && valor2 == 2) {
-                skinType = "mista"
+                skinType = "mista".localized()
             } else if (valor1 == 4 && valor2 == 1) || (valor1 == 1 && valor2 == 4) {
-                skinType = "mista"
+                skinType = "mista".localized()
             } else if (valor1 == 2 && valor2 == 4) || (valor1 == 4 && valor2 == 2) {
-                skinType = "normal"
+                skinType = "normal".localized()
             }
         case 4:
             if (valor1 == 2 && valor2 == 1) || (valor1 == 1 && valor2 == 2) {
-                skinType = "normal"
+                skinType = "normal".localized()
             } else if (valor1 == 2 && valor2 == 3) || (valor1 == 3 && valor2 == 2) {
-                skinType = "normal"
+                skinType = "normal".localized()
             } else if (valor1 == 1 && valor2 == 3) || (valor1 == 3 && valor2 == 1) {
-                skinType = "mista"
+                skinType = "mista".localized()
             }
         default:
             skinType = "erro"
@@ -222,20 +222,20 @@ class SkinTypeViewController: UIViewController {
     func setupPage(girl: String, skin: String, name: String){ //Configurando a página
         defaults.set("\(girl)-profile", forKey: "profileImage")
         skinType = skin
-        subtitle.text = "A rotina de \(name) vai te ajudar a começar"
-        meetLabel.text = "Conheça \(name)"
+        subtitle.text = "\("A rotina de".localized()) \(name) \("vai te ajudar a começar".localized())"
+        meetLabel.text = "\("Conheça".localized()) \(name)"
         skinImage.image = UIImage(named: girl)
     }
     
     func setupColor(){ //Configurando a cor que ficará no título
         switch skinType {
-        case "oleosa":
+        case "oleosa".localized():
             colorSkin = "Verde"
-        case "normal":
+        case "normal".localized():
             colorSkin = "Azul"
-        case "seca":
+        case "seca".localized():
             colorSkin = "Rosa"
-        case "mista":
+        case "mista".localized():
             colorSkin = "Roxo"
         default:
             colorSkin = "gelo botao"

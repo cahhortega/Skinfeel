@@ -53,6 +53,7 @@ class FeedViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationItem.setHidesBackButton(true, animated: false)
         navigationController?.navigationBar.topItem?.title = "Feed"
         navigationController?.navigationBar.prefersLargeTitles = true
         
