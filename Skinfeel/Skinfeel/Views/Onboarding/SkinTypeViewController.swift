@@ -104,7 +104,7 @@ class SkinTypeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let url = "https://restapi-skinfeel.herokuapp.com/produtos"
+        let url = "https://skinfeel-api.herokuapp.com/produtos"
         let instance = Request()
         group.enter()
         instance.getData(from: url) { result in
