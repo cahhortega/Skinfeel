@@ -2,7 +2,7 @@
 ![image](https://user-images.githubusercontent.com/70045652/206057384-cedef9ef-1548-4e6a-a0f3-f553a386d77c.png)
 # Skinfeel
 
-Apicativo desenvolvido para dispositivos iOS com recursos de acessibilidade para o processo de criação e encaminhamento de currículos.
+Apicativo desenvolvido para dispositivos iOS para criação e acompanhamento da rotina de cuidados com a pele.
 
 ## Descrição
 *O que você acha de começar uma rotina de skincare do zero?*
